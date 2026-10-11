@@ -29,7 +29,7 @@ const processChecklist = [
 export default function ProcessSection() {
   return (
     <section
-      className={`relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden ${poppins.className}`}
+      className={`relative py-8 lg:py-12 bg-white overflow-hidden ${poppins.className}`}
     >
       {/* Decorative Dot Matrix on Left */}
       <div
@@ -44,7 +44,7 @@ export default function ProcessSection() {
       </div>
 
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-4 lg:gap-6 items-center">
           {/* ========================================================= */}
           {/* LEFT COLUMN: Driver Photo with Custom Geometric Frame     */}
           {/* ========================================================= */}
@@ -75,11 +75,11 @@ export default function ProcessSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="lg:col-span-6 space-y-6 sm:space-y-7"
+            className="lg:col-span-6 space-y-2 sm:space-y-3"
           >
             {/* Eyebrow */}
             <div className="flex items-center gap-2">
-              <IoCar className="text-[#e51a24] text-xl shrink-0" />
+              <IoCar className="text-[#e51a24] text-4xl shrink-0" />
               <span className="text-[#081839] font-bold text-sm tracking-wide">
                 Our Work Process
               </span>
@@ -87,7 +87,7 @@ export default function ProcessSection() {
             </div>
 
             {/* Headline */}
-            <div className="space-y-1">
+            <div className="space-y-2 sm:space-y-2">
               <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#081839] tracking-tight leading-[1.18]">
                 Building Confident Drivers
               </h2>
@@ -110,13 +110,13 @@ export default function ProcessSection() {
               {processChecklist.map((row, idx) => (
                 <div key={idx} className="contents">
                   <div className="flex items-center gap-2.5">
-                    <IoCheckmarkCircle className="text-[#e51a24] text-xl shrink-0" />
+                    <IoCheckmarkCircle className="text-[#e51a24] text-2xl shrink-0" />
                     <span className="text-[#081839] font-bold text-[13.5px] sm:text-[14.5px]">
                       {row.col1}
                     </span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <IoCheckmarkCircle className="text-[#e51a24] text-xl shrink-0" />
+                    <IoCheckmarkCircle className="text-[#e51a24] text-2xl shrink-0" />
                     <span className="text-[#081839] font-bold text-[13.5px] sm:text-[14.5px]">
                       {row.col2}
                     </span>
@@ -127,7 +127,7 @@ export default function ProcessSection() {
 
             {/* Bottom Callout Card (Split: Video Preview + 24/7 Support) */}
             <div className="pt-2">
-              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 grid grid-cols-1 sm:grid-cols-12 items-stretch bg-[#081839]">
+              <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100 grid grid-cols-1 sm:grid-cols-12 items-stretch bg-[#081839]">
                 {/* Left: Video Thumbnail with Play Button */}
                 <div className="sm:col-span-5 relative min-h-[120px] sm:min-h-[130px] group overflow-hidden">
                   <Image

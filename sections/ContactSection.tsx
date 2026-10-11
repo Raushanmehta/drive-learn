@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   IoHeadset,
@@ -13,7 +12,6 @@ import {
   IoMailOutline,
   IoDocumentTextOutline,
   IoArrowForward,
-  IoChevronForward,
 } from "react-icons/io5";
 import {
   FaFacebookF,
@@ -22,6 +20,7 @@ import {
   FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa6";
+import ContactCard from "@/components/cards/ContactCard";
 import { poppins } from "@/lib/fonts";
 
 const contactCards = [
@@ -134,56 +133,13 @@ export default function ContactSection() {
     <section
       className={`relative py-8 lg:py-12 bg-[#f5f9fc] overflow-hidden ${poppins.className}`}
     >
-      <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-8 sm:space-y-12">
+      <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4 sm:space-y-6">
         {/* BLOCK 1: 4 Contact Info Cards */}
-        <div className="space-y-6 sm:space-y-8">
+        <div className="space-y-4 sm:space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-4">
-            {contactCards.map((card, idx) => {
-              const Icon = card.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-5 sm:p-6 shadow-[0_4px_25px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 sm:gap-5 hover:shadow-lg transition-all duration-300"
-                >
-                  {/* Left Red Icon Circle */}
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e51a24] flex items-center justify-center text-white text-2xl sm:text-[26px] shrink-0 shadow-md">
-                    <Icon />
-                  </div>
-
-                  {/* Vertical Tag */}
-                  <div className="hidden sm:flex items-center justify-center self-stretch border-r border-gray-100 pr-3.5">
-                    <span className="text-[10.5px] font-extrabold uppercase tracking-widest text-[#081839]/60 [writing-mode:vertical-lr] rotate-180">
-                      {card.tag}
-                    </span>
-                  </div>
-
-                  {/* Main Content & Action */}
-                  <div className="flex-1 flex flex-col justify-between self-stretch min-h-[90px]">
-                    <span className="sm:hidden text-[11px] font-extrabold uppercase tracking-widest text-[#e51a24] mb-1">
-                      {card.tag}
-                    </span>
-
-                    {card.content}
-
-                    <div className="mt-3">
-                      <Link
-                        href={card.actionHref}
-                        className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-bold text-[#081839] hover:text-[#e51a24] transition-colors uppercase tracking-wider group"
-                      >
-                        <span className="text-[#e51a24] font-extrabold text-sm group-hover:translate-x-0.5 transition-transform">
-                          <IoChevronForward className="inline -mt-0.5" />
-                        </span>
-                        <span>{card.actionText}</span>
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+            {contactCards.map((card, idx) => (
+              <ContactCard key={idx} delay={idx * 0.1} {...card} />
+            ))}
           </div>
 
           {/* Social Connect */}
@@ -266,12 +222,12 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-100"
+            className="bg-white rounded-xl p-4 sm:p-6 lg:p-6 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-100"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch">
                 {/* Left 4 Inputs */}
-                <div className="lg:col-span-6 space-y-4 sm:space-y-5">
+                <div className="lg:col-span-6 space-y-3 sm:space-y-4">
                   {/* Name */}
                   <div>
                     <label className="text-[13px] font-bold text-[#081839] mb-1.5 block">
@@ -410,11 +366,11 @@ export default function ContactSection() {
         </div>
 
         {/* BLOCK 3: Our Location / Map */}
-        <div id="location-map" className="scroll-mt-24">
+        <div id="location-map" className="scroll-mt-20">
           {/* Eyebrow Header */}
           <div className="flex items-center gap-2 mb-4">
             <span className="w-1 h-4 bg-[#e51a24] rounded-full inline-block" />
-            <span className="text-[#e51a24] font-bold text-xs uppercase tracking-widest">
+            <span className="text-[#e51a24] font-bold text-sm uppercase tracking-widest">
               OUR LOCATION
             </span>
           </div>
@@ -425,7 +381,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full h-[360px] sm:h-[420px] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white relative"
+            className="w-full h-[300px] sm:h-[300px] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white relative"
           >
             <iframe
               title="DriveLearn Location Map - New Delhi"

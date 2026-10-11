@@ -37,11 +37,10 @@ export default function PricingCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className={`bg-white rounded-2xl flex flex-col justify-between border transition-all duration-300 relative shadow-[0_4px_25px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1 ${
-        isPopular
-          ? "border-[#e51a24] ring-2 ring-[#e51a24]/10 lg:-translate-y-2"
-          : "border-gray-100"
-      } ${poppins.className}`}
+      className={`bg-white rounded-xl flex flex-col justify-between border transition-all duration-300 relative shadow-[0_4px_25px_rgba(0,0,0,0.05)] hover:shadow-xl hover:-translate-y-1 ${isPopular
+        ? "border-[#e51a24] ring-2 ring-[#e51a24]/10 lg:-translate-y-2"
+        : "border-gray-100"
+        } ${poppins.className}`}
     >
       {/* Popular Badge */}
       {isPopular && (
@@ -51,16 +50,15 @@ export default function PricingCard({
       )}
 
       {/* Main Content Area */}
-      <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
+      <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4 sm:space-y-5">
         <div>
           {/* Card Header: Icon + Title + Tagline */}
           <div className="flex items-start gap-4">
             <div
-              className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl shrink-0 shadow-sm ${
-                isPopular
-                  ? "bg-[#e51a24] text-white"
-                  : "bg-[#081839] text-white"
-              }`}
+              className={`w-16 h-16 rounded-full flex items-center justify-center text-4xl shrink-0 shadow-sm ${isPopular
+                ? "bg-[#e51a24] text-white"
+                : "bg-[#081839] text-white"
+                }`}
             >
               <HeaderIcon />
             </div>
@@ -75,7 +73,7 @@ export default function PricingCard({
           </div>
 
           {/* Pricing Row */}
-          <div className="mt-5 pb-5 border-b border-gray-100 flex items-baseline gap-1.5">
+          <div className="mt-4 pb-4 border-b border-gray-100 flex items-baseline gap-1.5">
             <span className="text-3xl sm:text-[34px] font-extrabold text-[#e51a24] tracking-tight">
               {price}
             </span>
@@ -85,13 +83,13 @@ export default function PricingCard({
           </div>
 
           {/* Feature List */}
-          <ul className="mt-5 space-y-3">
+          <ul className="mt-4 space-y-2">
             {features.map((feat, idx) => (
               <li
                 key={idx}
                 className="flex items-start gap-2.5 text-[13px] sm:text-[13.5px] font-medium text-[#081839] leading-snug"
               >
-                <IoCheckmarkCircle className="text-[#e51a24] text-base shrink-0 mt-0.5" />
+                <IoCheckmarkCircle className="text-[#e51a24] text-2xl shrink-0 mt-0.5" />
                 <span>{feat}</span>
               </li>
             ))}
@@ -108,7 +106,7 @@ export default function PricingCard({
               key={idx}
               className="flex flex-col items-center justify-center text-center px-1"
             >
-              <BIcon className="text-lg sm:text-xl text-white mb-1" />
+              <BIcon className="text-lg sm:text-4xl text-white mb-1" />
               <span className="text-[10px] sm:text-[10.5px] font-bold text-gray-200 leading-tight">
                 {bFeat.label}
               </span>

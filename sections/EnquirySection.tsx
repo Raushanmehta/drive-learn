@@ -87,7 +87,7 @@ export default function EnquirySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex items-center justify-center gap-2 mb-2.5"
+            className="flex items-center justify-center gap-2 mb-2"
           >
             <span className="w-1 h-4 bg-[#e51a24] rounded-full inline-block" />
             <span className="text-[#081839] font-bold text-xs uppercase tracking-widest">
@@ -101,7 +101,7 @@ export default function EnquirySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold tracking-tight text-[#081839] leading-tight"
+            className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-[#081839] leading-tight"
           >
             Get More <span className="text-[#e51a24]">Information</span>
           </motion.h2>
@@ -112,7 +112,7 @@ export default function EnquirySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.2 }}
-            className="text-[#556987] text-[14.5px] sm:text-[15.5px] max-w-2xl mx-auto mt-3 leading-relaxed"
+            className="text-[#556987] text-[14px] sm:text-[15px] max-w-2xl mx-auto mt-2.5 leading-relaxed"
           >
             Fill out the form below and our team will get back to you with
             complete details about our driving courses, fees, schedules and
@@ -121,7 +121,7 @@ export default function EnquirySection() {
         </div>
 
         {/* 2-Column Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-4 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch">
           {/* Left Column: Visual Car Photo with Floating Badge */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}
@@ -142,7 +142,7 @@ export default function EnquirySection() {
             />
 
             {/* Main Car Photo Container */}
-            <div className="relative w-full h-[450px] sm:h-[500px] lg:h-full min-h-[460px] rounded-xl overflow-hidden shadow-xl bg-gray-100">
+            <div className="relative w-full h-[420px] sm:h-[480px] lg:h-full min-h-[420px] rounded-xl overflow-hidden shadow-xl bg-gray-100">
               <Image
                 src="/images/enquiry-car.jpg"
                 alt="DriveLearn training car on training track"
@@ -183,21 +183,21 @@ export default function EnquirySection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="lg:col-span-7"
           >
-            <div className="bg-white rounded-xl p-6 sm:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-gray-100 h-full flex flex-col justify-between">
+            <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-6 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-100 h-full flex flex-col justify-between">
               <div>
                 {/* Form Heading */}
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#081839] tracking-tight">
                   Enquiry <span className="text-[#e51a24]">Now</span>
                 </h3>
                 <div className="w-10 h-1 bg-[#e51a24] rounded-full mt-2 mb-3" />
-                <p className="text-[#556987] text-[13.5px] sm:text-[14px] mb-7 leading-relaxed">
+                <p className="text-[#556987] text-[13.5px] sm:text-[14px] mb-4 sm:mb-5 leading-relaxed">
                   Have questions? Share your details and we will contact you
                   with all the required information.
                 </p>
 
                 {/* Form Elements */}
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-4">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {/* Full Name */}
                     <div>
                       <label className="text-[13px] font-bold text-[#081839] mb-1.5 block">
@@ -322,7 +322,7 @@ export default function EnquirySection() {
                     <motion.div
                       initial={{ opacity: 0, y: -8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="p-3.5 rounded-lg bg-green-50 border border-green-200 text-green-700 text-sm font-medium text-center"
+                      className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-700 text-sm font-semibold text-center"
                     >
                       Thank you! Your enquiry has been submitted successfully.
                       We will contact you shortly.

@@ -6,7 +6,7 @@ import TestimonialSection from "@/sections/home/TestimonialSection";
 export default function TeamPage() {
     return (
         <main>
-            <PageTopSection title="Our Instructors" breadcrumb="Our Team" />
+            <PageTopSection title="Our Team" breadcrumb="Our Team" />
             <TeamSection />
             <TestimonialSection />
             <CtaSection />
