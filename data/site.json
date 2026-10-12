@@ -436,10 +436,22 @@
                     "description": "Our Beginner Driving Course is specially designed for individuals who are new to driving. This course helps you understand the basics of vehicle operation, traffic rules, road safety and build confidence behind the wheel with hands-on training from expert instructors."
                   },
                   "highlights": [
-                    { "icon": "IoPeople", "title": "Certified Instructors" },
-                    { "icon": "IoCar", "title": "Modern Training Vehicles" },
-                    { "icon": "IoShieldCheckmark", "title": "Safe & Secure Learning" },
-                    { "icon": "IoTime", "title": "Flexible Class Timings" }
+                    {
+                      "icon": "IoPeople",
+                      "title": "Certified Instructors"
+                    },
+                    {
+                      "icon": "IoCar",
+                      "title": "Modern Training Vehicles"
+                    },
+                    {
+                      "icon": "IoShieldCheckmark",
+                      "title": "Safe & Secure Learning"
+                    },
+                    {
+                      "icon": "IoTime",
+                      "title": "Flexible Class Timings"
+                    }
                   ],
                   "advantages": {
                     "title": "Driving School Advantages",
@@ -469,10 +481,22 @@
                       "price": "Price (₹)"
                     },
                     "packages": [
-                      { "package": "For 5 Hours Training:", "price": "₹5,000.00" },
-                      { "package": "For 7.5 Hours (Five Lessons of 1 Hour)", "price": "₹8,750.00" },
-                      { "package": "For 10 Hours Training:", "price": "₹9,000.00" },
-                      { "package": "Include Road Test Package:", "price": "₹4,500.00" }
+                      {
+                        "package": "For 5 Hours Training:",
+                        "price": "₹5,000.00"
+                      },
+                      {
+                        "package": "For 7.5 Hours (Five Lessons of 1 Hour)",
+                        "price": "₹8,750.00"
+                      },
+                      {
+                        "package": "For 10 Hours Training:",
+                        "price": "₹9,000.00"
+                      },
+                      {
+                        "package": "Include Road Test Package:",
+                        "price": "₹4,500.00"
+                      }
                     ],
                     "inclusiveRow": {
                       "title": "Road test package includes:",
@@ -507,10 +531,22 @@
                     "description": "Our Driving License Training course is designed to guide you through RTO driving test routes, critical maneuver evaluations, road signage exams and simulator practices."
                   },
                   "highlights": [
-                    { "icon": "IoPeople", "title": "RTO Certified Instructors" },
-                    { "icon": "IoCar", "title": "Test-Ready Vehicles" },
-                    { "icon": "IoShieldCheckmark", "title": "Mock Road Tests" },
-                    { "icon": "IoTime", "title": "Flexible Slots" }
+                    {
+                      "icon": "IoPeople",
+                      "title": "RTO Certified Instructors"
+                    },
+                    {
+                      "icon": "IoCar",
+                      "title": "Test-Ready Vehicles"
+                    },
+                    {
+                      "icon": "IoShieldCheckmark",
+                      "title": "Mock Road Tests"
+                    },
+                    {
+                      "icon": "IoTime",
+                      "title": "Flexible Slots"
+                    }
                   ],
                   "advantages": {
                     "title": "License Training Advantages",
@@ -540,10 +576,22 @@
                       "price": "Price (₹)"
                     },
                     "packages": [
-                      { "package": "Express License Prep (5 Hours):", "price": "₹4,500.00" },
-                      { "package": "Complete Test Prep (10 Hours):", "price": "₹8,500.00" },
-                      { "package": "Mock Test + Car Rental:", "price": "₹3,500.00" },
-                      { "package": "Full RTO Assistance Package:", "price": "₹11,000.00" }
+                      {
+                        "package": "Express License Prep (5 Hours):",
+                        "price": "₹4,500.00"
+                      },
+                      {
+                        "package": "Complete Test Prep (10 Hours):",
+                        "price": "₹8,500.00"
+                      },
+                      {
+                        "package": "Mock Test + Car Rental:",
+                        "price": "₹3,500.00"
+                      },
+                      {
+                        "package": "Full RTO Assistance Package:",
+                        "price": "₹11,000.00"
+                      }
                     ],
                     "inclusiveRow": {
                       "title": "License package includes:",
@@ -578,10 +626,22 @@
                     "description": "Gain hands-on expertise in vehicle fluid checks, emergency braking, blind spot detection and hazardous weather navigation techniques."
                   },
                   "highlights": [
-                    { "icon": "IoPeople", "title": "Safety Experts" },
-                    { "icon": "IoCar", "title": "Dual Control Vehicles" },
-                    { "icon": "IoShieldCheckmark", "title": "Defensive Driving Certified" },
-                    { "icon": "IoTime", "title": "Flexible Batches" }
+                    {
+                      "icon": "IoPeople",
+                      "title": "Safety Experts"
+                    },
+                    {
+                      "icon": "IoCar",
+                      "title": "Dual Control Vehicles"
+                    },
+                    {
+                      "icon": "IoShieldCheckmark",
+                      "title": "Defensive Driving Certified"
+                    },
+                    {
+                      "icon": "IoTime",
+                      "title": "Flexible Batches"
+                    }
                   ],
                   "advantages": {
                     "title": "Vehicle Safety Advantages",
@@ -611,9 +671,18 @@
                       "price": "Price (₹)"
                     },
                     "packages": [
-                      { "package": "Defensive Driving (6 Hours):", "price": "₹6,000.00" },
-                      { "package": "Vehicle Safety & Maintenance (10 Hours):", "price": "₹9,500.00" },
-                      { "package": "Advanced Highway & Night Drive:", "price": "₹7,500.00" }
+                      {
+                        "package": "Defensive Driving (6 Hours):",
+                        "price": "₹6,000.00"
+                      },
+                      {
+                        "package": "Vehicle Safety & Maintenance (10 Hours):",
+                        "price": "₹9,500.00"
+                      },
+                      {
+                        "package": "Advanced Highway & Night Drive:",
+                        "price": "₹7,500.00"
+                      }
                     ],
                     "inclusiveRow": {
                       "title": "Safety course includes:",
@@ -648,10 +717,22 @@
                     "description": "Already have a license but feel hesitant in heavy traffic or busy highways? Our refresher lessons help you regain full control with zero pressure."
                   },
                   "highlights": [
-                    { "icon": "IoPeople", "title": "Patient Instructors" },
-                    { "icon": "IoCar", "title": "Modern Dual Control Cars" },
-                    { "icon": "IoShieldCheckmark", "title": "Zero Pressure Environment" },
-                    { "icon": "IoTime", "title": "Custom Flexible Schedule" }
+                    {
+                      "icon": "IoPeople",
+                      "title": "Patient Instructors"
+                    },
+                    {
+                      "icon": "IoCar",
+                      "title": "Modern Dual Control Cars"
+                    },
+                    {
+                      "icon": "IoShieldCheckmark",
+                      "title": "Zero Pressure Environment"
+                    },
+                    {
+                      "icon": "IoTime",
+                      "title": "Custom Flexible Schedule"
+                    }
                   ],
                   "advantages": {
                     "title": "Refresher Course Advantages",
@@ -681,9 +762,18 @@
                       "price": "Price (₹)"
                     },
                     "packages": [
-                      { "package": "Weekend Refresher (5 Hours):", "price": "₹4,500.00" },
-                      { "package": "Complete Confidence (10 Hours):", "price": "₹8,000.00" },
-                      { "package": "Highway Focus (4 Hours):", "price": "₹4,000.00" }
+                      {
+                        "package": "Weekend Refresher (5 Hours):",
+                        "price": "₹4,500.00"
+                      },
+                      {
+                        "package": "Complete Confidence (10 Hours):",
+                        "price": "₹8,000.00"
+                      },
+                      {
+                        "package": "Highway Focus (4 Hours):",
+                        "price": "₹4,000.00"
+                      }
                     ],
                     "inclusiveRow": {
                       "title": "Refresher package includes:",
@@ -718,10 +808,22 @@
                     "description": "Designed for quick learners and students on tight schedules who need to become test-ready fast through concentrated daily practical training."
                   },
                   "highlights": [
-                    { "icon": "IoPeople", "title": "Top Senior Trainers" },
-                    { "icon": "IoCar", "title": "Dedicated Vehicle" },
-                    { "icon": "IoShieldCheckmark", "title": "Accelerated Curriculum" },
-                    { "icon": "IoTime", "title": "Daily 2-Hour Batches" }
+                    {
+                      "icon": "IoPeople",
+                      "title": "Top Senior Trainers"
+                    },
+                    {
+                      "icon": "IoCar",
+                      "title": "Dedicated Vehicle"
+                    },
+                    {
+                      "icon": "IoShieldCheckmark",
+                      "title": "Accelerated Curriculum"
+                    },
+                    {
+                      "icon": "IoTime",
+                      "title": "Daily 2-Hour Batches"
+                    }
                   ],
                   "advantages": {
                     "title": "Fast-Track Advantages",
@@ -751,9 +853,18 @@
                       "price": "Price (₹)"
                     },
                     "packages": [
-                      { "package": "7-Day Fast Track (14 Hours):", "price": "₹12,500.00" },
-                      { "package": "10-Day Pro Intensive (20 Hours):", "price": "₹16,500.00" },
-                      { "package": "Fast Track + Test Car:", "price": "₹14,500.00" }
+                      {
+                        "package": "7-Day Fast Track (14 Hours):",
+                        "price": "₹12,500.00"
+                      },
+                      {
+                        "package": "10-Day Pro Intensive (20 Hours):",
+                        "price": "₹16,500.00"
+                      },
+                      {
+                        "package": "Fast Track + Test Car:",
+                        "price": "₹14,500.00"
+                      }
                     ],
                     "inclusiveRow": {
                       "title": "Intensive package includes:",
@@ -788,10 +899,22 @@
                     "description": "Our training cars feature certified dual brake and clutch pedals on the instructor side, ensuring total peace of mind for nervous beginners."
                   },
                   "highlights": [
-                    { "icon": "IoPeople", "title": "Safety Certified Mentors" },
-                    { "icon": "IoCar", "title": "Manual & Automatic Options" },
-                    { "icon": "IoShieldCheckmark", "title": "Dual Control Override" },
-                    { "icon": "IoTime", "title": "Flexible Morning & Evening" }
+                    {
+                      "icon": "IoPeople",
+                      "title": "Safety Certified Mentors"
+                    },
+                    {
+                      "icon": "IoCar",
+                      "title": "Manual & Automatic Options"
+                    },
+                    {
+                      "icon": "IoShieldCheckmark",
+                      "title": "Dual Control Override"
+                    },
+                    {
+                      "icon": "IoTime",
+                      "title": "Flexible Morning & Evening"
+                    }
                   ],
                   "advantages": {
                     "title": "Dual Control Advantages",
@@ -821,9 +944,18 @@
                       "price": "Price (₹)"
                     },
                     "packages": [
-                      { "package": "Manual Dual-Control (10 Hours):", "price": "₹8,500.00" },
-                      { "package": "Automatic Dual-Control (10 Hours):", "price": "₹10,500.00" },
-                      { "package": "Combined Manual + Auto (15 Hours):", "price": "₹13,500.00" }
+                      {
+                        "package": "Manual Dual-Control (10 Hours):",
+                        "price": "₹8,500.00"
+                      },
+                      {
+                        "package": "Automatic Dual-Control (10 Hours):",
+                        "price": "₹10,500.00"
+                      },
+                      {
+                        "package": "Combined Manual + Auto (15 Hours):",
+                        "price": "₹13,500.00"
+                      }
                     ],
                     "inclusiveRow": {
                       "title": "Dual-control package includes:",
@@ -1537,6 +1669,73 @@
               "eyebrow": "OUR LOCATION",
               "title": "DriveLearn Location Map - Beverly Hills, CA",
               "iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105799.04351659714!2d-118.49080775908202!3d34.0736204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20CA%2090210%2C%20USA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+            }
+          }
+        }
+      },
+      "thankYou": {
+        "variants": {
+          "DriveLearnThankYou1": {
+            "pageTop": {
+              "title": "Thank You",
+              "breadcrumb": "Thank You"
+            },
+            "eyebrow": "SUCCESSFULLY SUBMITTED",
+            "title": {
+              "part1": "Thank You!",
+              "part2": "We've Received Your Request."
+            },
+            "description": "Thank you for choosing DriveLearn. Our senior driving instructor will review your inquiry and reach out to you shortly to assist with course selection and scheduling.",
+            "buttons": {
+              "home": {
+                "text": "Return to Home",
+                "href": "/"
+              },
+              "courses": {
+                "text": "Explore Courses",
+                "href": "/driving-courses"
+              }
+            }
+          }
+        }
+      },
+      "notFound": {
+        "variants": {
+          "DriveLearnNotFound1": {
+            "pageTop": {
+              "title": "404 - Not Found",
+              "breadcrumb": "404 Not Found"
+            },
+            "code": "404",
+            "badge": "ROAD BLOCKED • PAGE NOT FOUND",
+            "title": "Looks Like You Took an Unmarked Turn!",
+            "description": "The page you are trying to visit might have been moved, renamed, or is currently unavailable. Let's steer you back in the right direction.",
+            "buttons": {
+              "home": {
+                "text": "Back to Home",
+                "href": "/"
+              },
+              "courses": {
+                "text": "Browse Courses",
+                "href": "/driving-courses"
+              }
+            },
+            "quickLinksSection": {
+              "title": "Popular Destinations",
+              "links": [
+                {
+                  "title": "About Us",
+                  "href": "/about"
+                },
+                {
+                  "title": "Packages",
+                  "href": "/packages"
+                },
+                {
+                  "title": "Contact Us",
+                  "href": "/contact"
+                }
+              ]
             }
           }
         }

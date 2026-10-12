@@ -19,9 +19,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${roboto.variable} ${poppins.variable} ${poppins.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body suppressHydrationWarning className="min-h-full flex flex-col font-sans">
         <Topbar />
         <Suspense fallback={null}>
           <Navbar />

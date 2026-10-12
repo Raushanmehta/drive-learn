@@ -35,6 +35,8 @@ export type DriveLearnPricingData = DriveLearnSections["pricing"]["variants"]["D
 export type DriveLearnOurMissionData = DriveLearnSections["ourMission"]["variants"]["DriveLearnOurMission1"];
 export type DriveLearnEnquiryData = DriveLearnSections["enquiry"]["variants"]["DriveLearnEnquiry1"];
 export type DriveLearnContactData = DriveLearnSections["contact"]["variants"]["DriveLearnContact1"];
+export type DriveLearnThankYouData = DriveLearnSections["thankYou"]["variants"]["DriveLearnThankYou1"];
+export type DriveLearnNotFoundData = DriveLearnSections["notFound"]["variants"]["DriveLearnNotFound1"];
 export type DriveLearnDrivingCoursesPageData = DriveLearnServicesData;
 
 // Types
@@ -72,6 +74,8 @@ export const siteMap = {
   ourMission: sec.ourMission.variants.DriveLearnOurMission1,
   enquiry: sec.enquiry.variants.DriveLearnEnquiry1,
   contact: sec.contact.variants.DriveLearnContact1,
+  thankYou: sec.thankYou.variants.DriveLearnThankYou1,
+  notFound: sec.notFound.variants.DriveLearnNotFound1,
   drivingCoursesPage: sec.services.variants.DriveLearnServices1,
 
   // Compatibility
@@ -94,6 +98,8 @@ export const siteMap = {
   ourMissionData: sec.ourMission.variants.DriveLearnOurMission1,
   enquiryData: sec.enquiry.variants.DriveLearnEnquiry1,
   contactData: sec.contact.variants.DriveLearnContact1,
+  thankYouData: sec.thankYou.variants.DriveLearnThankYou1,
+  notFoundData: sec.notFound.variants.DriveLearnNotFound1,
   drivingCoursesPageData: sec.services.variants.DriveLearnServices1,
 
   // Root
