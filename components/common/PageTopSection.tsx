@@ -5,48 +5,46 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { IoChevronForward } from "react-icons/io5";
 import { poppins } from "@/lib/fonts";
+import { siteMap, type DriveLearnPageTopData } from "@/data";
 
 interface PageTopSectionProps {
   title?: string;
   breadcrumb?: string;
   bgImage?: string;
+  data?: DriveLearnPageTopData;
 }
-
-
 
 export default function PageTopSection({
   title,
   breadcrumb,
-  bgImage = "/images/page-top-bg.jpg",
+  bgImage,
+  data: propData,
 }: PageTopSectionProps) {
-  const currentRoute = {
-    title: "About Us",
-    breadcrumb: "About Us",
-  };
-
-  const displayTitle = title || currentRoute.title;
-  const displayBreadcrumb = breadcrumb || currentRoute.breadcrumb;
+  const data = propData || siteMap.pageTopSection;
+  const displayTitle = title || data.defaultTitle;
+  const displayBreadcrumb = breadcrumb || data.defaultBreadcrumb;
+  const displayBgImage = bgImage || data.defaultBgImage;
 
   return (
     <section
       className={`relative w-full h-[260px] sm:h-[300px] lg:h-[300px] flex items-center justify-center overflow-hidden bg-[#040e25] ${poppins.className}`}
     >
-      {/* Background Image: Driver at Steering Wheel */}
+      {/* Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={bgImage}
+          src={displayBgImage}
           alt={displayTitle}
           fill
           priority
           className="object-cover object-center"
         />
 
-        {/* Dark Moody Gradient Overlays */}
+        {/* Background */}
         <div className="absolute inset-0 bg-[#040e25]/60 z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#040e25]/90 via-[#040e25]/40 to-[#040e25]/60 z-10" />
       </div>
 
-      {/* Main Centered Title */}
+      {/* Headline */}
       <div className="relative z-20 text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +56,7 @@ export default function PageTopSection({
         </motion.h1>
       </div>
 
-      {/* Bottom Left Breadcrumb Navigation */}
+      {/* Nav */}
       <div className="absolute bottom-5 sm:bottom-7 inset-x-0 z-20 pointer-events-none">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pointer-events-auto">
           <motion.nav

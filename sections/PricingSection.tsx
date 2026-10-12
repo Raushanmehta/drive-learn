@@ -19,118 +19,45 @@ import {
   IoPeopleOutline,
 } from "react-icons/io5";
 import { TbSteeringWheel, TbRoad, TbParking } from "react-icons/tb";
-import PricingCard, { PricingCardProps } from "@/components/cards/PricingCard";
+import type { IconType } from "react-icons";
+import PricingCard from "@/components/cards/PricingCard";
 import { poppins } from "@/lib/fonts";
+import { siteMap, type DriveLearnPricingData, type SectionProps } from "@/data";
 
-const pricingPackages: PricingCardProps[] = [
-  {
-    title: "Basic Course",
-    tagline: "Perfect for first-time learners who want to start with the basics.",
-    price: "₹6,999",
-    headerIcon: IoSchool,
-    features: [
-      "10 Hours of Practical Training",
-      "Basic Driving Skills",
-      "Traffic Rules & Road Signs",
-      "One-on-One Instructor",
-      "Flexible Scheduling",
-    ],
-    bottomFeatures: [
-      { icon: TbSteeringWheel, label: "Practical Training" },
-      { icon: TbRoad, label: "Road Safety" },
-      { icon: IoCalendarOutline, label: "Flexible Timings" },
-    ],
-  },
-  {
-    title: "Standard Course",
-    tagline: "A balanced package with complete driving training for all learners.",
-    price: "₹11,999",
-    headerIcon: TbSteeringWheel,
-    isPopular: true,
-    features: [
-      "20 Hours of Practical Training",
-      "City & Highway Driving",
-      "Parking & Reverse Driving",
-      "Traffic Rules & Safety Training",
-      "Flexible Class Timings",
-      "Dedicated Trainer",
-    ],
-    bottomFeatures: [
-      { icon: IoCar, label: "City Driving" },
-      { icon: TbRoad, label: "Highway Driving" },
-      { icon: TbParking, label: "Parking Practice" },
-    ],
-  },
-  {
-    title: "Advanced Course",
-    tagline: "For confident learners who want to master advanced driving skills.",
-    price: "₹16,999",
-    headerIcon: IoSettingsSharp,
-    features: [
-      "30 Hours of Practical Training",
-      "City, Highway & Night Driving",
-      "Advanced Parking Techniques",
-      "Defensive Driving Training",
-      "Real Traffic Practice",
-      "Flexible Scheduling",
-    ],
-    bottomFeatures: [
-      { icon: IoMoon, label: "Night Driving" },
-      { icon: IoShieldCheckmark, label: "Defensive Driving" },
-      { icon: IoPeople, label: "Expert Instructor" },
-    ],
-  },
-  {
-    title: "Premium Course",
-    tagline: "Complete training for a safe and confident driving experience.",
-    price: "₹22,999",
-    headerIcon: IoDiamond,
-    features: [
-      "40 Hours of Practical Training",
-      "City, Highway & Night Driving",
-      "Advanced Maneuvers",
-      "Defensive & Safe Driving",
-      "Mock Driving Test",
-      "Lifetime Guidance",
-    ],
-    bottomFeatures: [
-      { icon: IoCar, label: "Complete Training" },
-      { icon: IoStar, label: "Mock Test" },
-      { icon: IoHeadset, label: "Lifetime Support" },
-    ],
-  },
-];
+const iconMap: Record<string, IconType> = {
+  IoSchool,
+  IoSettingsSharp,
+  IoDiamond,
+  IoCar,
+  IoMoon,
+  IoShieldCheckmark,
+  IoPeople,
+  IoStar,
+  IoHeadset,
+  IoBookOutline,
+  IoCarOutline,
+  IoShieldCheckmarkOutline,
+  IoCalendarOutline,
+  IoPeopleOutline,
+  TbSteeringWheel,
+  TbRoad,
+  TbParking,
+};
 
-const includedFeatures = [
-  { icon: IoBookOutline, label: "Certified Instructors" },
-  { icon: IoCarOutline, label: "Modern Training Vehicles" },
-  { icon: IoShieldCheckmarkOutline, label: "Safe & Secure Learning" },
-  { icon: IoCalendarOutline, label: "Flexible Batch Timings" },
-  { icon: TbRoad, label: "Practical Road Training" },
-  { icon: IoPeopleOutline, label: "Personalized Attention" },
-];
+export default function PricingSection({
+  data: propData,
+  className = "",
+}: SectionProps<DriveLearnPricingData> = {}) {
+  const data = propData || siteMap.pricing;
 
-const addonServices = [
-  { service: "Additional Driving Hour", price: "₹700 / Hour" },
-  { service: "Automatic Car Training", price: "₹2,000 (Extra)" },
-  { service: "Night Driving Session", price: "₹1,500 / Session" },
-  { service: "Highway Driving Practice", price: "₹1,500 / Session" },
-  { service: "Mock Driving Test", price: "₹1,000 / Test" },
-  { service: "License Assistance", price: "₹2,500" },
-  { service: "Refresher Course (5 Hours)", price: "₹4,000" },
-];
-
-export default function PricingSection() {
   return (
     <section
-      className={`relative py-8 lg:py-12 bg-[#f8fafc] overflow-hidden ${poppins.className}`}
+      className={`relative py-8 lg:py-12 bg-[#f8fafc] overflow-hidden ${poppins.className} ${className}`}
     >
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4 sm:space-y-6">
-        {/* ========================================================= */}
-        {/* BLOCK 1: Header & 4 Pricing Cards                         */}
-        {/* ========================================================= */}
+        {/* Header */}
         <div className="space-y-4 sm:space-y-6">
-          {/* Section Header */}
+          {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 space-y-2 sm:space-y-2">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -141,7 +68,7 @@ export default function PricingSection() {
             >
               <span className="w-1 h-4 bg-[#e51a24] rounded-full inline-block" />
               <span className="text-[#081839] font-bold text-xs uppercase tracking-widest">
-                PRICING
+                {data.eyebrow}
               </span>
             </motion.div>
 
@@ -152,7 +79,7 @@ export default function PricingSection() {
               transition={{ duration: 0.55, delay: 0.1 }}
               className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#081839] tracking-tight leading-tight"
             >
-              Our Driving <span className="text-[#e51a24]">Course Packages</span>
+              {data.title.part1} <span className="text-[#e51a24]">{data.title.part2}</span>
             </motion.h2>
 
             <motion.p
@@ -162,36 +89,47 @@ export default function PricingSection() {
               transition={{ duration: 0.55, delay: 0.2 }}
               className="text-[#556987] text-[14px] sm:text-[15px] max-w-2xl mx-auto mt-2.5 leading-relaxed"
             >
-              Choose from our flexible driving course packages designed to match
-              your learning needs, schedule and experience level.
+              {data.description}
             </motion.p>
           </div>
 
-          {/* 4 Cards Grid */}
+          {/* Image */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 items-stretch">
-            {pricingPackages.map((pkg, idx) => (
-              <PricingCard
-                key={idx}
-                {...pkg}
-                delay={idx * 0.1}
-              />
-            ))}
+            {data.packages.map((pkg, idx) => {
+              const HeaderIcon = iconMap[pkg.headerIcon] || IoSchool;
+              const mappedBottom = pkg.bottomFeatures.map((bf) => ({
+                icon: iconMap[bf.icon] || TbSteeringWheel,
+                label: bf.label,
+              }));
+
+              return (
+                <PricingCard
+                  key={idx}
+                  title={pkg.title}
+                  tagline={pkg.tagline}
+                  price={pkg.price}
+                  headerIcon={HeaderIcon}
+                  isPopular={pkg.isPopular}
+                  features={pkg.features}
+                  bottomFeatures={mappedBottom}
+                  delay={idx * 0.1}
+                />
+              );
+            })}
           </div>
         </div>
 
-        {/* ========================================================= */}
-        {/* BLOCK 2: What’s Included in All Packages?                 */}
-        {/* ========================================================= */}
+        {/* Block */}
         <div className="space-y-4 sm:space-y-6">
           <div className="flex items-center gap-2 mb-2">
             <span className="w-1 h-8 bg-[#e51a24] rounded-full inline-block" />
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#081839] tracking-tight">
-              What’s Included in{" "}
-              <span className="text-[#e51a24]">All Packages?</span>
+              {data.includedSection.title.part1}{" "}
+              <span className="text-[#e51a24]">{data.includedSection.title.part2}</span>
             </h3>
           </div>
 
-          {/* 6 Icons Row in White Rounded Container with Vertical Division Lines */}
+          {/* Vision */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -199,24 +137,24 @@ export default function PricingSection() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-xl p-5 sm:p-6 shadow-[0_4px_25px_rgba(0,0,0,0.04)] border border-gray-100 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-6 sm:gap-y-6 lg:gap-y-0 items-start"
           >
-            {includedFeatures.map((item, idx) => {
-              const Icon = item.icon;
+            {data.includedSection.features.map((item, idx) => {
+              const Icon = iconMap[item.icon] || IoBookOutline;
               return (
                 <div
                   key={idx}
                   className="relative flex flex-col items-center text-center group px-2 sm:px-3"
                 >
-                  {/* Vertical Division Line (Desktop lg: between all items) */}
+                  {/* Vision */}
                   {idx !== 0 && (
                     <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-14 bg-gray-200" />
                   )}
 
-                  {/* Vertical Division Line (Tablet sm: between columns in each row) */}
+                  {/* Vision */}
                   {idx % 3 !== 0 && (
                     <div className="hidden sm:block lg:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-14 bg-gray-200" />
                   )}
 
-                  {/* Vertical Division Line (Mobile: between column 1 and 2) */}
+                  {/* Vision */}
                   {idx % 2 === 1 && (
                     <div className="sm:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-gray-200" />
                   )}
@@ -233,24 +171,22 @@ export default function PricingSection() {
           </motion.div>
         </div>
 
-        {/* ========================================================= */}
-        {/* BLOCK 3: Additional Services Table & Image                */}
-        {/* ========================================================= */}
+        {/* Services */}
         <div className="space-y-4 sm:space-y-6">
           <div className="space-y-2 sm:space-y-2">
             <div className="flex items-center gap-2 mb-2">
               <span className="w-1 h-8 bg-[#e51a24] rounded-full inline-block" />
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#081839] tracking-tight">
-                Additional Services
+                {data.additionalSection.title}
               </h3>
             </div>
             <p className="text-[#556987] text-[14px] sm:text-[15px]">
-              Enhance your learning experience with our add-on services.
+              {data.additionalSection.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch">
-            {/* Left Column: Pricing Table */}
+            {/* Pricing */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -269,11 +205,12 @@ export default function PricingSection() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100 text-sm">
-                    {addonServices.map((row, idx) => (
+                    {data.additionalSection.services.map((row, idx) => (
                       <tr
                         key={idx}
-                        className={`${idx % 2 === 0 ? "bg-white" : "bg-[#fcfdfe]"
-                          } hover:bg-red-50/40 transition-colors`}
+                        className={`${
+                          idx % 2 === 0 ? "bg-white" : "bg-[#fcfdfe]"
+                        } hover:bg-red-50/40 transition-colors`}
                       >
                         <td className="py-3 px-5 text-[#081839] font-medium text-[13.5px]">
                           {row.service}
@@ -288,7 +225,7 @@ export default function PricingSection() {
               </div>
             </motion.div>
 
-            {/* Right Column: Instructor & Student In-Car Image */}
+            {/* Image */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -298,7 +235,7 @@ export default function PricingSection() {
             >
               <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100 w-full h-full min-h-[260px] bg-gray-50">
                 <Image
-                  src="/images/pricing-addon-lessons.jpg"
+                  src={data.additionalSection.image}
                   alt="Professional driving instructor giving driving lesson to student"
                   fill
                   className="object-cover object-center"

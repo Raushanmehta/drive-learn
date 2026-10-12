@@ -10,50 +10,14 @@ import {
   TbUserCheck,
 } from "react-icons/tb";
 import { poppins } from "@/lib/fonts";
+import { siteMap, type DriveLearnStatsData, type SectionProps } from "@/data";
 
-interface StatItem {
-  id: number;
-  verticalLabel: string;
-  target: number;
-  suffix: string;
-  title: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
-
-const statsData: StatItem[] = [
-  {
-    id: 1,
-    verticalLabel: "EXPERIENCE",
-    target: 16,
-    suffix: "+",
-    title: "Student Traind",
-    icon: TbSteeringWheel,
-  },
-  {
-    id: 2,
-    verticalLabel: "LEANERS",
-    target: 18,
-    suffix: "k",
-    title: "Experienced Instructors",
-    icon: TbUserStar,
-  },
-  {
-    id: 3,
-    verticalLabel: "SERVICE AREAS",
-    target: 34,
-    suffix: "",
-    title: "Modern Training Vehicles",
-    icon: TbMap2,
-  },
-  {
-    id: 4,
-    verticalLabel: "INSTRUCTORS",
-    target: 290,
-    suffix: "",
-    title: "Success Rate",
-    icon: TbUserCheck,
-  },
-];
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  TbSteeringWheel,
+  TbUserStar,
+  TbMap2,
+  TbUserCheck,
+};
 
 function Counter({
   end,
@@ -88,15 +52,20 @@ function Counter({
   );
 }
 
-export default function StatsSection() {
+export default function StatsSection({
+  data: propData,
+  className = "",
+}: SectionProps<DriveLearnStatsData> = {}) {
+  const data = propData || siteMap.stats;
+
   return (
     <section
-      className={`relative py-8 lg:py-16 bg-[#cf121e] text-white overflow-hidden ${poppins.className}`}
+      className={`relative py-8 lg:py-16 bg-[#cf121e] text-white overflow-hidden ${poppins.className} ${className}`}
     >
-      {/* Background Aerial Cars Image with Crimson Tint */}
+      {/* Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/stats-cars-bg.jpg"
+          src={data.bgImage}
           alt="Fleet of training vehicles"
           fill
           className="object-cover object-center mix-blend-multiply opacity-30 select-none pointer-events-none"
@@ -106,8 +75,8 @@ export default function StatsSection() {
 
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4">
-          {statsData.map((stat, index) => {
-            const Icon = stat.icon;
+          {data.statsList.map((stat, index) => {
+            const Icon = iconMap[stat.icon] || TbSteeringWheel;
 
             return (
               <motion.div
@@ -118,7 +87,7 @@ export default function StatsSection() {
                 transition={{ duration: 0.5, delay: index * 0.12, ease: "easeOut" }}
                 className="flex items-start gap-4"
               >
-                {/* Vertical Label & Divider Line */}
+                {/* Divider */}
                 <div className="flex items-center gap-3 self-stretch shrink-0">
                   <span className="[writing-mode:vertical-rl] rotate-180 text-[11px] sm:text-[12px] font-bold text-white/80 tracking-widest uppercase select-none">
                     {stat.verticalLabel}
@@ -126,21 +95,21 @@ export default function StatsSection() {
                   <div className="w-[1.5px] h-full min-h-[110px] bg-white/30 rounded-full" />
                 </div>
 
-                {/* Main Stat Content */}
+                {/* Stats */}
                 <div className="flex-1 flex flex-col justify-between">
-                  {/* Hollow / Outlined Animated Counter Number */}
+                  {/* Stats */}
                   <div className="select-none">
                     <span className="font-black text-5xl sm:text-6xl lg:text-[70px] leading-none tracking-tight text-transparent [-webkit-text-stroke:2px_white] block tabular-nums">
                       <Counter end={stat.target} suffix={stat.suffix} />
                     </span>
                   </div>
 
-                  {/* Title */}
+                  {/* Headline */}
                   <h3 className="text-[17px] sm:text-[19px] font-bold text-white tracking-tight mt-2 mb-3 leading-snug">
                     {stat.title}
                   </h3>
 
-                  {/* Bottom Icon */}
+                  {/* Bottom */}
                   <motion.div
                     whileHover={{ scale: 1.12, rotate: 6 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}

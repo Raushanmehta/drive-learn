@@ -18,51 +18,16 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { poppins } from "@/lib/fonts";
+import { siteMap, type DriveLearnHeroData } from "@/data";
 
-interface SlideData {
-  id: number;
-  eyebrow: string;
-  titleTop: string;
-  badge: string;
-  titleBottom: string;
-  description: string;
-  image: string;
+interface HeroSectionProps {
+  data?: DriveLearnHeroData;
 }
 
-const slides: SlideData[] = [
-  {
-    id: 1,
-    eyebrow: "Drive Today For A Safer Tomorrow",
-    titleTop: "Professional",
-    badge: "Driving Training",
-    titleBottom: "For a Brighter Future",
-    description:
-      "Learn to drive with certified instructors and modern training cars. Safe, practical and personalized driving lessons for all levels.",
-    image: "/images/hero-driving-lesson.jpg",
-  },
-  {
-    id: 2,
-    eyebrow: "Master The Road With Confidence",
-    titleTop: "Certified",
-    badge: "Expert Instructors",
-    titleBottom: "For Every Learner",
-    description:
-      "Structured driving courses tailored to your pace. Learn defensive driving skills and gain complete confidence behind the wheel.",
-    image: "/images/hero-driving-slide2.jpg",
-  },
-  {
-    id: 3,
-    eyebrow: "Pass Your Test On The First Attempt",
-    titleTop: "Guaranteed",
-    badge: "License Success",
-    titleBottom: "With High Pass Rate",
-    description:
-      "Comprehensive test preparation, mock tests, and RTO guidance to help you pass your official driving test with flying colors.",
-    image: "/images/hero-driving-slide3.jpg",
-  },
-];
+export default function HeroSection({ data: propData }: HeroSectionProps = {}) {
+  const data = propData || siteMap.hero;
+  const { slides, videoButtonText, videoModal } = data;
 
-export default function HeroSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -84,7 +49,7 @@ export default function HeroSection() {
 
   return (
     <section className={`relative w-full overflow-hidden bg-[#040e25] ${poppins.className}`}>
-      {/* Shadcn UI Carousel */}
+      {/* Carousel */}
       <Carousel
         setApi={setApi}
         opts={{
@@ -99,32 +64,32 @@ export default function HeroSection() {
         ]}
         className="w-full"
       >
-        <CarouselContent className="-ml-0">
+        <CarouselContent className="ml-0">
           {slides.map((slide, index) => (
             <CarouselItem
               key={slide.id}
-              className="pl-0 relative min-h-[520px] sm:min-h-[540px] lg:min-h-[580px] flex items-center"
+              className="relative pl-0 w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex items-center justify-center"
             >
-              {/* Background Slide Image */}
+              {/* Image */}
               <div className="absolute inset-0 z-0">
                 <Image
                   src={slide.image}
-                  alt={slide.eyebrow}
+                  alt={slide.titleTop}
                   fill
                   priority={index === 0}
-                  className="object-cover object-right md:object-[78%_center]"
+                  className="object-cover object-center transition-transform duration-1000 scale-100"
                 />
 
-                {/* Overlays for High Contrast and Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#040e25] via-[#040e25]/95 md:via-[#040e25]/85 lg:via-[#040e25]/75 to-transparent z-10 w-full md:w-[78%] lg:w-[65%]" />
-                <div className="absolute inset-0 bg-[#040e25]/25 z-10" />
-                <div className="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-[#040e25]/80 to-transparent z-10" />
+                {/* Background */}
+                <div className="absolute inset-0 bg-[#040e25]/60 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#040e25]/95 via-[#040e25]/65 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#040e25]/90 via-transparent to-[#040e25]/40 z-10" />
               </div>
 
-              {/* Slide Content */}
+              {/* Content */}
               <div className="max-w-[1420px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-16 sm:py-20 lg:py-20 relative z-20">
                 <div className="max-w-xl lg:max-w-2xl">
-                  {/* Eyebrow / Subtitle */}
+                  {/* Eyebrow */}
                   <motion.div
                     key={`eyebrow-${current}`}
                     initial={{ opacity: 0, y: 15 }}
@@ -136,7 +101,7 @@ export default function HeroSection() {
                     </span>
                   </motion.div>
 
-                  {/* Main Headline */}
+                  {/* Headline */}
                   <motion.h1
                     key={`headline-${current}`}
                     initial={{ opacity: 0, y: 20 }}
@@ -146,7 +111,7 @@ export default function HeroSection() {
                   >
                     <span className="block">{slide.titleTop}</span>
 
-                    {/* Slanted Red Parallelogram Banner */}
+                    {/* Slanted */}
                     <span className="inline-block relative my-1.5 sm:my-2">
                       <span className="inline-block bg-[#e51a24] text-white px-6 sm:px-8 py-1.5 sm:py-1.5 -skew-x-[20deg] rounded-[3px] shadow-lg">
                         <span className="inline-block skew-x-[20deg] italic font-extrabold tracking-wide">
@@ -158,7 +123,7 @@ export default function HeroSection() {
                     <span className="block">{slide.titleBottom}</span>
                   </motion.h1>
 
-                  {/* Description Paragraph */}
+                  {/* Description */}
                   <motion.p
                     key={`desc-${current}`}
                     initial={{ opacity: 0, y: 15 }}
@@ -169,21 +134,21 @@ export default function HeroSection() {
                     {slide.description}
                   </motion.p>
 
-                  {/* Action CTAs */}
+                  {/* Button */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.55, delay: 0.3, ease: "easeOut" }}
                     className="flex flex-wrap items-center gap-5 sm:gap-7 mt-2 sm:mt-2"
                   >
-                    {/* Explore Courses Button */}
+                    {/* Services */}
                     <motion.div
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
                       transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     >
                       <Link
-                        href="/courses"
+                        href="/driving-courses"
                         className="group inline-flex items-center gap-2.5 bg-[#e51a24] hover:bg-[#d41720] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-[6px] font-semibold text-[15px] sm:text-[16px] transition-all shadow-md"
                       >
                         <span>Explore Our Courses</span>
@@ -191,7 +156,7 @@ export default function HeroSection() {
                       </Link>
                     </motion.div>
 
-                    {/* Watch Video Button */}
+                    {/* Button */}
                     <motion.button
                       type="button"
                       onClick={() => setIsVideoOpen(true)}
@@ -205,7 +170,7 @@ export default function HeroSection() {
                         <IoPlay className="text-lg ml-0.5" />
                       </span>
                       <span className="font-semibold text-[15px] sm:text-[16px] text-white group-hover:text-[#e51a24] transition-colors">
-                        Watch Our Video
+                        {videoButtonText || "Watch Our Video"}
                       </span>
                     </motion.button>
                   </motion.div>
@@ -216,7 +181,7 @@ export default function HeroSection() {
         </CarouselContent>
       </Carousel>
 
-      {/* Center Bottom Scroll Down Pill Indicator */}
+      {/* Center */}
       <motion.div
         animate={{ y: [0, 6, 0] }}
         transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
@@ -231,7 +196,7 @@ export default function HeroSection() {
         </a>
       </motion.div>
 
-      {/* Right Side Vertical Carousel Dots Indicator (Interactive with Shadcn Carousel) */}
+      {/* Carousel */}
       <div className="absolute right-6 sm:right-10 top-1/2 -translate-y-1/2 z-20 hidden md:flex flex-col items-center gap-3">
         {slides.map((_, index) => {
           const isActive = current === index;
@@ -255,7 +220,7 @@ export default function HeroSection() {
         })}
       </div>
 
-      {/* Video Modal Popup */}
+      {/* Video */}
       <AnimatePresence>
         {isVideoOpen && (
           <motion.div
@@ -282,8 +247,8 @@ export default function HeroSection() {
                 <IoClose className="text-2xl" />
               </button>
               <iframe
-                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
-                title="Driving School Introduction Video"
+                src={videoModal?.embedUrl || "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"}
+                title={videoModal?.title || "Driving School Introduction Video"}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full border-0"

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { roboto, poppins } from "@/lib/fonts";
 import "./globals.css";
@@ -22,7 +23,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans">
         <Topbar />
-        <Navbar />
+        <Suspense fallback={null}>
+          <Navbar />
+        </Suspense>
         {children}
         <Footer />
       </body>

@@ -6,24 +6,15 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoChevronForward, IoMenu, IoClose } from "react-icons/io5";
 import { poppins } from "@/lib/fonts";
+import { siteMap, type DriveLearnNavbarData } from "@/data";
 
-interface NavItem {
-  name: string;
-  href: string;
+interface NavbarProps {
+  data?: DriveLearnNavbarData;
 }
 
-const navLinks: NavItem[] = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Driving Courses", href: "/courses" },
-  { name: "Team", href: "/team" },
-  { name: "Packages", href: "/packages" },
-  { name: "Testimonials", href: "/testimonials" },
-  { name: "Driving Test Preparation", href: "/test-preparation" },
-  { name: "Contact Us", href: "/contact" },
-];
-
-export default function Navbar() {
+export default function Navbar({ data: propData }: NavbarProps = {}) {
+  const data = propData || siteMap.navbar;
+  const { navLinks, cta } = data;
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,7 +22,7 @@ export default function Navbar() {
     <nav className={`w-full bg-[#061536] sticky top-0 z-50 shadow-md ${poppins.className}`}>
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex items-center justify-between h-[60px] md:h-[66px]">
-          {/* Desktop Navigation Links */}
+          {/* Nav */}
           <ul className="hidden xl:flex items-center gap-6 2xl:gap-8">
             {navLinks.map((link) => {
               const isActive =
@@ -61,7 +52,7 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* Mobile / Tablet Left Menu Toggle */}
+          {/* Table */}
           <div className="flex xl:hidden items-center gap-3">
             <button
               type="button"
@@ -80,7 +71,7 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Right Action Button: Enquiry Now */}
+          {/* Enquiry */}
           <div className="flex items-center">
             <motion.div
               whileHover={{ scale: 1.03 }}
@@ -88,10 +79,10 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <Link
-                href="/contact"
+                href={cta.href}
                 className="group flex items-center gap-2.5 bg-[#e51a24] hover:bg-[#d61720] text-white font-semibold text-[14px] sm:text-[14.5px] pl-5 pr-2 py-1.5 sm:py-2 rounded-full transition-all shadow-md"
               >
-                <span>Enquiry Now</span>
+                <span>{cta.text}</span>
                 <span className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-[#e51a24] text-xs font-bold shrink-0 transition-transform duration-200 group-hover:translate-x-0.5">
                   <IoChevronForward className="stroke-[2.5]" />
                 </span>
@@ -101,7 +92,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile / Tablet Navigation Drawer */}
+      {/* Nav */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

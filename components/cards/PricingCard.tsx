@@ -42,17 +42,17 @@ export default function PricingCard({
         : "border-gray-100"
         } ${poppins.className}`}
     >
-      {/* Popular Badge */}
+      {/* Badge */}
       {isPopular && (
         <div className="bg-[#e51a24] text-white py-1.5 px-4 text-center text-[11px] font-extrabold uppercase tracking-widest rounded-t-[14px]">
           MOST POPULAR
         </div>
       )}
 
-      {/* Main Content Area */}
+      {/* Content */}
       <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4 sm:space-y-5">
         <div>
-          {/* Card Header: Icon + Title + Tagline */}
+          {/* Headline */}
           <div className="flex items-start gap-4">
             <div
               className={`w-16 h-16 rounded-full flex items-center justify-center text-4xl shrink-0 shadow-sm ${isPopular
@@ -72,7 +72,7 @@ export default function PricingCard({
             </div>
           </div>
 
-          {/* Pricing Row */}
+          {/* Pricing */}
           <div className="mt-4 pb-4 border-b border-gray-100 flex items-baseline gap-1.5">
             <span className="text-3xl sm:text-[34px] font-extrabold text-[#e51a24] tracking-tight">
               {price}
@@ -82,7 +82,7 @@ export default function PricingCard({
             </span>
           </div>
 
-          {/* Feature List */}
+          {/* Features */}
           <ul className="mt-4 space-y-2">
             {features.map((feat, idx) => (
               <li
@@ -97,7 +97,7 @@ export default function PricingCard({
         </div>
       </div>
 
-      {/* Dark Navy Bottom Bar */}
+      {/* Nav */}
       <div className="bg-[#081839] text-white rounded-b-2xl p-3 sm:p-3.5 grid grid-cols-3 divide-x divide-white/10">
         {bottomFeatures.map((bFeat, idx) => {
           const BIcon = bFeat.icon;

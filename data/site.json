@@ -1,0 +1,1546 @@
+{
+  "DriveLearn": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "topbar": "DriveLearnTopbar1",
+          "navbar": "DriveLearnNavbar1",
+          "footer": "DriveLearnFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "hero",
+                "component": "DriveLearnHero1"
+              },
+              {
+                "key": "about",
+                "component": "DriveLearnAbout1"
+              },
+              {
+                "key": "services",
+                "component": "DriveLearnServices1"
+              },
+              {
+                "key": "whyChooseUs",
+                "component": "DriveLearnWhyChooseUs1"
+              },
+              {
+                "key": "stats",
+                "component": "DriveLearnStats1"
+              },
+              {
+                "key": "testimonial",
+                "component": "DriveLearnTestimonial1"
+              },
+              {
+                "key": "cta",
+                "component": "DriveLearnCta1"
+              }
+            ]
+          },
+          "about": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "DriveLearnPageTop1"
+              },
+              {
+                "key": "about",
+                "component": "DriveLearnAbout1"
+              },
+              {
+                "key": "ourMission",
+                "component": "DriveLearnOurMission1"
+              },
+              {
+                "key": "whyChooseUs",
+                "component": "DriveLearnWhyChooseUs1"
+              },
+              {
+                "key": "process",
+                "component": "DriveLearnProcess1"
+              },
+              {
+                "key": "stats",
+                "component": "DriveLearnStats1"
+              },
+              {
+                "key": "cta",
+                "component": "DriveLearnCta1"
+              }
+            ]
+          },
+          "contact": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "DriveLearnPageTop1"
+              },
+              {
+                "key": "contact",
+                "component": "DriveLearnContact1"
+              }
+            ]
+          },
+          "team": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "DriveLearnPageTop1"
+              },
+              {
+                "key": "team",
+                "component": "DriveLearnTeam1"
+              }
+            ]
+          },
+          "packages": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "DriveLearnPageTop1"
+              },
+              {
+                "key": "pricing",
+                "component": "DriveLearnPricing1"
+              }
+            ]
+          },
+          "enquiry": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "DriveLearnPageTop1"
+              },
+              {
+                "key": "enquiry",
+                "component": "DriveLearnEnquiry1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "topbar": {
+        "variants": {
+          "DriveLearnTopbar1": {
+            "logo": {
+              "src": "/logo/logo-blacks.png",
+              "alt": "DriveLearn Driving School",
+              "width": 380,
+              "height": 125,
+              "href": "/"
+            },
+            "contactInfo": {
+              "location": {
+                "line1": "3170 Rosewood Lane Unit 200,",
+                "line2": "Beverly Hills, CA 90210"
+              },
+              "phone": {
+                "number": "+1 000000000",
+                "href": "tel:+1000000000"
+              },
+              "emailTiming": {
+                "email": "info@xyz.com",
+                "href": "mailto:info@xyz.com",
+                "timing": "Mon - Sun: 9:00 AM - 8:00 PM"
+              }
+            }
+          }
+        }
+      },
+      "navbar": {
+        "variants": {
+          "DriveLearnNavbar1": {
+            "navLinks": [
+              {
+                "name": "Home",
+                "href": "/"
+              },
+              {
+                "name": "About Us",
+                "href": "/about"
+              },
+              {
+                "name": "Driving Courses",
+                "href": "/driving-courses"
+              },
+              {
+                "name": "Packages",
+                "href": "/packages"
+              },
+              {
+                "name": "Driving Test Preparation",
+                "href": "/drive-test"
+              },
+              {
+                "name": "Team",
+                "href": "/team"
+              },
+              {
+                "name": "Testimonials",
+                "href": "/testimonial"
+              },
+              {
+                "name": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "cta": {
+              "text": "Enquiry Now",
+              "href": "/enquiry"
+            }
+          }
+        }
+      },
+      "footer": {
+        "variants": {
+          "DriveLearnFooter1": {
+            "logo": {
+              "src": "/logo/logo-whites.png",
+              "alt": "DriveLearn Driving School",
+              "width": 380,
+              "height": 125,
+              "href": "/"
+            },
+            "description": "At DriveLearn, we are committed to providing high-quality driving education with experienced instructors, modern training vehicles and a focus on safe driving for every learner.",
+            "bgImage": "/images/footer-car-bg.jpg",
+            "quickLinks": [
+              {
+                "name": "Home",
+                "href": "/"
+              },
+              {
+                "name": "About Us",
+                "href": "/about"
+              },
+              {
+                "name": "Our Courses",
+                "href": "/driving-courses"
+              },
+              {
+                "name": "Packages",
+                "href": "/packages"
+              },
+              {
+                "name": "Driving Test Preparation",
+                "href": "/drive-test"
+              },
+              {
+                "name": "Testimonials",
+                "href": "/testimonial"
+              },
+              {
+                "name": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "ourServices": [
+              {
+                "name": "Beginner Driving Course",
+                "href": "/driving-courses/beginner-driving-course"
+              },
+              {
+                "name": "Driving License Training",
+                "href": "/driving-courses/driving-license-training"
+              },
+              {
+                "name": "Vehicle & Safety Training",
+                "href": "/driving-courses/vehicle-safety-training"
+              },
+              {
+                "name": "Refresher Driving Lessons",
+                "href": "/driving-courses/refresher-driving-lessons"
+              },
+              {
+                "name": "Intensive Fast-Track Course",
+                "href": "/driving-courses/intensive-fast-track-course"
+              },
+              {
+                "name": "Dual-Control Car Training",
+                "href": "/driving-courses/dual-control-car-training"
+              }
+            ],
+            "contact": {
+              "address": {
+                "line1": "3170 Rosewood Lane Unit 200,",
+                "line2": "Beverly Hills, CA 90210"
+              },
+              "phone": {
+                "display": "+1 000000000",
+                "href": "tel:+1000000000"
+              },
+              "email": {
+                "display": "info@xyz.com",
+                "href": "mailto:info@xyz.com"
+              },
+              "timing": "Mon - Sun: 9:00 AM - 8:00 PM"
+            },
+            "socialLinks": [
+              {
+                "platform": "Facebook",
+                "href": "https://facebook.com",
+                "label": "Facebook"
+              },
+              {
+                "platform": "Instagram",
+                "href": "https://instagram.com",
+                "label": "Instagram"
+              },
+              {
+                "platform": "YouTube",
+                "href": "https://youtube.com",
+                "label": "YouTube"
+              },
+              {
+                "platform": "LinkedIn",
+                "href": "https://linkedin.com",
+                "label": "LinkedIn"
+              }
+            ],
+            "copyright": "© 2026 DriveLearn. All Rights Reserved. Powered by Lestow"
+          }
+        }
+      },
+      "pageTopSection": {
+        "variants": {
+          "DriveLearnPageTop1": {
+            "defaultTitle": "About Us",
+            "defaultBreadcrumb": "About Us",
+            "defaultBgImage": "/images/page-top-bg.jpg"
+          }
+        }
+      },
+      "hero": {
+        "variants": {
+          "DriveLearnHero1": {
+            "slides": [
+              {
+                "id": 1,
+                "eyebrow": "Drive Today For A Safer Tomorrow",
+                "titleTop": "Professional",
+                "badge": "Driving Training",
+                "titleBottom": "For a Brighter Future",
+                "description": "Learn to drive with certified instructors and modern training cars. Safe, practical and personalized driving lessons for all levels.",
+                "image": "/images/hero-driving-lesson.jpg"
+              },
+              {
+                "id": 2,
+                "eyebrow": "Master The Road With Confidence",
+                "titleTop": "Certified",
+                "badge": "Expert Instructors",
+                "titleBottom": "For Every Learner",
+                "description": "Structured driving courses tailored to your pace. Learn defensive driving skills and gain complete confidence behind the wheel.",
+                "image": "/images/hero-driving-slide2.jpg"
+              },
+              {
+                "id": 3,
+                "eyebrow": "Pass Your Test On The First Attempt",
+                "titleTop": "Guaranteed",
+                "badge": "License Success",
+                "titleBottom": "With High Pass Rate",
+                "description": "Comprehensive test preparation, mock tests, and RTO guidance to help you pass your official driving test with flying colors.",
+                "image": "/images/hero-driving-slide3.jpg"
+              }
+            ],
+            "videoButtonText": "Watch Our Video",
+            "videoModal": {
+              "title": "Driving School Introduction Video",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
+            }
+          }
+        }
+      },
+      "about": {
+        "variants": {
+          "DriveLearnAbout1": {
+            "eyebrow": "About Us",
+            "title": {
+              "part1": "Learn To Drive,",
+              "part2": "Drive With Confidence."
+            },
+            "description": "We are a professional driving school committed to providing safe, practical and confidence-building driving lessons. Our experienced instructors help you learn driving with the right skills, road awareness and traffic rules for a safer tomorrow.",
+            "experienceBadge": {
+              "number": "10+",
+              "label": "Years Experience"
+            },
+            "images": {
+              "main": "/images/hero-driving-lesson.jpg",
+              "overlapping": "/images/about-woman-keys.jpg",
+              "videoThumb": "/images/about-video-thumb.jpg"
+            },
+            "checkListCol1": [
+              "Certified Instructors",
+              "Practical Training",
+              "Parking Skills",
+              "Road Safety Rules"
+            ],
+            "checkListCol2": [
+              "Flexible Timing",
+              "Modern Training Cars",
+              "Personalized Coaching",
+              "100% Success Rate"
+            ],
+            "cta": {
+              "text": "ABOUT MORE",
+              "href": "/about"
+            },
+            "videoModal": {
+              "title": "About DriveLearn Video",
+              "embedUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
+            }
+          }
+        }
+      },
+      "services": {
+        "variants": {
+          "DriveLearnServices1": {
+            "eyebrow": "Our Services",
+            "courseEyebrow": "Our Courses",
+            "title": {
+              "part1": "Professional",
+              "part2": "Driving Services"
+            },
+            "courseTitle": {
+              "part1": "Professional ",
+              "part2": "Driving Courses"
+            },
+            "pageTop": {
+              "title": "Driving Courses",
+              "breadcrumb": "Driving Courses"
+            },
+            "description": "We offer a variety of driving training programs to help you gain the skills, knowledge and confidence needed to become a safe and responsible driver.",
+            "courseList": [
+              {
+                "number": "01",
+                "slug": "beginner-driving-course",
+                "title": "Beginner Driving Course",
+                "description": "Comprehensive lessons for first-time learners covering car controls, road signs, parking and safe driving fundamentals.",
+                "image": "/images/service-driving-courses.jpg",
+                "icon": "PiSteeringWheelBold",
+                "href": "/driving-courses/beginner-driving-course",
+                "courseDetail": {
+                  "eyebrow": "COURSE DETAILS",
+                  "heroImage": "/images/service-driving-courses.jpg",
+                  "title": {
+                    "part1": "Beginner ",
+                    "part2": "Driving Course"
+                  },
+                  "description": "Start your driving journey with our beginner course designed for first-time learners. Learn the basics of driving with professional instructors and gain confidence on the road.",
+                  "intro": {
+                    "badge": "EXPERIENCED SCHOOL",
+                    "title": "We're an Experienced Friendly Driving School",
+                    "description": "Our Beginner Driving Course is specially designed for individuals who are new to driving. This course helps you understand the basics of vehicle operation, traffic rules, road safety and build confidence behind the wheel with hands-on training from expert instructors."
+                  },
+                  "highlights": [
+                    { "icon": "IoPeople", "title": "Certified Instructors" },
+                    { "icon": "IoCar", "title": "Modern Training Vehicles" },
+                    { "icon": "IoShieldCheckmark", "title": "Safe & Secure Learning" },
+                    { "icon": "IoTime", "title": "Flexible Class Timings" }
+                  ],
+                  "advantages": {
+                    "title": "Driving School Advantages",
+                    "description": "Learn with professional instructors and get complete support to become a safe and confident driver.",
+                    "image": "/images/driver-girl-clean.png",
+                    "items": [
+                      "60 Mins Driving Lesson",
+                      "Additional Time Available",
+                      "2 Hour Highway Lesson",
+                      "Car Rental For Road Test",
+                      "Road Test Appointment",
+                      "7 Hour Pre-Licensing Course"
+                    ]
+                  },
+                  "features": {
+                    "title": "Complete Driving Course Features",
+                    "description": "Our beginner course covers everything you need to know to start driving confidently. From basic vehicle control to real road practice, we ensure a safe and supportive learning experience.",
+                    "items": [
+                      "5 Hour Pre License CB-009 Course",
+                      "Car To Practice In (Automatic Transmission Only)",
+                      "Road Test Appointment"
+                    ]
+                  },
+                  "pricingTable": {
+                    "headers": {
+                      "package": "Course Package",
+                      "price": "Price (₹)"
+                    },
+                    "packages": [
+                      { "package": "For 5 Hours Training:", "price": "₹5,000.00" },
+                      { "package": "For 7.5 Hours (Five Lessons of 1 Hour)", "price": "₹8,750.00" },
+                      { "package": "For 10 Hours Training:", "price": "₹9,000.00" },
+                      { "package": "Include Road Test Package:", "price": "₹4,500.00" }
+                    ],
+                    "inclusiveRow": {
+                      "title": "Road test package includes:",
+                      "items": [
+                        "90 Min Simulated Road Test",
+                        "Free Road Test Appointment (3 Weeks)",
+                        "Car Rental For Test"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "number": "02",
+                "slug": "driving-license-training",
+                "title": "Driving License Training",
+                "description": "Get expert guidance and complete road test preparation to pass your official driving license exam with ease.",
+                "image": "/images/service-driving-license.jpg",
+                "icon": "IoIdCard",
+                "href": "/driving-courses/driving-license-training",
+                "courseDetail": {
+                  "eyebrow": "COURSE DETAILS",
+                  "heroImage": "/images/service-driving-license.jpg",
+                  "title": {
+                    "part1": "Driving License ",
+                    "part2": "Training"
+                  },
+                  "description": "Get expert guidance and complete road test preparation to pass your official driving license exam with ease.",
+                  "intro": {
+                    "badge": "RTO ASSISTANCE",
+                    "title": "Complete RTO Test Preparation & Training",
+                    "description": "Our Driving License Training course is designed to guide you through RTO driving test routes, critical maneuver evaluations, road signage exams and simulator practices."
+                  },
+                  "highlights": [
+                    { "icon": "IoPeople", "title": "RTO Certified Instructors" },
+                    { "icon": "IoCar", "title": "Test-Ready Vehicles" },
+                    { "icon": "IoShieldCheckmark", "title": "Mock Road Tests" },
+                    { "icon": "IoTime", "title": "Flexible Slots" }
+                  ],
+                  "advantages": {
+                    "title": "License Training Advantages",
+                    "description": "Learn exactly what the RTO examiner looks for to pass on your very first attempt.",
+                    "image": "/images/driver-girl-clean.png",
+                    "items": [
+                      "Mock RTO Driving Test",
+                      "Parallel & Reverse Parking Focus",
+                      "Traffic Rules & Signs Prep",
+                      "Car Provided For Driving Test",
+                      "Test Slot Booking Assistance",
+                      "Pre-Test Confidence Drive"
+                    ]
+                  },
+                  "features": {
+                    "title": "License Course Features",
+                    "description": "Comprehensive road test preparation covering car controls, road safety, parking and official exam patterns.",
+                    "items": [
+                      "8 Hours Dedicated Practical Driving",
+                      "Mock Test on Official RTO Track",
+                      "Document & Appointment Assistance"
+                    ]
+                  },
+                  "pricingTable": {
+                    "headers": {
+                      "package": "Course Package",
+                      "price": "Price (₹)"
+                    },
+                    "packages": [
+                      { "package": "Express License Prep (5 Hours):", "price": "₹4,500.00" },
+                      { "package": "Complete Test Prep (10 Hours):", "price": "₹8,500.00" },
+                      { "package": "Mock Test + Car Rental:", "price": "₹3,500.00" },
+                      { "package": "Full RTO Assistance Package:", "price": "₹11,000.00" }
+                    ],
+                    "inclusiveRow": {
+                      "title": "License package includes:",
+                      "items": [
+                        "Mock RTO Track Evaluation",
+                        "Pre-Test Simulator Briefing",
+                        "Car Provided For Exam Day"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "number": "03",
+                "slug": "vehicle-safety-training",
+                "title": "Vehicle & Safety Training",
+                "description": "Learn essential vehicle mechanics, hazard anticipation and defensive road safety measures for all driving conditions.",
+                "image": "/images/service-vehicle-insurance.jpg",
+                "icon": "IoShieldCheckmark",
+                "href": "/driving-courses/vehicle-safety-training",
+                "courseDetail": {
+                  "eyebrow": "COURSE DETAILS",
+                  "heroImage": "/images/service-vehicle-insurance.jpg",
+                  "title": {
+                    "part1": "Vehicle & Safety ",
+                    "part2": "Training"
+                  },
+                  "description": "Learn essential vehicle mechanics, hazard anticipation and defensive road safety measures for all driving conditions.",
+                  "intro": {
+                    "badge": "SAFETY FIRST",
+                    "title": "Defensive Driving & Vehicle Maintenance Mastery",
+                    "description": "Gain hands-on expertise in vehicle fluid checks, emergency braking, blind spot detection and hazardous weather navigation techniques."
+                  },
+                  "highlights": [
+                    { "icon": "IoPeople", "title": "Safety Experts" },
+                    { "icon": "IoCar", "title": "Dual Control Vehicles" },
+                    { "icon": "IoShieldCheckmark", "title": "Defensive Driving Certified" },
+                    { "icon": "IoTime", "title": "Flexible Batches" }
+                  ],
+                  "advantages": {
+                    "title": "Vehicle Safety Advantages",
+                    "description": "Master proactive defensive road skills and unexpected emergency handling.",
+                    "image": "/images/driver-girl-clean.png",
+                    "items": [
+                      "Hazard Perception Drills",
+                      "Emergency Braking Practice",
+                      "Tyre Change & Basic Mechanics",
+                      "Night & Rain Driving Modules",
+                      "Safe Distance Calculations",
+                      "Accident Prevention Tactics"
+                    ]
+                  },
+                  "features": {
+                    "title": "Safety Training Features",
+                    "description": "Comprehensive safety-first curriculum covering defensive reactions, road etiquette and maintenance basics.",
+                    "items": [
+                      "Defensive Driving Certification",
+                      "Hands-on Vehicle Inspection",
+                      "Simulator Hazard Tests"
+                    ]
+                  },
+                  "pricingTable": {
+                    "headers": {
+                      "package": "Course Package",
+                      "price": "Price (₹)"
+                    },
+                    "packages": [
+                      { "package": "Defensive Driving (6 Hours):", "price": "₹6,000.00" },
+                      { "package": "Vehicle Safety & Maintenance (10 Hours):", "price": "₹9,500.00" },
+                      { "package": "Advanced Highway & Night Drive:", "price": "₹7,500.00" }
+                    ],
+                    "inclusiveRow": {
+                      "title": "Safety course includes:",
+                      "items": [
+                        "Real-world Hazard Reaction Evaluation",
+                        "Maintenance Checklist Guide",
+                        "Defensive Driver Certificate"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "number": "04",
+                "slug": "refresher-driving-lessons",
+                "title": "Refresher Driving Lessons",
+                "description": "Perfect for license holders looking to rebuild confidence, highway driving skills, and advanced night driving.",
+                "image": "/images/drivetest-confidences.jpg",
+                "icon": "IoSpeedometerOutline",
+                "href": "/driving-courses/refresher-driving-lessons",
+                "courseDetail": {
+                  "eyebrow": "COURSE DETAILS",
+                  "heroImage": "/images/drivetest-confidences.jpg",
+                  "title": {
+                    "part1": "Refresher Driving ",
+                    "part2": "Lessons"
+                  },
+                  "description": "Perfect for license holders looking to rebuild confidence, highway driving skills, and advanced night driving.",
+                  "intro": {
+                    "badge": "BOOST CONFIDENCE",
+                    "title": "Rebuild Your Driving Confidence & Road Ease",
+                    "description": "Already have a license but feel hesitant in heavy traffic or busy highways? Our refresher lessons help you regain full control with zero pressure."
+                  },
+                  "highlights": [
+                    { "icon": "IoPeople", "title": "Patient Instructors" },
+                    { "icon": "IoCar", "title": "Modern Dual Control Cars" },
+                    { "icon": "IoShieldCheckmark", "title": "Zero Pressure Environment" },
+                    { "icon": "IoTime", "title": "Custom Flexible Schedule" }
+                  ],
+                  "advantages": {
+                    "title": "Refresher Course Advantages",
+                    "description": "Customized to target specifically the areas where you feel hesitation.",
+                    "image": "/images/driver-girl-clean.png",
+                    "items": [
+                      "Heavy City Traffic Navigation",
+                      "Multi-Lane Highway Merging",
+                      "Tight Mall Parking Practice",
+                      "Flyovers & Roundabouts Training",
+                      "Night Driving Comfort",
+                      "Stress-Free Dual Pedal Safety"
+                    ]
+                  },
+                  "features": {
+                    "title": "Refresher Course Features",
+                    "description": "Personalized one-on-one sessions tailored to your individual comfort level and routes.",
+                    "items": [
+                      "Practice on Your Daily Commute Routes",
+                      "Flexible Weekday & Weekend Hours",
+                      "Instructor Support from Day One"
+                    ]
+                  },
+                  "pricingTable": {
+                    "headers": {
+                      "package": "Course Package",
+                      "price": "Price (₹)"
+                    },
+                    "packages": [
+                      { "package": "Weekend Refresher (5 Hours):", "price": "₹4,500.00" },
+                      { "package": "Complete Confidence (10 Hours):", "price": "₹8,000.00" },
+                      { "package": "Highway Focus (4 Hours):", "price": "₹4,000.00" }
+                    ],
+                    "inclusiveRow": {
+                      "title": "Refresher package includes:",
+                      "items": [
+                        "Personalized Route Planning",
+                        "One-on-one Dedicated Mentor",
+                        "Dual-Pedal Safe Car"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "number": "05",
+                "slug": "intensive-fast-track-course",
+                "title": "Intensive Fast-Track Course",
+                "description": "Accelerated learning schedule designed to prepare you for road driving and license testing within a short period.",
+                "image": "/images/drivetest-instructor.jpg",
+                "icon": "IoSchoolOutline",
+                "href": "/driving-courses/intensive-fast-track-course",
+                "courseDetail": {
+                  "eyebrow": "COURSE DETAILS",
+                  "heroImage": "/images/drivetest-instructor.jpg",
+                  "title": {
+                    "part1": "Intensive ",
+                    "part2": "Fast-Track Course"
+                  },
+                  "description": "Accelerated learning schedule designed to prepare you for road driving and license testing within a short period.",
+                  "intro": {
+                    "badge": "FAST TRACK",
+                    "title": "Master Driving In Just 7 to 10 Days",
+                    "description": "Designed for quick learners and students on tight schedules who need to become test-ready fast through concentrated daily practical training."
+                  },
+                  "highlights": [
+                    { "icon": "IoPeople", "title": "Top Senior Trainers" },
+                    { "icon": "IoCar", "title": "Dedicated Vehicle" },
+                    { "icon": "IoShieldCheckmark", "title": "Accelerated Curriculum" },
+                    { "icon": "IoTime", "title": "Daily 2-Hour Batches" }
+                  ],
+                  "advantages": {
+                    "title": "Fast-Track Advantages",
+                    "description": "Rapid skill acquisition through continuous, immersive daily driving practice.",
+                    "image": "/images/driver-girl-clean.png",
+                    "items": [
+                      "Daily 2 Hours Immersive Driving",
+                      "Complete Curriculum in 1-2 Weeks",
+                      "Quick Road Test Readiness",
+                      "City, Highway & Parking Drills",
+                      "Priority Slot Booking",
+                      "Accelerated Licence Support"
+                    ]
+                  },
+                  "features": {
+                    "title": "Fast-Track Course Features",
+                    "description": "Condensed, high-intensity modules that fast-track vehicle mastery without compromising safety.",
+                    "items": [
+                      "15 Practical Driving Hours in 7-10 Days",
+                      "Full RTO Test Simulation Included",
+                      "Priority Dedicated Senior Instructor"
+                    ]
+                  },
+                  "pricingTable": {
+                    "headers": {
+                      "package": "Course Package",
+                      "price": "Price (₹)"
+                    },
+                    "packages": [
+                      { "package": "7-Day Fast Track (14 Hours):", "price": "₹12,500.00" },
+                      { "package": "10-Day Pro Intensive (20 Hours):", "price": "₹16,500.00" },
+                      { "package": "Fast Track + Test Car:", "price": "₹14,500.00" }
+                    ],
+                    "inclusiveRow": {
+                      "title": "Intensive package includes:",
+                      "items": [
+                        "Priority Batch Timing Allocation",
+                        "Daily Progress Diagnostic Report",
+                        "Car for Official Road Test"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "number": "06",
+                "slug": "dual-control-car-training",
+                "title": "Dual-Control Car Training",
+                "description": "Hands-on practice in modern dual-control training cars with both manual and automatic transmission options.",
+                "image": "/images/enquiry-car.jpg",
+                "icon": "IoCarSportOutline",
+                "href": "/driving-courses/dual-control-car-training",
+                "courseDetail": {
+                  "eyebrow": "COURSE DETAILS",
+                  "heroImage": "/images/enquiry-car.jpg",
+                  "title": {
+                    "part1": "Dual-Control ",
+                    "part2": "Car Training"
+                  },
+                  "description": "Hands-on practice in modern dual-control training cars with both manual and automatic transmission options.",
+                  "intro": {
+                    "badge": "MAXIMUM SAFETY",
+                    "title": "100% Safe Driving With Certified Dual Control",
+                    "description": "Our training cars feature certified dual brake and clutch pedals on the instructor side, ensuring total peace of mind for nervous beginners."
+                  },
+                  "highlights": [
+                    { "icon": "IoPeople", "title": "Safety Certified Mentors" },
+                    { "icon": "IoCar", "title": "Manual & Automatic Options" },
+                    { "icon": "IoShieldCheckmark", "title": "Dual Control Override" },
+                    { "icon": "IoTime", "title": "Flexible Morning & Evening" }
+                  ],
+                  "advantages": {
+                    "title": "Dual Control Advantages",
+                    "description": "Zero risk of accidents while you build muscle memory and car feel.",
+                    "image": "/images/driver-girl-clean.png",
+                    "items": [
+                      "Instructor Instant Override Safety",
+                      "Choose Manual or Automatic Fleet",
+                      "Eliminate Driving Anxiety",
+                      "Smooth Clutch & Gear Progression",
+                      "Pedal Control Fine-Tuning",
+                      "Safe Real-Road Traffic Practice"
+                    ]
+                  },
+                  "features": {
+                    "title": "Dual Control Course Features",
+                    "description": "Experience modern training with air-conditioned, safety-equipped modern vehicles.",
+                    "items": [
+                      "Choice of Hatchback or Sedan Cars",
+                      "Manual and Automatic Options",
+                      "Comprehensive Safety Audit Compliant"
+                    ]
+                  },
+                  "pricingTable": {
+                    "headers": {
+                      "package": "Course Package",
+                      "price": "Price (₹)"
+                    },
+                    "packages": [
+                      { "package": "Manual Dual-Control (10 Hours):", "price": "₹8,500.00" },
+                      { "package": "Automatic Dual-Control (10 Hours):", "price": "₹10,500.00" },
+                      { "package": "Combined Manual + Auto (15 Hours):", "price": "₹13,500.00" }
+                    ],
+                    "inclusiveRow": {
+                      "title": "Dual-control package includes:",
+                      "items": [
+                        "Fully Insured Fleet Training",
+                        "Dual Foot Pedal Mechanism Inspection",
+                        "Air Conditioned Comfort Training"
+                      ]
+                    }
+                  }
+                }
+              }
+            ],
+            "sidebar": {
+              "title": "Driving Courses",
+              "courses": [
+                {
+                  "title": "Beginner Driving Course",
+                  "href": "/driving-courses/beginner-driving-course"
+                },
+                {
+                  "title": "Driving License Training",
+                  "href": "/driving-courses/driving-license-training"
+                },
+                {
+                  "title": "Vehicle & Safety Training",
+                  "href": "/driving-courses/vehicle-safety-training"
+                },
+                {
+                  "title": "Refresher Driving Lessons",
+                  "href": "/driving-courses/refresher-driving-lessons"
+                },
+                {
+                  "title": "Intensive Fast-Track Course",
+                  "href": "/driving-courses/intensive-fast-track-course"
+                },
+                {
+                  "title": "Dual-Control Car Training",
+                  "href": "/driving-courses/dual-control-car-training"
+                }
+              ],
+              "callout": {
+                "image": "/images/drivetest-cone.jpg",
+                "title": "Best Guidance To \nEach Student, That's \nWhy We Produce \nA Confident Drivers",
+                "subtitle": "Join Our Driving Courses, Call us",
+                "phone": "+1 000000000",
+                "phoneHref": "tel:+1000000000"
+              }
+            }
+          }
+        }
+      },
+      "whyChooseUs": {
+        "variants": {
+          "DriveLearnWhyChooseUs1": {
+            "eyebrow": "Why Choose Us",
+            "title": {
+              "part1": "Your Trusted Partner",
+              "part2": "For Safe Driving"
+            },
+            "description": "We are committed to providing high-quality driving education with professional instructors, modern vehicles and a student-focused approach.",
+            "centerImage": "/images/car-stering-2.png",
+            "leftFeatures": [
+              {
+                "number": "01",
+                "title": "Licensed",
+                "description": "We are a fully licensed driving school, ensuring safe, legal and standardized training.",
+                "icon": "FaAward",
+                "iconBg": "red",
+                "borderSide": "left",
+                "borderColor": "red",
+                "align": "left"
+              },
+              {
+                "number": "02",
+                "title": "Experienced Instructors",
+                "description": "Learn from professional certified instructors who make driving easy, safe and confident.",
+                "icon": "IoPeople",
+                "iconBg": "navy",
+                "borderSide": "left",
+                "borderColor": "navy",
+                "align": "left"
+              },
+              {
+                "number": "03",
+                "title": "Modern Training Vehicles",
+                "description": "Practice with well-maintained latest model training cars for a better learning experience.",
+                "icon": "IoCar",
+                "iconBg": "red",
+                "borderSide": "left",
+                "borderColor": "red",
+                "align": "left"
+              }
+            ],
+            "rightFeatures": [
+              {
+                "number": "04",
+                "title": "Safe & Practical Training",
+                "description": "We focus on real-road practical training with defensive skills and safety as top priority.",
+                "icon": "IoShieldCheckmark",
+                "iconBg": "navy",
+                "borderSide": "right",
+                "borderColor": "navy",
+                "align": "right"
+              },
+              {
+                "number": "05",
+                "title": "Flexible Scheduling",
+                "description": "Choose class timings that work best for your routine, including weekday and weekend options.",
+                "icon": "IoCalendar",
+                "iconBg": "red",
+                "borderSide": "right",
+                "borderColor": "red",
+                "align": "right"
+              },
+              {
+                "number": "06",
+                "title": "Affordable Rates",
+                "description": "Get high-quality certified driving education with transparent pricing and no hidden costs.",
+                "icon": "FaHandHoldingDollar",
+                "iconBg": "navy",
+                "borderSide": "right",
+                "borderColor": "navy",
+                "align": "right"
+              }
+            ]
+          }
+        }
+      },
+      "stats": {
+        "variants": {
+          "DriveLearnStats1": {
+            "bgImage": "/images/stats-cars-bg.jpg",
+            "statsList": [
+              {
+                "id": 1,
+                "verticalLabel": "EXPERIENCE",
+                "target": 16,
+                "suffix": "+",
+                "title": "Student Traind",
+                "icon": "TbSteeringWheel"
+              },
+              {
+                "id": 2,
+                "verticalLabel": "LEANERS",
+                "target": 18,
+                "suffix": "k",
+                "title": "Experienced Instructors",
+                "icon": "TbUserStar"
+              },
+              {
+                "id": 3,
+                "verticalLabel": "SERVICE AREAS",
+                "target": 34,
+                "suffix": "",
+                "title": "Modern Training Vehicles",
+                "icon": "TbMap2"
+              },
+              {
+                "id": 4,
+                "verticalLabel": "INSTRUCTORS",
+                "target": 290,
+                "suffix": "",
+                "title": "Success Rate",
+                "icon": "TbUserCheck"
+              }
+            ]
+          }
+        }
+      },
+      "testimonial": {
+        "variants": {
+          "DriveLearnTestimonial1": {
+            "pageTop": {
+              "title": "Testimonials",
+              "breadcrumb": "Testimonials"
+            },
+            "bgImage": "/images/testimonial-bg-girl.jpg",
+            "eyebrow": "Testimonial",
+            "title": {
+              "part1": "What our ",
+              "part2": "Students Say"
+            },
+            "homeTitle": {
+              "part1": "Reviews &",
+              "part2": "Testimonials"
+            },
+            "description": "Real stories from our learners who have gained confidence and driving skills with us.",
+            "homeDescription": "See what our students say about their learning experience, our instructors and their journey towards becoming confident drivers.",
+            "rating": {
+              "text": "Excellent",
+              "score": "4.8",
+              "totalStars": 5,
+              "activeStars": 4
+            },
+            "cta": {
+              "text": "READ MORE REVIEWS",
+              "href": "/testimonials"
+            },
+            "testimonials": [
+              {
+                "title": "Bahut Achha Driving School Hai.",
+                "review": "Yahan ke instructors bahut patient hain aur har cheez ko clearly samjhate hain. Inki training ki wajah se mujhe driving me confidence mila. Main is driving school ko sabko recommend karunga.",
+                "name": "Amit Sharma",
+                "location": "NEW DELHI",
+                "avatar": "/images/reviewer-amit.jpg",
+                "rating": 5
+              },
+              {
+                "title": "Professional Team & Training.",
+                "review": "Mera driving experience yahan bahut accha raha. Staff bahut supportive hai aur training cars bhi well-maintained hain. Yahan seekhna easy aur comfortable hai. Highly recommended!",
+                "name": "Priya Verma",
+                "location": "GURGAON",
+                "avatar": "/images/reviewer-priya.jpg",
+                "rating": 5
+              },
+              {
+                "title": "Passed In First Attempt!",
+                "review": "Instructors ne test routes par itni achhi practice karayi ki maine pehle hi attempt me RTO driving test pass kar liya. Inka training system lajawab hai.",
+                "name": "Rohit Malhotra",
+                "location": "NOIDA",
+                "avatar": "/images/reviewer-amit.jpg",
+                "rating": 5
+              },
+              {
+                "title": "Best For Beginners.",
+                "review": "Mujhe driving se bahut darr lagta tha, par yahan ke calm environment aur step-by-step guidance se mera saara darr khatam ho gaya. Thank you DriveLearn!",
+                "name": "Sneha Patel",
+                "location": "NEW DELHI",
+                "avatar": "/images/reviewer-priya.jpg",
+                "rating": 5
+              },
+              {
+                "title": "Flexible Timings & Great Cars.",
+                "review": "Meri job ki wajah se weekend batches best the. Training cars bilkul nayi aur clean hain. Dual-control pedals se safe feel hota hai.",
+                "name": "Vikram Singh",
+                "location": "FARIDABAD",
+                "avatar": "/images/reviewer-amit.jpg",
+                "rating": 5
+              },
+              {
+                "title": "Affordable & Trustworthy.",
+                "review": "Koi hidden charges nahi hain. Jo commit kiya tha, wahi complete training aur guidance provide ki. Sabhi ko yahan se hi driving sikhni chahiye.",
+                "name": "Ananya Roy",
+                "location": "GHAZIABAD",
+                "avatar": "/images/reviewer-priya.jpg",
+                "rating": 5
+              }
+            ]
+          }
+        }
+      },
+      "cta": {
+        "variants": {
+          "DriveLearnCta1": {
+            "bgImage": "/images/footer-car-bg.jpg",
+            "title": {
+              "part1": "Start Your",
+              "part2": "Driving Journey",
+              "part3": "Today!"
+            },
+            "description": "Join our expert-led driving courses and build your confidence on the road.",
+            "button": {
+              "text": "ENQUIRE NOW",
+              "href": "/enquiry"
+            }
+          }
+        }
+      },
+      "team": {
+        "variants": {
+          "DriveLearnTeam1": {
+            "eyebrow": "OUR TEAM",
+            "title": {
+              "part1": "Meet Our",
+              "part2": "Expert Instructors"
+            },
+            "description": "Our qualified and patient driving instructors are dedicated to giving you the skills and confidence to pass your test and drive safely for life.",
+            "members": [
+              {
+                "name": "Mac Alexixe",
+                "role": "CEO, Founder",
+                "image": "/images/team-mac-alexixes.jpg"
+              },
+              {
+                "name": "Alex Julian",
+                "role": "Instructor",
+                "image": "/images/team-alex-julians.jpg"
+              },
+              {
+                "name": "Jenifer Lopez",
+                "role": "Instructor",
+                "image": "/images/team-jenifer-lopezs.jpg"
+              },
+              {
+                "name": "Henry Joseph",
+                "role": "Senior Instructor",
+                "image": "/images/team-henry-josephs.jpg"
+              },
+              {
+                "name": "Poppy Joanne",
+                "role": "Instructor",
+                "image": "/images/team-poppy-joannes.jpg"
+              },
+              {
+                "name": "Oscar Rhys",
+                "role": "Instructor",
+                "image": "/images/team-oscar-rhyss.jpg"
+              },
+              {
+                "name": "James Charles",
+                "role": "Senior Instructor",
+                "image": "/images/team-james-charless.jpg"
+              },
+              {
+                "name": "Jessica Madison",
+                "role": "Junior Instructor",
+                "image": "/images/team-jessica-madisons.jpg"
+              }
+            ]
+          }
+        }
+      },
+      "process": {
+        "variants": {
+          "DriveLearnProcess1": {
+            "eyebrow": "Our Work Process",
+            "title": {
+              "part1": "Building Confident Drivers",
+              "part2": "For A Safer Tomorrow"
+            },
+            "description": "At DriveLearn, we are committed to providing high-quality driving education with experienced instructors, modern training vehicles and a focus on safe driving for every learner. Our goal is to turn beginners into confident, skilled and responsible drivers.",
+            "checklist": [
+              {
+                "col1": "Experienced Instructors",
+                "col2": "Practical & Road Safety Training"
+              },
+              {
+                "col1": "Modern Training Vehicles",
+                "col2": "Personalized Guidance"
+              },
+              {
+                "col1": "Flexible Learning Schedules",
+                "col2": "High Success Rate"
+              }
+            ],
+            "driverImage": "/images/driver-girl-clean.png",
+            "calloutCard": {
+              "videoThumbnail": "/images/process-video-thumb.jpg",
+              "supportTitle": "24/7 Support Team",
+              "phone": "+1 000000000",
+              "phoneHref": "tel:+1000000000"
+            }
+          }
+        }
+      },
+      "pricing": {
+        "variants": {
+          "DriveLearnPricing1": {
+            "eyebrow": "PRICING",
+            "title": {
+              "part1": "Our Driving",
+              "part2": "Course Packages"
+            },
+            "description": "Choose from our flexible driving course packages designed to match your learning needs, schedule and experience level.",
+            "packages": [
+              {
+                "title": "Basic Course",
+                "tagline": "Perfect for first-time learners who want to start with the basics.",
+                "price": "₹6,999",
+                "headerIcon": "IoSchool",
+                "features": [
+                  "10 Hours of Practical Training",
+                  "Basic Driving Skills",
+                  "Traffic Rules & Road Signs",
+                  "One-on-One Instructor",
+                  "Flexible Scheduling"
+                ],
+                "bottomFeatures": [
+                  {
+                    "icon": "TbSteeringWheel",
+                    "label": "Practical Training"
+                  },
+                  {
+                    "icon": "TbRoad",
+                    "label": "Road Safety"
+                  },
+                  {
+                    "icon": "IoCalendarOutline",
+                    "label": "Flexible Timings"
+                  }
+                ]
+              },
+              {
+                "title": "Standard Course",
+                "tagline": "A balanced package with complete driving training for all learners.",
+                "price": "₹11,999",
+                "headerIcon": "TbSteeringWheel",
+                "isPopular": true,
+                "features": [
+                  "20 Hours of Practical Training",
+                  "City & Highway Driving",
+                  "Parking & Reverse Driving",
+                  "Traffic Rules & Safety Training",
+                  "Flexible Class Timings",
+                  "Dedicated Trainer"
+                ],
+                "bottomFeatures": [
+                  {
+                    "icon": "IoCar",
+                    "label": "City Driving"
+                  },
+                  {
+                    "icon": "TbRoad",
+                    "label": "Highway Driving"
+                  },
+                  {
+                    "icon": "TbParking",
+                    "label": "Parking Practice"
+                  }
+                ]
+              },
+              {
+                "title": "Advanced Course",
+                "tagline": "For confident learners who want to master advanced driving skills.",
+                "price": "₹16,999",
+                "headerIcon": "IoSettingsSharp",
+                "features": [
+                  "30 Hours of Practical Training",
+                  "City, Highway & Night Driving",
+                  "Advanced Parking Techniques",
+                  "Defensive Driving Training",
+                  "Real Traffic Practice",
+                  "Flexible Scheduling"
+                ],
+                "bottomFeatures": [
+                  {
+                    "icon": "IoMoon",
+                    "label": "Night Driving"
+                  },
+                  {
+                    "icon": "IoShieldCheckmark",
+                    "label": "Defensive Driving"
+                  },
+                  {
+                    "icon": "IoPeople",
+                    "label": "Expert Instructor"
+                  }
+                ]
+              },
+              {
+                "title": "Premium Course",
+                "tagline": "Complete training for a safe and confident driving experience.",
+                "price": "₹22,999",
+                "headerIcon": "IoDiamond",
+                "features": [
+                  "40 Hours of Practical Training",
+                  "City, Highway & Night Driving",
+                  "Advanced Maneuvers",
+                  "Defensive & Safe Driving",
+                  "Mock Driving Test",
+                  "Lifetime Guidance"
+                ],
+                "bottomFeatures": [
+                  {
+                    "icon": "IoCar",
+                    "label": "Complete Training"
+                  },
+                  {
+                    "icon": "IoStar",
+                    "label": "Mock Test"
+                  },
+                  {
+                    "icon": "IoHeadset",
+                    "label": "Lifetime Support"
+                  }
+                ]
+              }
+            ],
+            "includedSection": {
+              "title": {
+                "part1": "What’s Included in",
+                "part2": "All Packages?"
+              },
+              "features": [
+                {
+                  "icon": "IoBookOutline",
+                  "label": "Certified Instructors"
+                },
+                {
+                  "icon": "IoCarOutline",
+                  "label": "Modern Training Vehicles"
+                },
+                {
+                  "icon": "IoShieldCheckmarkOutline",
+                  "label": "Safe & Secure Learning"
+                },
+                {
+                  "icon": "IoCalendarOutline",
+                  "label": "Flexible Batch Timings"
+                },
+                {
+                  "icon": "TbRoad",
+                  "label": "Practical Road Training"
+                },
+                {
+                  "icon": "IoPeopleOutline",
+                  "label": "Personalized Attention"
+                }
+              ]
+            },
+            "additionalSection": {
+              "title": "Additional Services",
+              "description": "Enhance your learning experience with our add-on services.",
+              "image": "/images/pricing-addon-lessons.jpg",
+              "services": [
+                {
+                  "service": "Additional Driving Hour",
+                  "price": "₹700 / Hour"
+                },
+                {
+                  "service": "Automatic Car Training",
+                  "price": "₹2,000 (Extra)"
+                },
+                {
+                  "service": "Night Driving Session",
+                  "price": "₹1,500 / Session"
+                },
+                {
+                  "service": "Highway Driving Practice",
+                  "price": "₹1,500 / Session"
+                },
+                {
+                  "service": "Mock Driving Test",
+                  "price": "₹1,000 / Test"
+                },
+                {
+                  "service": "License Assistance",
+                  "price": "₹2,500"
+                },
+                {
+                  "service": "Refresher Course (5 Hours)",
+                  "price": "₹4,000"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "ourMission": {
+        "variants": {
+          "DriveLearnOurMission1": {
+            "mission": {
+              "eyebrow": "OUR MISSION",
+              "title": {
+                "part1": "Our Commitment",
+                "part2": "to Safe Driving"
+              },
+              "description": "At DriveLearn, our mission is to provide high-quality driving education with experienced instructors, modern training vehicles and a learner-focused approach, ensuring every student becomes a confident, skilled and responsible driver.",
+              "statCard": {
+                "percentage": "100%",
+                "text": "Driver's license exam pass rate."
+              }
+            },
+            "vision": {
+              "eyebrow": "OUR VISION",
+              "title": {
+                "part1": "Empowering Drivers",
+                "part2": "for a Safer Future"
+              },
+              "description": "Our vision is to become the nation's most trusted and innovative driving academy, elevating road safety awareness through modern interactive learning, defensive driving techniques, and personalized mentorship.",
+              "statCard": {
+                "percentage": "100%",
+                "text": "Commitment to road safety & student excellence."
+              }
+            },
+            "driverImage": "/images/driver-mission-clean.jpg"
+          }
+        }
+      },
+      "enquiry": {
+        "variants": {
+          "DriveLearnEnquiry1": {
+            "eyebrow": "ENQUIRY NOW",
+            "title": {
+              "part1": "Get More",
+              "part2": "Information"
+            },
+            "description": "Fill out the form below and our team will get back to you with complete details about our driving courses, fees, schedules and admission process.",
+            "carImage": "/images/enquiry-car.jpg",
+            "features": [
+              {
+                "icon": "IoSchool",
+                "title": "Professional Driving Training"
+              },
+              {
+                "icon": "IoCar",
+                "title": "Flexible Batch Timings"
+              },
+              {
+                "icon": "IoPeople",
+                "title": "Certified Instructors"
+              },
+              {
+                "icon": "IoShieldCheckmark",
+                "title": "Safe & Modern Vehicles"
+              }
+            ],
+            "form": {
+              "title": {
+                "part1": "Enquiry",
+                "part2": "Now"
+              },
+              "description": "Have questions? Share your details and we will contact you with all the required information.",
+              "courseOptions": [
+                "Beginner Driving Course",
+                "Refresher Driving Course",
+                "Driving License Assistance",
+                "Defensive Driving Training"
+              ],
+              "submitButton": "SEND ENQUIRY"
+            }
+          }
+        }
+      },
+      "contact": {
+        "variants": {
+          "DriveLearnContact1": {
+            "infoCards": [
+              {
+                "icon": "IoHeadset",
+                "tag": "REACH US",
+                "phone": "+1 000000000",
+                "phoneHref": "tel:+1000000000",
+                "email": "info@xyz.com",
+                "emailHref": "mailto:info@xyz.com",
+                "actionText": "GET A QUOTE",
+                "actionHref": "/enquiry"
+              },
+              {
+                "icon": "IoLocationSharp",
+                "tag": "ADDRESS",
+                "line1": "3170 Rosewood Lane Unit 200,",
+                "line2": "Beverly Hills, CA 90210",
+                "actionText": "GOOGLE MAP",
+                "actionHref": "#location-map"
+              },
+              {
+                "icon": "IoTime",
+                "tag": "OFF HOURS",
+                "line1": "Mon - Sat: 9:00 AM - 8:00 PM",
+                "line2": "Sunday: 9:00 AM - 5:00 PM",
+                "actionText": "BOOK APPOINTMENT",
+                "actionHref": "/enquiry"
+              },
+              {
+                "icon": "IoChatbubblesOutline",
+                "tag": "FAQ'S",
+                "line1": "Find quick answers in our",
+                "line2": "frequently asked questions.",
+                "actionText": "READ FAQ'S",
+                "actionHref": "/faqs"
+              }
+            ],
+            "socialConnect": {
+              "title": "Social Connect",
+              "links": [
+                {
+                  "platform": "Facebook",
+                  "icon": "FaFacebookF",
+                  "href": "https://facebook.com",
+                  "label": "Facebook"
+                },
+                {
+                  "platform": "X (Twitter)",
+                  "icon": "FaXTwitter",
+                  "href": "https://x.com",
+                  "label": "X (Twitter)"
+                },
+                {
+                  "platform": "Instagram",
+                  "icon": "FaInstagram",
+                  "href": "https://instagram.com",
+                  "label": "Instagram"
+                },
+                {
+                  "platform": "YouTube",
+                  "icon": "FaYoutube",
+                  "href": "https://youtube.com",
+                  "label": "YouTube"
+                },
+                {
+                  "platform": "WhatsApp",
+                  "icon": "FaWhatsapp",
+                  "href": "https://whatsapp.com",
+                  "label": "WhatsApp"
+                }
+              ]
+            },
+            "form": {
+              "eyebrow": "MESSAGE US",
+              "title": {
+                "part1": "Send Us a",
+                "part2": "Message Now"
+              },
+              "description": "Our dedicated experts are ready to assist you every step of the way.",
+              "submitButton": "SEND YOUR MESSAGE",
+              "successMessage": "Thank you! Your message has been sent successfully. Our team will get back to you shortly."
+            },
+            "locationMap": {
+              "eyebrow": "OUR LOCATION",
+              "title": "DriveLearn Location Map - Beverly Hills, CA",
+              "iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105799.04351659714!2d-118.49080775908202!3d34.0736204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20CA%2090210%2C%20USA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,15 +5,24 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaMountain, FaGem, FaIdCard } from "react-icons/fa6";
 import { poppins } from "@/lib/fonts";
+import {
+  siteMap,
+  type DriveLearnOurMissionData,
+  type SectionProps,
+} from "@/data";
 
-export default function OurMisionSection() {
+export default function OurMisionSection({
+  data: propData,
+  className = "",
+}: SectionProps<DriveLearnOurMissionData> = {}) {
   const [activeTab, setActiveTab] = useState<"mission" | "vision">("mission");
+  const data = propData || siteMap.ourMission;
 
   return (
     <section
-      className={`relative py-8 lg:py-12 bg-gradient-to-r from-[#061536] via-[#051330] to-[#040e24] text-white overflow-hidden ${poppins.className}`}
+      className={`relative py-8 lg:py-12 bg-gradient-to-r from-[#061536] via-[#051330] to-[#040e24] text-white overflow-hidden ${poppins.className} ${className}`}
     >
-      {/* Decorative Dot Matrix on Left & Right */}
+      {/* Dots */}
       <div
         className="absolute bottom-6 left-6 opacity-25 pointer-events-none select-none hidden lg:block"
         aria-hidden="true"
@@ -37,11 +46,9 @@ export default function OurMisionSection() {
 
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-4 lg:gap-6 items-center">
-          {/* ========================================================= */}
-          {/* LEFT 2 COLUMNS: Tab Switcher (Mission / Vision)           */}
-          {/* ========================================================= */}
+          {/* Mission */}
           <div className="lg:col-span-2 flex lg:flex-col justify-center gap-3 sm:gap-4">
-            {/* Mission Tab */}
+            {/* Mission */}
             <button
               type="button"
               onClick={() => setActiveTab("mission")}
@@ -55,16 +62,16 @@ export default function OurMisionSection() {
                 <FaMountain />
               </div>
               <span className="text-[12px] sm:text-[13px] font-extrabold uppercase tracking-wider">
-                OUR MISSION
+                {data.mission.eyebrow}
               </span>
 
-              {/* Speech bubble pointer pointing right (desktop only) */}
+              {/* Speech */}
               {activeTab === "mission" && (
                 <div className="hidden lg:block absolute right-[-8px] top-1/2 -translate-y-1/2 w-0 h-0 border-y-[8px] border-y-transparent border-l-[8px] border-l-[#e51a24]" />
               )}
             </button>
 
-            {/* Vision Tab */}
+            {/* Vision */}
             <button
               type="button"
               onClick={() => setActiveTab("vision")}
@@ -78,19 +85,17 @@ export default function OurMisionSection() {
                 <FaGem />
               </div>
               <span className="text-[12px] sm:text-[13px] font-extrabold uppercase tracking-wider">
-                OUR VISION
+                {data.vision.eyebrow}
               </span>
 
-              {/* Speech bubble pointer pointing right (desktop only) */}
+              {/* Speech */}
               {activeTab === "vision" && (
                 <div className="hidden lg:block absolute right-[-8px] top-1/2 -translate-y-1/2 w-0 h-0 border-y-[8px] border-y-transparent border-l-[8px] border-l-[#e51a24]" />
               )}
             </button>
           </div>
 
-          {/* ========================================================= */}
-          {/* CENTER 5 COLUMNS: Content & Pass Rate Card                */}
-          {/* ========================================================= */}
+          {/* Image */}
           <div className="lg:col-span-5 space-y-6 sm:space-y-7">
             <AnimatePresence mode="wait">
               {activeTab === "mission" ? (
@@ -106,36 +111,32 @@ export default function OurMisionSection() {
                   <div className="flex items-center gap-2">
                     <span className="w-1 h-4 bg-[#e51a24] rounded-full inline-block" />
                     <span className="text-[#e51a24] font-bold text-xs uppercase tracking-widest">
-                      OUR MISSION
+                      {data.mission.eyebrow}
                     </span>
                   </div>
 
                   {/* Headline */}
                   <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.18]">
-                    Our Commitment <br />
-                    to <span className="text-[#e51a24]">Safe Driving</span>
+                    {data.mission.title.part1} <br />
+                    <span className="text-[#e51a24]">{data.mission.title.part2}</span>
                   </h2>
 
                   {/* Description */}
                   <p className="text-gray-300 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-                    At <strong className="text-white font-bold">DriveLearn</strong>,
-                    our mission is to provide high-quality driving education with
-                    experienced instructors, modern training vehicles and a
-                    learner-focused approach, ensuring every student becomes a
-                    confident, skilled and responsible driver.
+                    {data.mission.description}
                   </p>
 
-                  {/* Stat Card */}
+                  {/* Stats */}
                   <div className="bg-[#091b40]/70 backdrop-blur-sm border border-white/15 rounded-xl p-4 sm:p-5 flex items-center gap-4 sm:gap-5 shadow-lg">
                     <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#e51a24] flex items-center justify-center text-white text-3xl shrink-0 shadow-md">
                       <FaIdCard />
                     </div>
                     <div>
                       <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                        100%
+                        {data.mission.statCard.percentage}
                       </div>
                       <p className="text-xs sm:text-[13px] text-gray-300 font-medium mt-0.5">
-                        Driver&apos;s license exam pass rate.
+                        {data.mission.statCard.text}
                       </p>
                     </div>
                   </div>
@@ -153,35 +154,32 @@ export default function OurMisionSection() {
                   <div className="flex items-center gap-2">
                     <span className="w-1 h-4 bg-[#e51a24] rounded-full inline-block" />
                     <span className="text-[#e51a24] font-bold text-xs uppercase tracking-widest">
-                      OUR VISION
+                      {data.vision.eyebrow}
                     </span>
                   </div>
 
                   {/* Headline */}
                   <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.18]">
-                    Empowering Drivers <br />
-                    for a <span className="text-[#e51a24]">Safer Future</span>
+                    {data.vision.title.part1} <br />
+                    <span className="text-[#e51a24]">{data.vision.title.part2}</span>
                   </h2>
 
                   {/* Description */}
                   <p className="text-gray-300 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-                    Our vision is to become the nation&apos;s most trusted and
-                    innovative driving academy, elevating road safety awareness
-                    through modern interactive learning, defensive driving
-                    techniques, and personalized mentorship.
+                    {data.vision.description}
                   </p>
 
-                  {/* Stat Card */}
+                  {/* Stats */}
                   <div className="bg-[#091b40]/70 backdrop-blur-sm border border-white/15 rounded-xl p-4 sm:p-5 flex items-center gap-4 sm:gap-5 shadow-lg">
                     <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#e51a24] flex items-center justify-center text-white text-3xl shrink-0 shadow-md">
                       <FaGem />
                     </div>
                     <div>
                       <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                        100%
+                        {data.vision.statCard.percentage}
                       </div>
                       <p className="text-xs sm:text-[13px] text-gray-300 font-medium mt-0.5">
-                        Commitment to road safety & student excellence.
+                        {data.vision.statCard.text}
                       </p>
                     </div>
                   </div>
@@ -190,25 +188,82 @@ export default function OurMisionSection() {
             </AnimatePresence>
           </div>
 
-          {/* ========================================================= */}
-          {/* RIGHT 5 COLUMNS: Driver Photo with Custom Geometric Frame */}
-          {/* ========================================================= */}
+          {/* Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.94 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-5 flex items-center justify-center"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-5 flex items-center justify-center py-6 sm:py-8 lg:py-4"
           >
-            <div className="relative w-full max-w-[460px] aspect-square flex items-center justify-center filter drop-shadow-2xl">
-              <Image
-                src="/images/mission-driver-framed.png"
-                alt="Confident driver with instructor giving thumbs up"
-                fill
-                priority
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 460px"
+            {/* Frame */}
+            <div className="relative w-full max-w-[390px] sm:max-w-[420px] lg:max-w-[450px] aspect-square mx-auto">
+              {/* Frame */}
+              <motion.div
+                initial={{ opacity: 0, x: -10, y: -10 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 lg:-top-7 lg:-left-7 w-[90%] h-[90%] rounded-xl border-[2.5px] sm:border-[3px] border-[#e51a24] pointer-events-none z-0"
+                aria-hidden="true"
               />
+
+              {/* Frame */}
+              <motion.div
+                initial={{ opacity: 0, x: 10, y: 10 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 lg:-bottom-7 lg:-right-7 w-[90%] h-[90%] rounded-xl border-[2.5px] sm:border-[3px] border-[#1d4f8d] pointer-events-none z-0"
+                aria-hidden="true"
+              />
+
+              {/* Image */}
+              <div
+                className="absolute -bottom-5 -right-5 sm:-bottom-7 sm:-right-7 w-28 h-28 sm:w-36 sm:h-36 rounded-br-xl rounded-tl-xl bg-gradient-to-br from-[#0a2350]/80 to-[#061536] border border-blue-400/30 pointer-events-none z-0 shadow-lg"
+                aria-hidden="true"
+              />
+
+              {/* Dots */}
+              <div
+                className="absolute -right-3 sm:-right-5 lg:-right-6 top-1/4 -translate-y-4 grid grid-cols-3 gap-1.5 sm:gap-2 pointer-events-none z-0 select-none opacity-40"
+                aria-hidden="true"
+              >
+                {Array.from({ length: 24 }).map((_, i) => (
+                  <span
+                    key={i}
+                    className="w-1.5 h-1.5 rounded-full bg-blue-300"
+                  />
+                ))}
+              </div>
+
+              {/* Frame */}
+              <div
+                className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 w-16 h-16 rounded-bl-xl border-b-2 border-l-2 border-blue-500/35 pointer-events-none z-0"
+                aria-hidden="true"
+              />
+
+              {/* Image */}
+              <motion.div
+                whileHover={{ scale: 1.015 }}
+                transition={{ duration: 0.3 }}
+                className="relative z-10 w-full h-full rounded-xl overflow-hidden border-[2.5px] sm:border-[3px] border-white/60 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-[#07183d]"
+              >
+                <Image
+                  src={data.driverImage || "/images/driver-mission-clean.jpg"}
+                  alt="Confident driver with instructor giving thumbs up"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 460px"
+                />
+
+                {/* Frame */}
+                <div
+                  className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/20 pointer-events-none"
+                  aria-hidden="true"
+                />
+              </motion.div>
             </div>
           </motion.div>
         </div>

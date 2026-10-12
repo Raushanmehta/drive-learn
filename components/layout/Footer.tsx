@@ -17,41 +17,29 @@ import {
   IoTimeSharp,
 } from "react-icons/io5";
 import { poppins } from "@/lib/fonts";
+import { siteMap, type DriveLearnFooterData } from "@/data";
 
-const quickLinks = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
-  { name: "Our Courses", href: "/courses" },
-  { name: "Driving License", href: "/driving-license" },
-  { name: "Vehicle Insurance", href: "/vehicle-insurance" },
-  { name: "FAQs", href: "/faqs" },
-  { name: "Contact Us", href: "/contact" },
-];
+const socialIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Facebook: FaFacebookF,
+  Instagram: FaInstagram,
+  YouTube: FaYoutube,
+  LinkedIn: FaLinkedinIn,
+};
 
-const ourServices = [
-  { name: "Driving Courses", href: "/courses" },
-  { name: "Driving License Assistance", href: "/license-assistance" },
-  { name: "RTO Services", href: "/rto-services" },
-  { name: "Vehicle Insurance", href: "/vehicle-insurance" },
-  { name: "Refresher Courses", href: "/refresher-courses" },
-  { name: "Defensive Driving", href: "/defensive-driving" },
-  { name: "Road Safety Training", href: "/road-safety-training" },
-];
+interface FooterProps {
+  data?: DriveLearnFooterData;
+}
 
-const socialLinks = [
-  { icon: FaFacebookF, href: "https://facebook.com", label: "Facebook" },
-  { icon: FaInstagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: FaYoutube, href: "https://youtube.com", label: "YouTube" },
-  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-];
+export default function Footer({ data: propData }: FooterProps = {}) {
+  const data = propData || siteMap.footer;
+  const { logo, description, bgImage, quickLinks, ourServices, contact, socialLinks, copyright } = data;
 
-export default function Footer() {
   return (
     <footer className={`relative bg-[#061536] text-white overflow-hidden ${poppins.className}`}>
-      {/* Background Car Ambient Overlay */}
+      {/* Image */}
       <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full opacity-20 pointer-events-none select-none">
         <Image
-          src="/images/footer-car-bg.jpg"
+          src={bgImage}
           alt="Driving background"
           fill
           priority={false}
@@ -63,44 +51,45 @@ export default function Footer() {
 
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-16 pb-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
-          {/* Column 1: Brand & About */}
+          {/* Column */}
           <div className="lg:col-span-4 space-y-5">
-            <Link href="/" className="inline-block" aria-label="DriveLearn Driving School">
+            <Link href={logo.href || "/"} className="inline-block" aria-label={logo.alt}>
               <Image
-                src="/logo/logo-whites.png"
-                alt="DriveLearn Driving School"
-                width={380}
-                height={125}
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.width || 380}
+                height={logo.height || 125}
                 className="h-16 sm:h-20 md:h-[70px] w-auto object-contain"
               />
             </Link>
 
             <p className="text-[#9db2ce] text-[13.5px] sm:text-[14px] leading-relaxed max-w-sm">
-              At DriveLearn, we are committed to providing high-quality driving education
-              with experienced instructors, modern training vehicles and a focus on safe
-              driving for every learner.
+              {description}
             </p>
 
-            {/* Social Links */}
+            {/* Social */}
             <div className="flex items-center gap-3 pt-2">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  whileHover={{ scale: 1.12, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-[#e51a24] hover:border-[#e51a24] transition-all duration-200 text-sm shadow-xs"
-                >
-                  <Icon />
-                </motion.a>
-              ))}
+              {socialLinks.map(({ platform, href, label }) => {
+                const Icon = socialIconMap[platform] || FaFacebookF;
+                return (
+                  <motion.a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    whileHover={{ scale: 1.12, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-[#e51a24] hover:border-[#e51a24] transition-all duration-200 text-sm shadow-xs"
+                  >
+                    <Icon />
+                  </motion.a>
+                );
+              })}
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Links */}
           <div className="lg:col-span-2">
             <h3 className="text-white font-bold text-[17px] tracking-tight">
               Quick Links
@@ -122,7 +111,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Our Services */}
+          {/* Services */}
           <div className="lg:col-span-3">
             <h3 className="text-white font-bold text-[17px] tracking-tight">
               Our Services
@@ -144,7 +133,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Get In Touch */}
+          {/* Column */}
           <div className="lg:col-span-3">
             <h3 className="text-white font-bold text-[17px] tracking-tight">
               Get In Touch
@@ -159,24 +148,24 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col leading-tight">
                   <span className="text-[14px] font-medium text-white">
-                    123 Training Street,
+                    {contact.address.line1}
                   </span>
                   <span className="text-[13px] text-[#9db2ce] mt-0.5">
-                    New Delhi, India
+                    {contact.address.line2}
                   </span>
                 </div>
               </div>
 
-              {/* Phone */}
+              {/* Support */}
               <div className="flex items-center gap-3.5">
                 <div className="w-9 h-9 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
                   <IoCall className="text-[15px]" />
                 </div>
                 <a
-                  href="tel:+919876543210"
+                  href={contact.phone.href}
                   className="text-[14px] font-medium text-white hover:text-[#e51a24] transition-colors"
                 >
-                  +91 9876543210
+                  {contact.phone.display}
                 </a>
               </div>
 
@@ -186,20 +175,20 @@ export default function Footer() {
                   <IoMail className="text-[15px]" />
                 </div>
                 <a
-                  href="mailto:info@drivelearn.com"
+                  href={contact.email.href}
                   className="text-[14px] font-medium text-white hover:text-[#e51a24] transition-colors"
                 >
-                  info@drivelearn.com
+                  {contact.email.display}
                 </a>
               </div>
 
-              {/* Operating Hours */}
+              {/* Rating */}
               <div className="flex items-center gap-3.5">
                 <div className="w-9 h-9 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
                   <IoTimeSharp className="text-[16px]" />
                 </div>
                 <span className="text-[13.5px] font-medium text-white">
-                  Mon - Sun: 9:00 AM - 8:00 PM
+                  {contact.timing}
                 </span>
               </div>
             </div>
@@ -207,16 +196,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Copyright Bar */}
+      {/* Bottom */}
       <div className="border-t border-white/10 relative z-10">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-5 text-center text-[13.5px] text-[#9db2ce]">
-          <p>
-            © 2026{" "}
-            <span className="font-semibold text-white">
-              Drive<span className="text-[#e51a24]">Learn</span>
-            </span>{" "}
-            Driving School. All Rights Reserved.
-          </p>
+          <p>{copyright}</p>
         </div>
       </div>
     </footer>

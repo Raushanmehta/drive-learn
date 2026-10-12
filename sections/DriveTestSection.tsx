@@ -101,11 +101,9 @@ export default function DriveTestSection() {
       className={`relative py-8 lg:py-12 bg-white overflow-hidden ${poppins.className}`}
     >
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4 sm:space-y-6">
-        {/* ========================================================= */}
-        {/* BLOCK 1: Hero / Pass Your Driving Test with Confidence     */}
-        {/* ========================================================= */}
+        {/* Hero */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
-          {/* Left Column: Heading & 4 Badges */}
+          {/* Headline */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -133,7 +131,7 @@ export default function DriveTestSection() {
               prepare for your driving test and get your license with ease.
             </p>
 
-            {/* 4 Feature Badges in a Row with Vertical Division Lines */}
+            {/* Vision */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-4 sm:gap-y-0 pt-2 border-t border-gray-100 sm:border-t-0">
               {topBadges.map((badge, idx) => {
                 const Icon = badge.icon;
@@ -146,12 +144,12 @@ export default function DriveTestSection() {
                     transition={{ duration: 0.4, delay: idx * 0.1 }}
                     className="relative flex flex-col items-center text-center group px-2 sm:px-3"
                   >
-                    {/* Vertical Division Line (Desktop: between all items) */}
+                    {/* Vision */}
                     {idx !== 0 && (
                       <div className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-gray-200" />
                     )}
 
-                    {/* Vertical Division Line (Mobile: between column 1 and 2) */}
+                    {/* Vision */}
                     {idx % 2 === 1 && (
                       <div className="sm:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-gray-200" />
                     )}
@@ -168,7 +166,7 @@ export default function DriveTestSection() {
             </div>
           </motion.div>
 
-          {/* Right Column: Thumbs Up Girl Photo with Red Corner Accents */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -177,10 +175,10 @@ export default function DriveTestSection() {
             className="lg:col-span-5"
           >
             <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 aspect-[700/540] max-w-[500px] mx-auto">
-              {/* Top-Left Red Corner Accent */}
+              {/* Frame */}
               <div className="absolute top-0 left-0 w-0 h-0 border-t-[36px] border-t-[#e51a24] border-r-[36px] border-r-transparent z-10" />
 
-              {/* Bottom-Right Red Corner Accent */}
+              {/* Frame */}
               <div className="absolute bottom-0 right-0 w-0 h-0 border-b-[36px] border-b-[#e51a24] border-l-[36px] border-l-transparent z-10" />
 
               <Image
@@ -195,11 +193,9 @@ export default function DriveTestSection() {
           </motion.div>
         </div>
 
-        {/* ========================================================= */}
-        {/* BLOCK 2: About Driving Test Preparation                    */}
-        {/* ========================================================= */}
+        {/* Block */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
-          {/* Left Column: Heading, Text & 4-Item Feature Row */}
+          {/* Headline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -207,7 +203,7 @@ export default function DriveTestSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-3 sm:space-y-4"
           >
-            {/* Eyebrow & Title */}
+            {/* Eyebrow */}
             <div className="space-y-2 sm:space-y-2">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-1 h-8 bg-[#e51a24] rounded-full inline-block" />
@@ -224,7 +220,7 @@ export default function DriveTestSection() {
               </p>
             </div>
 
-            {/* 4 Feature Cards Row in Box Container */}
+            {/* Features */}
             <div className="bg-[#f9fafc] rounded-xl p-4 sm:p-5 border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.04)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3">
               {prepFeatures.map((feat, idx) => {
                 const Icon = feat.icon;
@@ -249,7 +245,7 @@ export default function DriveTestSection() {
             </div>
           </motion.div>
 
-          {/* Right Column: Cones Track Image */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -269,11 +265,9 @@ export default function DriveTestSection() {
           </motion.div>
         </div>
 
-        {/* ========================================================= */}
-        {/* BLOCK 3: Why Choose Our Test Preparation?                  */}
-        {/* ========================================================= */}
+        {/* Block */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
-          {/* Left Column: Student & Instructor Photo */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -292,7 +286,7 @@ export default function DriveTestSection() {
             </div>
           </motion.div>
 
-          {/* Right Column: Heading & 6 Checklist Points */}
+          {/* Headline */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -325,9 +319,7 @@ export default function DriveTestSection() {
           </motion.div>
         </div>
 
-        {/* ========================================================= */}
-        {/* BLOCK 4: Our Training Process (4 Step Cards Flow)          */}
-        {/* ========================================================= */}
+        {/* Process */}
         <div className="space-y-4 sm:space-y-6">
           {/* Header */}
           <div className="space-y-2 sm:space-y-2">
@@ -343,7 +335,7 @@ export default function DriveTestSection() {
             </p>
           </div>
 
-          {/* 4 Process Step Cards */}
+          {/* Process */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 relative">
             {processSteps.map((step, idx) => {
               const Icon = step.icon;
@@ -356,7 +348,7 @@ export default function DriveTestSection() {
                     transition={{ duration: 0.5, delay: idx * 0.12 }}
                     className="w-full bg-[#f9fafc] hover:bg-white rounded-xl p-4 sm:p-5 border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 flex flex-col min-h-[140px] justify-between group"
                   >
-                    {/* Top Row: Number Badge & Icon */}
+                    {/* Badge */}
                     <div className="flex items-center justify-between mb-2 sm:mb-4">
                       <div className="w-10 h-10 rounded-full bg-[#e51a24] text-white flex items-center justify-center font-bold text-sm shadow-sm">
                         {step.step}
@@ -366,7 +358,7 @@ export default function DriveTestSection() {
                       </div>
                     </div>
 
-                    {/* Step Title & Description */}
+                    {/* Headline */}
                     <div>
                       <h4 className="text-[14.5px] sm:text-[15.5px] font-bold text-[#081839] mb-1 leading-snug">
                         {step.title}
@@ -377,7 +369,7 @@ export default function DriveTestSection() {
                     </div>
                   </motion.div>
 
-                  {/* Flow Arrow (Desktop only, between steps) */}
+                  {/* Process */}
                   {idx < processSteps.length - 1 && (
                     <div className="hidden lg:flex absolute -right-3.5 z-10 w-7 h-7 rounded-full bg-white border border-gray-200 items-center justify-center text-gray-400 text-sm shadow-sm pointer-events-none">
                       <IoChevronForward />
