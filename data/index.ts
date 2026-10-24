@@ -21,6 +21,7 @@ export type DriveLearnTopbarData = DriveLearnSections["topbar"]["variants"]["Dri
 export type DriveLearnNavbarData = DriveLearnSections["navbar"]["variants"]["DriveLearnNavbar1"];
 export type DriveLearnFooterData = DriveLearnSections["footer"]["variants"]["DriveLearnFooter1"];
 export type DriveLearnPageTopData = DriveLearnSections["pageTopSection"]["variants"]["DriveLearnPageTop1"];
+export type DriveLearnBreadcrumbData = DriveLearnPageTopData;
 export type DriveLearnHeroData = DriveLearnSections["hero"]["variants"]["DriveLearnHero1"];
 export type DriveLearnAboutData = DriveLearnSections["about"]["variants"]["DriveLearnAbout1"];
 export type DriveLearnServicesData = DriveLearnSections["services"]["variants"]["DriveLearnServices1"];
@@ -37,6 +38,7 @@ export type DriveLearnEnquiryData = DriveLearnSections["enquiry"]["variants"]["D
 export type DriveLearnContactData = DriveLearnSections["contact"]["variants"]["DriveLearnContact1"];
 export type DriveLearnThankYouData = DriveLearnSections["thankYou"]["variants"]["DriveLearnThankYou1"];
 export type DriveLearnNotFoundData = DriveLearnSections["notFound"]["variants"]["DriveLearnNotFound1"];
+export type DriveLearnDriveTestData = DriveLearnSections["driveTest"]["variants"]["DriveLearnDriveTest1"];
 export type DriveLearnDrivingCoursesPageData = DriveLearnServicesData;
 
 // Types
@@ -59,6 +61,7 @@ export const siteMap = {
   navbar: sec.navbar.variants.DriveLearnNavbar1,
   footer: sec.footer.variants.DriveLearnFooter1,
   pageTopSection: sec.pageTopSection.variants.DriveLearnPageTop1,
+  breadcrumb: sec.pageTopSection.variants.DriveLearnPageTop1,
   hero: sec.hero.variants.DriveLearnHero1,
   about: sec.about.variants.DriveLearnAbout1,
   services: sec.services.variants.DriveLearnServices1,
@@ -76,6 +79,7 @@ export const siteMap = {
   contact: sec.contact.variants.DriveLearnContact1,
   thankYou: sec.thankYou.variants.DriveLearnThankYou1,
   notFound: sec.notFound.variants.DriveLearnNotFound1,
+  driveTest: sec.driveTest.variants.DriveLearnDriveTest1,
   drivingCoursesPage: sec.services.variants.DriveLearnServices1,
 
   // Compatibility
@@ -83,6 +87,7 @@ export const siteMap = {
   navbarData: sec.navbar.variants.DriveLearnNavbar1,
   footerData: sec.footer.variants.DriveLearnFooter1,
   pageTopSectionData: sec.pageTopSection.variants.DriveLearnPageTop1,
+  breadcrumbData: sec.pageTopSection.variants.DriveLearnPageTop1,
   heroData: sec.hero.variants.DriveLearnHero1,
   aboutData: sec.about.variants.DriveLearnAbout1,
   servicesData: sec.services.variants.DriveLearnServices1,
@@ -100,6 +105,7 @@ export const siteMap = {
   contactData: sec.contact.variants.DriveLearnContact1,
   thankYouData: sec.thankYou.variants.DriveLearnThankYou1,
   notFoundData: sec.notFound.variants.DriveLearnNotFound1,
+  driveTestData: sec.driveTest.variants.DriveLearnDriveTest1,
   drivingCoursesPageData: sec.services.variants.DriveLearnServices1,
 
   // Root

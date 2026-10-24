@@ -1,7 +1,6 @@
 "use client";
 
-import PageTopSection from "@/components/common/PageTopSection";
-import CtaSection from "@/sections/home/CtaSection";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import { motion } from "framer-motion";
 import { IoCar } from "react-icons/io5";
@@ -9,11 +8,11 @@ import { poppins } from "@/lib/fonts";
 import { siteMap } from "@/data";
 
 export default function TestimonialPage() {
-    const { testimonial: data, cta } = siteMap;
+    const { testimonial: data, } = siteMap;
 
     return (
         <main>
-            <PageTopSection
+            <Breadcrumb
                 title={data.pageTop.title}
                 breadcrumb={data.pageTop.breadcrumb}
             />
@@ -77,7 +76,6 @@ export default function TestimonialPage() {
                     </div>
                 </div>
             </section>
-            <CtaSection data={cta} />
         </main>
     );
 }

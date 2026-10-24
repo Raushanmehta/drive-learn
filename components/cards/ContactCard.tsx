@@ -1,15 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { IoChevronForward } from "react-icons/io5";
 
 export interface ContactCardProps {
   icon: React.ComponentType<{ className?: string }>;
   tag: string;
   content: React.ReactNode;
-  actionText: string;
-  actionHref: string;
+  actionText?: string;
+  actionHref?: string;
   delay?: number;
 }
 
@@ -17,8 +15,6 @@ export default function ContactCard({
   icon: Icon,
   tag,
   content,
-  actionText,
-  actionHref,
   delay = 0,
 }: ContactCardProps) {
   return (
@@ -41,25 +37,13 @@ export default function ContactCard({
         </span>
       </div>
 
-      {/* Button */}
-      <div className="flex-1 flex flex-col justify-between self-stretch min-h-[90px]">
+      {/* Content */}
+      <div className="flex-1 flex flex-col justify-center self-stretch">
         <span className="sm:hidden text-[11px] font-extrabold uppercase tracking-widest text-[#e51a24] mb-1">
           {tag}
         </span>
 
         {content}
-
-        <div className="mt-3">
-          <Link
-            href={actionHref}
-            className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-bold text-[#081839] hover:text-[#e51a24] transition-colors uppercase tracking-wider group"
-          >
-            <span className="text-[#e51a24] font-extrabold text-sm group-hover:translate-x-0.5 transition-transform">
-              <IoChevronForward className="inline -mt-0.5" />
-            </span>
-            <span>{actionText}</span>
-          </Link>
-        </div>
       </div>
     </motion.div>
   );

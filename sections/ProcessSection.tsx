@@ -93,7 +93,7 @@ export default function ProcessSection({
               <div className="relative z-10 w-full aspect-square rounded-xl overflow-hidden shadow-2xl bg-gray-100 border border-white/20">
                 <Image
                   src={data.driverImage}
-                  alt="Confident student driver driving with guidance and safety"
+                  alt={(data as unknown as { driverImageAlt?: string })?.driverImageAlt || "Confident student driver driving with guidance and safety"}
                   fill
                   priority
                   className="object-cover"
@@ -162,7 +162,7 @@ export default function ProcessSection({
                 <div className="sm:col-span-5 relative min-h-[120px] sm:min-h-[130px] group overflow-hidden">
                   <Image
                     src={data.calloutCard.videoThumbnail}
-                    alt="Watch DriveLearn training session video"
+                    alt={(data.calloutCard as unknown as { videoThumbnailAlt?: string })?.videoThumbnailAlt || "Watch DriveLearn training session video"}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, 250px"
@@ -181,8 +181,8 @@ export default function ProcessSection({
 
                 {/* Support */}
                 <div className="sm:col-span-7 p-4 sm:p-5 flex flex-col justify-center space-y-2 text-white">
-                  <div className="flex items-center gap-2 text-gray-300 text-xs sm:text-[13px] font-semibold">
-                    <IoHeadsetOutline className="text-base text-white shrink-0" />
+                  <div className="flex items-center gap-2 text-gray-300 text-sm sm:text-[16px] font-semibold">
+                    <IoHeadsetOutline className="text-[30px] text-white shrink-0" />
                     <span>{data.calloutCard.supportTitle}</span>
                   </div>
 

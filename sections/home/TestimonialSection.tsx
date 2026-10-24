@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { IoStar, IoStarOutline, IoArrowForward } from "react-icons/io5";
+import { IoArrowForward } from "react-icons/io5";
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import { poppins } from "@/lib/fonts";
 import {
@@ -60,41 +60,6 @@ export default function TestimonialSection({
             >
               {data.homeDescription || data.description}
             </motion.p>
-
-            {/* Rating */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="pt-1 space-y-2"
-            >
-              <h3 className="text-white font-bold text-lg tracking-tight">
-                {data.rating.text}
-              </h3>
-
-              {/* Rating */}
-              <div className="flex items-center gap-1.5">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-md bg-[#e51a24] flex items-center justify-center text-white text-sm shadow-xs"
-                  >
-                    <IoStar />
-                  </div>
-                ))}
-                {/* Rating */}
-                <div className="w-8 h-8 rounded-md border border-[#e51a24] flex items-center justify-center text-[#e51a24] text-sm shadow-xs">
-                  <IoStarOutline />
-                </div>
-              </div>
-
-              {/* Rating */}
-              <p className="text-[13px] text-[#9db2ce]">
-                Trust Score{" "}
-                <span className="font-bold text-white">{data.rating.score}</span> (Based on 2,500 reviews)
-              </p>
-            </motion.div>
 
             {/* Testimonial */}
             <motion.div

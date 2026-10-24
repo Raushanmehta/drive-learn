@@ -1,4 +1,4 @@
-import PageTopSection from "@/components/common/PageTopSection";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import DrivingCoursesDetailSection from "@/sections/DrivingCoursesDetailSection";
 import { siteMap } from "@/data";
 
@@ -30,7 +30,7 @@ export default async function DrivingCoursesDetailPage({ params }: PageProps) {
 
   return (
     <main>
-      <PageTopSection title={title} breadcrumb={breadcrumb} />
+      <Breadcrumb title={title} breadcrumb={breadcrumb} />
       <DrivingCoursesDetailSection currentSlug={slug} data={data} />
     </main>
   );

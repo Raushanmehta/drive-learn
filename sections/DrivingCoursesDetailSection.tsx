@@ -55,7 +55,7 @@ export default function DrivingCoursesDetailSection({
   const eyebrow = (activeDetail as { eyebrow?: string })?.eyebrow || "COURSE DETAILS";
   const title = (activeDetail as { title?: { part1: string; part2: string } })?.title;
   const description = (activeDetail as { description?: string })?.description || currentCourse?.description || "";
-  const heroImage = (activeDetail as { heroImage?: string })?.heroImage || currentCourse?.image || "/images/service-driving-courses.jpg";
+  const heroImage = (activeDetail as { heroImage?: string })?.heroImage || currentCourse?.image || "/images/service-driving-courses.webp";
 
   const intro = (activeDetail as { intro?: { title: string; description: string } })?.intro || {
     title: "We're an Experienced Friendly Driving School",
@@ -72,7 +72,7 @@ export default function DrivingCoursesDetailSection({
   const advantages = (activeDetail as { advantages?: { title: string; description: string; image: string; items: string[] } })?.advantages || {
     title: "Driving School Advantages",
     description: "Learn with professional instructors and get complete support to become a safe and confident driver.",
-    image: "/images/driver-girl-clean.png",
+    image: "/images/driver-girl-clean.webp",
     items: [
       "60 Mins Driving Lesson",
       "Additional Time Available",
@@ -117,7 +117,7 @@ export default function DrivingCoursesDetailSection({
   }));
 
   const sidebarCallout = sidebarData.callout || {
-    image: "/images/drivetest-cone.jpg",
+    image: "/images/drivetest-cone.webp",
     title: "Best Guidance To \nEach Student, That's \nWhy We Produce \nA Confident Drivers",
     subtitle: "Join Our Driving Courses, Call us",
     phone: "+1 000000000",
@@ -130,10 +130,10 @@ export default function DrivingCoursesDetailSection({
     >
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-start">
-          
+
           {/* Services */}
           <div className="lg:col-span-8 space-y-4 sm:space-y-6">
-            
+
             {/* Headline */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -211,7 +211,7 @@ export default function DrivingCoursesDetailSection({
                       key={idx}
                       className="bg-[#f0f5fa] rounded-xl p-4 sm:p-5 text-center flex flex-col items-center justify-center border border-gray-100 hover:bg-[#eaf1f8] hover:shadow-md transition-all duration-300 group"
                     >
-                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white text-[#e51a24] shadow-sm flex items-center justify-center text-xl sm:text-2xl mb-2.5 border border-gray-100 group-hover:scale-105 transition-transform">
+                      <div className=" text-[#e51a24] flex items-center justify-center text-3xl sm:text-5xl mb-2.5  group-hover:scale-105 transition-transform">
                         <IconComp />
                       </div>
                       <span className="text-[#081839] font-bold text-[13px] sm:text-[14px] leading-snug">
@@ -316,9 +316,8 @@ export default function DrivingCoursesDetailSection({
                     {pricingTable.packages.map((row, idx) => (
                       <tr
                         key={idx}
-                        className={`${
-                          idx % 2 === 1 ? "bg-[#f8fafc]" : "bg-white"
-                        } hover:bg-blue-50/40 transition-colors`}
+                        className={`${idx % 2 === 1 ? "bg-[#f8fafc]" : "bg-white"
+                          } hover:bg-blue-50/40 transition-colors`}
                       >
                         <td className="py-3.5 px-4 sm:px-6 text-[#081839] font-medium text-[13.5px] sm:text-[14.5px]">
                           {row.package}
@@ -348,7 +347,7 @@ export default function DrivingCoursesDetailSection({
 
           {/* Nav */}
           <aside className="lg:col-span-4 space-y-4 sm:space-y-6 lg:sticky lg:top-[88px] self-start z-20">
-            
+
             {/* Nav */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -373,16 +372,14 @@ export default function DrivingCoursesDetailSection({
                     <Link
                       key={i}
                       href={c.href}
-                      className={`flex items-center gap-3 px-3.5 sm:px-4 py-3 rounded-xl font-semibold text-[13.5px] sm:text-[14px] transition-all duration-200 group ${
-                        isActive
-                          ? "bg-[#e51a24] text-white shadow-md shadow-red-900/30"
-                          : "bg-[#f0f5fa] hover:bg-white text-[#081839] hover:text-[#e51a24]"
-                      }`}
+                      className={`flex items-center gap-3 px-3.5 sm:px-4 py-3 rounded-xl font-semibold text-[13.5px] sm:text-[14px] transition-all duration-200 group ${isActive
+                        ? "bg-[#e51a24] text-white shadow-md shadow-red-900/30"
+                        : "bg-[#f0f5fa] hover:bg-white text-[#081839] hover:text-[#e51a24]"
+                        }`}
                     >
                       <IoArrowForward
-                        className={`text-sm shrink-0 transition-transform group-hover:translate-x-1 ${
-                          isActive ? "text-white" : "text-[#e51a24]"
-                        }`}
+                        className={`text-sm shrink-0 transition-transform group-hover:translate-x-1 ${isActive ? "text-white" : "text-[#e51a24]"
+                          }`}
                       />
                       <span>{c.title}</span>
                     </Link>

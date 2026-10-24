@@ -146,23 +146,23 @@ export default function PricingSection({
                 >
                   {/* Vision */}
                   {idx !== 0 && (
-                    <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-14 bg-gray-200" />
+                    <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-16 sm:h-20 bg-gray-200" />
                   )}
 
                   {/* Vision */}
                   {idx % 3 !== 0 && (
-                    <div className="hidden sm:block lg:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-14 bg-gray-200" />
+                    <div className="hidden sm:block lg:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-16 bg-gray-200" />
                   )}
 
                   {/* Vision */}
                   {idx % 2 === 1 && (
-                    <div className="sm:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-gray-200" />
+                    <div className="sm:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-14 bg-gray-200" />
                   )}
 
-                  <div className="w-16 h-16 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-[#e51a24] text-4xl group-hover:bg-[#e51a24] group-hover:text-white transition-all duration-300 shadow-sm mb-3">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-[#e51a24] text-3xl sm:text-5xl group-hover:bg-[#e51a24] group-hover:text-white transition-all duration-300 shadow-sm mb-3.5">
                     <Icon />
                   </div>
-                  <span className="text-[12.5px] sm:text-[13px] font-bold text-[#081839] leading-snug">
+                  <span className="text-[13px] sm:text-[14px] font-bold text-[#081839] leading-snug">
                     {item.label}
                   </span>
                 </div>
@@ -198,9 +198,11 @@ export default function PricingSection({
                 <table className="w-full text-left border-collapse">
                   <thead>
                     <tr className="bg-[#081839] text-white">
-                      <th className="py-3.5 px-5 text-sm font-bold">Service</th>
+                      <th className="py-3.5 px-5 text-sm font-bold">
+                        {(data.additionalSection as unknown as { tableHeaders?: { service?: string } })?.tableHeaders?.service || "Service"}
+                      </th>
                       <th className="py-3.5 px-5 text-sm font-bold text-right sm:text-left">
-                        Price (₹)
+                        {(data.additionalSection as unknown as { tableHeaders?: { price?: string } })?.tableHeaders?.price || "Price (₹)"}
                       </th>
                     </tr>
                   </thead>
@@ -236,7 +238,7 @@ export default function PricingSection({
               <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100 w-full h-full min-h-[260px] bg-gray-50">
                 <Image
                   src={data.additionalSection.image}
-                  alt="Professional driving instructor giving driving lesson to student"
+                  alt={(data.additionalSection as unknown as { imageAlt?: string })?.imageAlt || "Professional driving instructor giving driving lesson to student"}
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 600px"

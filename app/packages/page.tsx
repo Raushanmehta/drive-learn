@@ -1,6 +1,5 @@
-import PageTopSection from "@/components/common/PageTopSection";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import PricingSection from "@/sections/PricingSection";
-import CtaSection from "@/sections/home/CtaSection";
 import { siteMap } from "@/data";
 
 export default function PackagesPage() {
@@ -8,9 +7,8 @@ export default function PackagesPage() {
 
     return (
         <main>
-            <PageTopSection title="Packages" breadcrumb="Packages" />
+            <Breadcrumb title="Packages" breadcrumb="Packages" />
             <PricingSection data={pricing} />
-            <CtaSection data={cta} />
         </main>
     );
 }

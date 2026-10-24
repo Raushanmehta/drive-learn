@@ -12,10 +12,8 @@ import {
 import { PiSteeringWheelBold } from "react-icons/pi";
 import type { IconType } from "react-icons";
 import ServiceCard from "@/components/cards/ServiceCard";
-import PageTopSection from "@/components/common/PageTopSection";
-import CtaSection from "@/sections/home/CtaSection";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import { poppins } from "@/lib/fonts";
-import WhyChooseUsSection from "@/sections/home/WhyChooseUsSection";
 import { siteMap } from "@/data";
 
 const iconMap: Record<string, IconType> = {
@@ -33,7 +31,7 @@ export default function DrivingCourses() {
 
     return (
         <main>
-            <PageTopSection
+            <Breadcrumb
                 title={data.pageTop?.title || "Driving Courses"}
                 breadcrumb={data.pageTop?.breadcrumb || "Driving Courses"}
             />
@@ -115,9 +113,6 @@ export default function DrivingCourses() {
                     </motion.div>
                 </div>
             </section>
-            <WhyChooseUsSection data={siteMap.whyChooseUs} />
-            {/* Button */}
-            <CtaSection data={siteMap.cta} />
         </main>
     );
 }

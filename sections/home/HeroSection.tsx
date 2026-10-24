@@ -6,7 +6,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   IoArrowForward,
-  IoPlay,
   IoChevronDown,
   IoClose,
 } from "react-icons/io5";
@@ -26,11 +25,10 @@ interface HeroSectionProps {
 
 export default function HeroSection({ data: propData }: HeroSectionProps = {}) {
   const data = propData || siteMap.hero;
-  const { slides, videoButtonText, videoModal } = data;
+  const slides = data.slides;
 
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const onSelect = useCallback(() => {
     if (!api) return;
@@ -68,7 +66,7 @@ export default function HeroSection({ data: propData }: HeroSectionProps = {}) {
           {slides.map((slide, index) => (
             <CarouselItem
               key={slide.id}
-              className="relative pl-0 w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex items-center justify-center"
+              className="relative pl-0 w-full min-h-[540px] sm:min-h-[560px] lg:min-h-[585px] flex items-center justify-center"
             >
               {/* Image */}
               <div className="absolute inset-0 z-0">
@@ -155,24 +153,6 @@ export default function HeroSection({ data: propData }: HeroSectionProps = {}) {
                         <IoArrowForward className="text-lg transition-transform duration-200 group-hover:translate-x-1" />
                       </Link>
                     </motion.div>
-
-                    {/* Button */}
-                    <motion.button
-                      type="button"
-                      onClick={() => setIsVideoOpen(true)}
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.97 }}
-                      className="inline-flex items-center gap-3.5 text-white group cursor-pointer focus:outline-none"
-                      aria-label="Watch our driving school introduction video"
-                    >
-                      <span className="relative flex items-center justify-center w-12 h-12 rounded-full bg-[#e51a24] text-white shadow-lg transition-transform duration-200 group-hover:scale-105">
-                        <span className="absolute inset-0 rounded-full bg-[#e51a24] animate-ping opacity-30" />
-                        <IoPlay className="text-lg ml-0.5" />
-                      </span>
-                      <span className="font-semibold text-[15px] sm:text-[16px] text-white group-hover:text-[#e51a24] transition-colors">
-                        {videoButtonText || "Watch Our Video"}
-                      </span>
-                    </motion.button>
                   </motion.div>
                 </div>
               </div>
@@ -188,7 +168,7 @@ export default function HeroSection({ data: propData }: HeroSectionProps = {}) {
         className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center"
       >
         <a
-          href="#about"
+          href="/about"
           aria-label="Scroll down"
           className="w-7 h-10 rounded-full border border-white/60 flex items-center justify-center hover:border-white transition-colors"
         >
@@ -196,67 +176,6 @@ export default function HeroSection({ data: propData }: HeroSectionProps = {}) {
         </a>
       </motion.div>
 
-      {/* Carousel */}
-      <div className="absolute right-6 sm:right-10 top-1/2 -translate-y-1/2 z-20 hidden md:flex flex-col items-center gap-3">
-        {slides.map((_, index) => {
-          const isActive = current === index;
-
-          return (
-            <button
-              key={index}
-              onClick={() => api?.scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-              className="flex items-center justify-center focus:outline-none cursor-pointer transition-all duration-300"
-            >
-              {isActive ? (
-                <div className="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center shadow-md">
-                  <div className="w-2 h-2 rounded-full bg-[#e51a24]" />
-                </div>
-              ) : (
-                <div className="w-2.5 h-2.5 rounded-full bg-white/70 hover:bg-white transition-colors" />
-              )}
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Video */}
-      <AnimatePresence>
-        {isVideoOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4"
-            onClick={() => setIsVideoOpen(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl bg-black rounded-xl overflow-hidden shadow-2xl aspect-video"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                type="button"
-                onClick={() => setIsVideoOpen(false)}
-                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-[#e51a24] text-white flex items-center justify-center transition-colors cursor-pointer"
-                aria-label="Close video modal"
-              >
-                <IoClose className="text-2xl" />
-              </button>
-              <iframe
-                src={videoModal?.embedUrl || "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"}
-                title={videoModal?.title || "Driving School Introduction Video"}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full border-0"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }

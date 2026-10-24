@@ -77,54 +77,56 @@ export default function ContactSection({
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4 sm:space-y-6">
         {/* Contact */}
         <div className="space-y-4 sm:space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-4">
-            {data.infoCards.map((card, idx) => {
-              const CardIcon = iconMap[card.icon] || IoHeadset;
-              const content = (
-                <div className="space-y-1 text-[13.5px] sm:text-[14.5px] text-[#081839]">
-                  {"phone" in card && (
-                    <p>
-                      <span className="font-bold text-[#081839]">Phone: </span>
-                      <a
-                        href={card.phoneHref}
-                        className="hover:text-[#e51a24] transition-colors"
-                      >
-                        {card.phone}
-                      </a>
-                    </p>
-                  )}
-                  {"email" in card && (
-                    <p>
-                      <span className="font-bold text-[#081839]">Email: </span>
-                      <a
-                        href={card.emailHref}
-                        className="hover:text-[#e51a24] transition-colors"
-                      >
-                        {card.email}
-                      </a>
-                    </p>
-                  )}
-                  {"line1" in card && (
-                    <>
-                      <p>{card.line1}</p>
-                      <p>{card.line2}</p>
-                    </>
-                  )}
-                </div>
-              );
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-4">
+            {data.infoCards
+              .filter((card) => card.tag !== "FAQ'S")
+              .map((card, idx) => {
+                const CardIcon = iconMap[card.icon] || IoHeadset;
+                const content = (
+                  <div className="space-y-1 text-[13.5px] sm:text-[14.5px] text-[#081839]">
+                    {"phone" in card && (
+                      <p>
+                        <span className="font-bold text-[#081839]">Phone: </span>
+                        <a
+                          href={card.phoneHref}
+                          className="hover:text-[#e51a24] transition-colors"
+                        >
+                          {card.phone}
+                        </a>
+                      </p>
+                    )}
+                    {"email" in card && (
+                      <p>
+                        <span className="font-bold text-[#081839]">Email: </span>
+                        <a
+                          href={card.emailHref}
+                          className="hover:text-[#e51a24] transition-colors"
+                        >
+                          {card.email}
+                        </a>
+                      </p>
+                    )}
+                    {"line1" in card && (
+                      <>
+                        <p>{card.line1}</p>
+                        <p>{card.line2}</p>
+                      </>
+                    )}
+                  </div>
+                );
 
-              return (
-                <ContactCard
-                  key={idx}
-                  delay={idx * 0.1}
-                  icon={CardIcon}
-                  tag={card.tag}
-                  content={content}
-                  actionText={card.actionText}
-                  actionHref={card.actionHref}
-                />
-              );
-            })}
+                return (
+                  <ContactCard
+                    key={idx}
+                    delay={idx * 0.1}
+                    icon={CardIcon}
+                    tag={card.tag}
+                    content={content}
+                    actionText={card.actionText}
+                    actionHref={card.actionHref}
+                  />
+                );
+              })}
           </div>
 
           {/* Social */}
@@ -140,7 +142,7 @@ export default function ContactSection({
             </h3>
             <div className="w-10 h-1 bg-[#e51a24] rounded-full mx-auto mt-2 mb-5" />
 
-            <div className="flex items-center justify-center gap-3 sm:gap-4">
+            <div className="flex items-center justify-center gap-3 sm:gap-6">
               {data.socialConnect.links.map((social, idx) => {
                 const Icon = iconMap[social.icon] || FaFacebookF;
                 return (
@@ -152,7 +154,7 @@ export default function ContactSection({
                     aria-label={social.label}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#081839] hover:text-white hover:bg-[#e51a24] hover:border-[#e51a24] transition-all duration-300 text-base sm:text-lg"
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#081839] hover:text-white hover:bg-[#e51a24] hover:border-[#e51a24] transition-all duration-300 text-xl sm:text-3xl"
                   >
                     <Icon />
                   </motion.a>

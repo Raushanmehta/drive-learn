@@ -15,90 +15,34 @@ import {
   IoChevronForward,
 } from "react-icons/io5";
 import { TbSteeringWheel, TbTarget } from "react-icons/tb";
+import type { IconType } from "react-icons";
 import { poppins } from "@/lib/fonts";
+import { siteMap, type DriveLearnDriveTestData, type SectionProps } from "@/data";
 
-const topBadges = [
-  {
-    icon: IoShieldCheckmark,
-    title: "Expert Instructors",
-  },
-  {
-    icon: IoCar,
-    title: "Real Test Routes",
-  },
-  {
-    icon: IoDocumentText,
-    title: "Mock Tests",
-  },
-  {
-    icon: TbTarget,
-    title: "Higher Success Rate",
-  },
-];
+const iconMap: Record<string, IconType> = {
+  IoShieldCheckmark,
+  IoCar,
+  IoDocumentText,
+  TbTarget,
+  IoBookOutline,
+  TbSteeringWheel,
+  IoClipboardOutline,
+  IoPersonOutline,
+  IoCheckmarkCircle,
+  IoDocumentTextOutline,
+  IoShieldCheckmarkOutline,
+};
 
-const prepFeatures = [
-  {
-    icon: IoBookOutline,
-    title: "Traffic Rules & Regulations",
-    description: "Learn all the essential traffic rules and signs.",
-  },
-  {
-    icon: TbSteeringWheel,
-    title: "Practical Driving Training",
-    description: "Build real-world road experience.",
-  },
-  {
-    icon: IoClipboardOutline,
-    title: "Mock Driving Tests",
-    description: "Practice with exam-like scenarios.",
-  },
-  {
-    icon: IoPersonOutline,
-    title: "Personalized Guidance",
-    description: "Get one-on-one support from experts.",
-  },
-];
+export default function DriveTestSection({
+  data: propData,
+  className = "",
+}: SectionProps<DriveLearnDriveTestData> = {}) {
+  const data = propData || siteMap.driveTest;
+  const { hero, about, whyChoose, process } = data;
 
-const whyChoosePoints = [
-  "Experienced and certified driving instructors",
-  "Complete training as per RTO guidelines",
-  "Flexible class timings (weekdays & weekends)",
-  "Real test route practice",
-  "High pass rate and proven results",
-  "Support until you get your license",
-];
-
-const processSteps = [
-  {
-    step: "01",
-    icon: IoClipboardOutline,
-    title: "Initial Assessment",
-    description: "We check your current skills and requirements.",
-  },
-  {
-    step: "02",
-    icon: TbSteeringWheel,
-    title: "Training Sessions",
-    description: "Get hands-on training with expert instructors.",
-  },
-  {
-    step: "03",
-    icon: IoDocumentTextOutline,
-    title: "Mock Test",
-    description: "Practice with real exam  get your conditions.",
-  },
-  {
-    step: "04",
-    icon: IoShieldCheckmarkOutline,
-    title: "Test & License",
-    description: "Appear for the driving test and get your license.",
-  },
-];
-
-export default function DriveTestSection() {
   return (
     <section
-      className={`relative py-8 lg:py-12 bg-white overflow-hidden ${poppins.className}`}
+      className={`relative py-8 lg:py-12 bg-white overflow-hidden ${poppins.className} ${className}`}
     >
       <div className="max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 space-y-4 sm:space-y-6">
         {/* Hero */}
@@ -115,26 +59,25 @@ export default function DriveTestSection() {
             <div className="flex items-center gap-2 mb-2">
               <span className="w-1 h-4 bg-[#e51a24] rounded-full inline-block" />
               <span className="text-[#081839] font-bold text-xs uppercase tracking-widest">
-                DRIVING TEST PREPARATION
+                {hero.eyebrow}
               </span>
             </div>
 
             {/* Headline */}
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#081839] tracking-tight leading-[1.18]">
-              Pass Your Driving Test{" "}
-              <span className="text-[#e51a24]">with Confidence</span>
+              {hero.title.part1}{" "}
+              <span className="text-[#e51a24]">{hero.title.part2}</span>
             </h2>
 
             {/* Description */}
             <p className="text-[#556987] text-[14px] sm:text-[15px] leading-relaxed max-w-xl">
-              Get expert guidance, practical training and mock tests to help you
-              prepare for your driving test and get your license with ease.
+              {hero.description}
             </p>
 
-            {/* Vision */}
+            {/* Badges */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-4 sm:gap-y-0 pt-2 border-t border-gray-100 sm:border-t-0">
-              {topBadges.map((badge, idx) => {
-                const Icon = badge.icon;
+              {hero.badges.map((badge, idx) => {
+                const Icon = iconMap[badge.icon] || IoShieldCheckmark;
                 return (
                   <motion.div
                     key={idx}
@@ -144,20 +87,18 @@ export default function DriveTestSection() {
                     transition={{ duration: 0.4, delay: idx * 0.1 }}
                     className="relative flex flex-col items-center text-center group px-2 sm:px-3"
                   >
-                    {/* Vision */}
                     {idx !== 0 && (
-                      <div className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-gray-200" />
+                      <div className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-16 sm:h-20 bg-gray-200" />
                     )}
 
-                    {/* Vision */}
                     {idx % 2 === 1 && (
-                      <div className="sm:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-gray-200" />
+                      <div className="sm:hidden absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-16 bg-gray-200" />
                     )}
 
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#e51a24] flex items-center justify-center text-white text-xl sm:text-3xl shadow-md group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#e51a24] flex items-center justify-center text-white text-3xl sm:text-5xl shadow-md group-hover:scale-105 transition-transform">
                       <Icon />
                     </div>
-                    <span className="text-xs sm:text-[13px] font-bold text-[#081839] mt-2.5 leading-snug">
+                    <span className="text-sm sm:text-base font-bold text-[#081839] mt-3 leading-snug">
                       {badge.title}
                     </span>
                   </motion.div>
@@ -182,8 +123,8 @@ export default function DriveTestSection() {
               <div className="absolute bottom-0 right-0 w-0 h-0 border-b-[36px] border-b-[#e51a24] border-l-[36px] border-l-transparent z-10" />
 
               <Image
-                src="/images/drivetest-confidences.jpg"
-                alt="Student driver passing driving test with confidence"
+                src={hero.image}
+                alt={hero.imageAlt}
                 fill
                 priority
                 className="object-cover"
@@ -193,7 +134,7 @@ export default function DriveTestSection() {
           </motion.div>
         </div>
 
-        {/* Block */}
+        {/* Block: About */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
           {/* Headline */}
           <motion.div
@@ -208,35 +149,31 @@ export default function DriveTestSection() {
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-1 h-8 bg-[#e51a24] rounded-full inline-block" />
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-[#081839] tracking-tight">
-                  About Driving Test Preparation
+                  {about.title}
                 </h3>
               </div>
               <p className="text-[#556987] text-[14px] sm:text-[15px] leading-relaxed pt-1">
-                Our driving test preparation program is designed to give you the
-                skills, confidence and knowledge needed to pass your driving
-                test. We focus on real exam conditions, traffic rules and
-                practical driving experience so you can get your license without
-                any stress.
+                {about.description}
               </p>
             </div>
 
             {/* Features */}
             <div className="bg-[#f9fafc] rounded-xl p-4 sm:p-5 border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.04)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3">
-              {prepFeatures.map((feat, idx) => {
-                const Icon = feat.icon;
+              {about.features.map((feat, idx) => {
+                const Icon = iconMap[feat.icon] || IoBookOutline;
                 return (
                   <div
                     key={idx}
                     className={`flex flex-col items-start p-3 rounded-xl transition-all ${idx !== 0 ? "sm:border-l sm:border-gray-200/60 sm:pl-4" : ""
                       }`}
                   >
-                    <div className="text-[#e51a24] text-3xl mb-2">
+                    <div className="text-[#e51a24] text-4xl sm:text-5xl mb-3">
                       <Icon />
                     </div>
-                    <h4 className="text-[13px] sm:text-[13.5px] font-bold text-[#081839] leading-snug">
+                    <h4 className="text-[13px] sm:text-[16.5px] font-bold text-[#081839] leading-snug">
                       {feat.title}
                     </h4>
-                    <p className="text-[11.5px] sm:text-[12px] text-[#556987] mt-1 leading-normal">
+                    <p className="text-[11.5px] sm:text-[13px] text-[#556987] mt-1 leading-normal">
                       {feat.description}
                     </p>
                   </div>
@@ -255,8 +192,8 @@ export default function DriveTestSection() {
           >
             <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100 aspect-[16/10] max-w-[460px] mx-auto bg-gray-50">
               <Image
-                src="/images/drivetest-cone.jpg"
-                alt="Practical driving test preparation with cones obstacle track"
+                src={about.image}
+                alt={about.imageAlt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 460px"
@@ -265,7 +202,7 @@ export default function DriveTestSection() {
           </motion.div>
         </div>
 
-        {/* Block */}
+        {/* Block: Why Choose */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
           {/* Image */}
           <motion.div
@@ -277,8 +214,8 @@ export default function DriveTestSection() {
           >
             <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-100 aspect-[16/9] w-full bg-gray-50">
               <Image
-                src="/images/drivetest-instructors.jpg"
-                alt="Instructor guiding learner driver with checklist"
+                src={whyChoose.image}
+                alt={whyChoose.imageAlt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 600px"
@@ -297,12 +234,12 @@ export default function DriveTestSection() {
             <div className="flex items-center gap-2 mb-2">
               <span className="w-1 h-8 bg-[#e51a24] rounded-full inline-block" />
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#081839] tracking-tight">
-                Why Choose Our Test Preparation?
+                {whyChoose.title}
               </h3>
             </div>
 
             <ul className="space-y-2.5 sm:space-y-3">
-              {whyChoosePoints.map((point, idx) => (
+              {whyChoose.points.map((point, idx) => (
                 <motion.li
                   key={idx}
                   initial={{ opacity: 0, x: 15 }}
@@ -311,7 +248,7 @@ export default function DriveTestSection() {
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
                   className="flex items-center gap-2.5 sm:gap-3 text-[#081839] font-medium text-[13.5px] sm:text-[14.5px]"
                 >
-                  <IoCheckmarkCircle className="text-[#e51a24] text-2xl shrink-0" />
+                  <IoCheckmarkCircle className="text-[#e51a24] text-2xl sm:text-3xl shrink-0" />
                   <span>{point}</span>
                 </motion.li>
               ))}
@@ -326,19 +263,18 @@ export default function DriveTestSection() {
             <div className="flex items-center gap-2 mb-2">
               <span className="w-1 h-8 bg-[#e51a24] rounded-full inline-block" />
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#081839] tracking-tight">
-                Our Training Process
+                {process.title}
               </h3>
             </div>
             <p className="text-[#556987] text-[14px] sm:text-[15px]">
-              A simple and effective process to help you prepare and pass your
-              driving test.
+              {process.description}
             </p>
           </div>
 
-          {/* Process */}
+          {/* Steps */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 relative">
-            {processSteps.map((step, idx) => {
-              const Icon = step.icon;
+            {process.steps.map((step, idx) => {
+              const Icon = iconMap[step.icon] || IoClipboardOutline;
               return (
                 <div key={idx} className="relative flex items-center">
                   <motion.div
@@ -349,11 +285,11 @@ export default function DriveTestSection() {
                     className="w-full bg-[#f9fafc] hover:bg-white rounded-xl p-4 sm:p-5 border border-gray-100 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 flex flex-col min-h-[140px] justify-between group"
                   >
                     {/* Badge */}
-                    <div className="flex items-center justify-between mb-2 sm:mb-4">
-                      <div className="w-10 h-10 rounded-full bg-[#e51a24] text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                    <div className="flex items-center justify-between mb-3 sm:mb-4">
+                      <div className="w-12 h-12 rounded-full bg-[#e51a24] text-white flex items-center justify-center font-bold text-base shadow-sm">
                         {step.step}
                       </div>
-                      <div className="text-3xl sm:text-[32px] text-[#081839] group-hover:text-[#e51a24] transition-colors">
+                      <div className="text-4xl sm:text-5xl text-[#081839] group-hover:text-[#e51a24] transition-colors">
                         <Icon />
                       </div>
                     </div>
@@ -369,8 +305,7 @@ export default function DriveTestSection() {
                     </div>
                   </motion.div>
 
-                  {/* Process */}
-                  {idx < processSteps.length - 1 && (
+                  {idx < process.steps.length - 1 && (
                     <div className="hidden lg:flex absolute -right-3.5 z-10 w-7 h-7 rounded-full bg-white border border-gray-200 items-center justify-center text-gray-400 text-sm shadow-sm pointer-events-none">
                       <IoChevronForward />
                     </div>

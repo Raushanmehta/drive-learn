@@ -250,8 +250,8 @@ export default function OurMisionSection({
                 className="relative z-10 w-full h-full rounded-xl overflow-hidden border-[2.5px] sm:border-[3px] border-white/60 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-[#07183d]"
               >
                 <Image
-                  src={data.driverImage || "/images/driver-mission-clean.jpg"}
-                  alt="Confident driver with instructor giving thumbs up"
+                  src={data.driverImage || "/images/driver-mission-clean.webp"}
+                  alt={(data as unknown as { driverImageAlt?: string })?.driverImageAlt || "Confident driver with instructor giving thumbs up"}
                   fill
                   priority
                   className="object-cover object-center"

@@ -80,7 +80,7 @@ export default function Footer({ data: propData }: FooterProps = {}) {
                     aria-label={label}
                     whileHover={{ scale: 1.12, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-[#e51a24] hover:border-[#e51a24] transition-all duration-200 text-sm shadow-xs"
+                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-[#e51a24] hover:border-[#e51a24] transition-all duration-200 text-lg shadow-xs"
                   >
                     <Icon />
                   </motion.a>
@@ -143,8 +143,8 @@ export default function Footer({ data: propData }: FooterProps = {}) {
             <div className="space-y-4">
               {/* Address */}
               <div className="flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 mt-0.5 shadow-sm">
-                  <IoLocationSharp className="text-[17px]" />
+                <div className="w-12 h-12 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 mt-0.5 shadow-sm">
+                  <IoLocationSharp className="text-2xl" />
                 </div>
                 <div className="flex flex-col leading-tight">
                   <span className="text-[14px] font-medium text-white">
@@ -158,8 +158,8 @@ export default function Footer({ data: propData }: FooterProps = {}) {
 
               {/* Support */}
               <div className="flex items-center gap-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
-                  <IoCall className="text-[15px]" />
+                <div className="w-12 h-12 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
+                  <IoCall className="text-2xl" />
                 </div>
                 <a
                   href={contact.phone.href}
@@ -171,8 +171,8 @@ export default function Footer({ data: propData }: FooterProps = {}) {
 
               {/* Email */}
               <div className="flex items-center gap-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
-                  <IoMail className="text-[15px]" />
+                <div className="w-12 h-12 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
+                  <IoMail className="text-2xl" />
                 </div>
                 <a
                   href={contact.email.href}
@@ -184,8 +184,8 @@ export default function Footer({ data: propData }: FooterProps = {}) {
 
               {/* Rating */}
               <div className="flex items-center gap-3.5">
-                <div className="w-9 h-9 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
-                  <IoTimeSharp className="text-[16px]" />
+                <div className="w-12 h-12 rounded-full bg-[#e51a24] flex items-center justify-center text-white shrink-0 shadow-sm">
+                  <IoTimeSharp className="text-2xl" />
                 </div>
                 <span className="text-[13.5px] font-medium text-white">
                   {contact.timing}

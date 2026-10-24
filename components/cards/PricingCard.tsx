@@ -55,7 +55,7 @@ export default function PricingCard({
           {/* Headline */}
           <div className="flex items-start gap-4">
             <div
-              className={`w-16 h-16 rounded-full flex items-center justify-center text-4xl shrink-0 shadow-sm ${isPopular
+              className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center text-3xl sm:text-5xl shrink-0 shadow-sm ${isPopular
                 ? "bg-[#e51a24] text-white"
                 : "bg-[#081839] text-white"
                 }`}
@@ -89,7 +89,7 @@ export default function PricingCard({
                 key={idx}
                 className="flex items-start gap-2.5 text-[13px] sm:text-[13.5px] font-medium text-[#081839] leading-snug"
               >
-                <IoCheckmarkCircle className="text-[#e51a24] text-2xl shrink-0 mt-0.5" />
+                <IoCheckmarkCircle className="text-[#e51a24] text-2xl sm:text-3xl shrink-0 mt-0.5" />
                 <span>{feat}</span>
               </li>
             ))}
@@ -106,7 +106,7 @@ export default function PricingCard({
               key={idx}
               className="flex flex-col items-center justify-center text-center px-1"
             >
-              <BIcon className="text-lg sm:text-4xl text-white mb-1" />
+              <BIcon className="text-2xl sm:text-5xl text-white mb-1.5" />
               <span className="text-[10px] sm:text-[10.5px] font-bold text-gray-200 leading-tight">
                 {bFeat.label}
               </span>

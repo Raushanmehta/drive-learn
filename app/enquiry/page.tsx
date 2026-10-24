@@ -1,16 +1,14 @@
-import PageTopSection from "@/components/common/PageTopSection";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import EnquirySection from "@/sections/EnquirySection";
-import CtaSection from "@/sections/home/CtaSection";
 import { siteMap } from "@/data";
 
 export default function EnquiryPage() {
-    const { enquiry, cta } = siteMap;
+    const { enquiry } = siteMap;
 
     return (
         <main>
-            <PageTopSection title="Enquiry" breadcrumb="Enquiry" />
+            <Breadcrumb title="Enquiry" breadcrumb="Enquiry" />
             <EnquirySection data={enquiry} />
-            <CtaSection data={cta} />
         </main>
     );
 }

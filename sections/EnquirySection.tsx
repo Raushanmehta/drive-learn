@@ -46,6 +46,20 @@ export default function EnquirySection({
     setTimeout(() => setSubmitted(false), 5000);
   };
 
+  const formFields = (data.form as unknown as {
+    fields?: {
+      name?: { label?: string; placeholder?: string };
+      phone?: { label?: string; placeholder?: string };
+      email?: { label?: string; placeholder?: string };
+      course?: { label?: string; placeholder?: string };
+      message?: { label?: string; placeholder?: string };
+    };
+    successMessage?: string;
+  })?.fields;
+  const successMessage =
+    (data.form as unknown as { successMessage?: string })?.successMessage ||
+    "Thank you! Your enquiry has been submitted successfully. We will contact you shortly.";
+
   return (
     <section
       className={`relative py-8 lg:py-12 bg-white overflow-hidden ${poppins.className} ${className}`}
@@ -137,7 +151,7 @@ export default function EnquirySection({
             <div className="relative w-full h-[420px] sm:h-[480px] lg:h-full min-h-[420px] rounded-xl overflow-hidden shadow-xl bg-gray-100">
               <Image
                 src={data.carImage}
-                alt="DriveLearn training car on training track"
+                alt={(data as unknown as { carImageAlt?: string })?.carImageAlt || "DriveLearn training car on training track"}
                 fill
                 className="object-cover object-center"
               />
@@ -192,7 +206,7 @@ export default function EnquirySection({
                     {/* Full */}
                     <div>
                       <label className="text-[13px] font-bold text-[#081839] mb-1.5 block">
-                        Full Name <span className="text-[#e51a24]">*</span>
+                        {formFields?.name?.label || "Full Name"} <span className="text-[#e51a24]">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 text-lg">
@@ -205,7 +219,7 @@ export default function EnquirySection({
                           onChange={(e) =>
                             setFormData({ ...formData, name: e.target.value })
                           }
-                          placeholder="Your Name"
+                          placeholder={formFields?.name?.placeholder || "Your Name"}
                           className="w-full pl-10 pr-4 py-3 rounded-[10px] border border-gray-200 text-sm text-[#081839] placeholder-gray-400 focus:outline-none focus:border-[#e51a24] focus:ring-1 focus:ring-[#e51a24]/30 transition-all"
                         />
                       </div>
@@ -214,7 +228,7 @@ export default function EnquirySection({
                     {/* Support */}
                     <div>
                       <label className="text-[13px] font-bold text-[#081839] mb-1.5 block">
-                        Phone Number <span className="text-[#e51a24]">*</span>
+                        {formFields?.phone?.label || "Phone Number"} <span className="text-[#e51a24]">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 text-lg">
@@ -227,7 +241,7 @@ export default function EnquirySection({
                           onChange={(e) =>
                             setFormData({ ...formData, phone: e.target.value })
                           }
-                          placeholder="Your Phone Number"
+                          placeholder={formFields?.phone?.placeholder || "Your Phone Number"}
                           className="w-full pl-10 pr-4 py-3 rounded-[10px] border border-gray-200 text-sm text-[#081839] placeholder-gray-400 focus:outline-none focus:border-[#e51a24] focus:ring-1 focus:ring-[#e51a24]/30 transition-all"
                         />
                       </div>
@@ -236,7 +250,7 @@ export default function EnquirySection({
                     {/* Email */}
                     <div>
                       <label className="text-[13px] font-bold text-[#081839] mb-1.5 block">
-                        Email Address <span className="text-[#e51a24]">*</span>
+                        {formFields?.email?.label || "Email Address"} <span className="text-[#e51a24]">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 text-lg">
@@ -249,7 +263,7 @@ export default function EnquirySection({
                           onChange={(e) =>
                             setFormData({ ...formData, email: e.target.value })
                           }
-                          placeholder="Your Email Address"
+                          placeholder={formFields?.email?.placeholder || "Your Email Address"}
                           className="w-full pl-10 pr-4 py-3 rounded-[10px] border border-gray-200 text-sm text-[#081839] placeholder-gray-400 focus:outline-none focus:border-[#e51a24] focus:ring-1 focus:ring-[#e51a24]/30 transition-all"
                         />
                       </div>
@@ -258,7 +272,7 @@ export default function EnquirySection({
                     {/* Services */}
                     <div>
                       <label className="text-[13px] font-bold text-[#081839] mb-1.5 block">
-                        Select Course <span className="text-[#e51a24]">*</span>
+                        {formFields?.course?.label || "Select Course"} <span className="text-[#e51a24]">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 text-lg">
@@ -272,7 +286,7 @@ export default function EnquirySection({
                           }
                           className="w-full pl-10 pr-8 py-3 rounded-[10px] border border-gray-200 text-sm text-[#081839] bg-white focus:outline-none focus:border-[#e51a24] focus:ring-1 focus:ring-[#e51a24]/30 transition-all appearance-none cursor-pointer"
                         >
-                          <option value="">Select Course</option>
+                          <option value="">{formFields?.course?.placeholder || "Select Course"}</option>
                           {data.form.courseOptions.map((courseName) => (
                             <option key={courseName} value={courseName}>
                               {courseName}
@@ -289,7 +303,7 @@ export default function EnquirySection({
                   {/* Form */}
                   <div>
                     <label className="text-[13px] font-bold text-[#081839] mb-1.5 block">
-                      Your Message <span className="text-[#e51a24]">*</span>
+                      {formFields?.message?.label || "Your Message"} <span className="text-[#e51a24]">*</span>
                     </label>
                     <div className="relative">
                       <div className="absolute top-3.5 left-3.5 pointer-events-none text-gray-400 text-lg">
@@ -302,7 +316,7 @@ export default function EnquirySection({
                         onChange={(e) =>
                           setFormData({ ...formData, message: e.target.value })
                         }
-                        placeholder="Write your message here..."
+                        placeholder={formFields?.message?.placeholder || "Write your message here..."}
                         className="w-full pl-10 pr-4 py-3 rounded-[10px] border border-gray-200 text-sm text-[#081839] placeholder-gray-400 focus:outline-none focus:border-[#e51a24] focus:ring-1 focus:ring-[#e51a24]/30 transition-all resize-none"
                       />
                     </div>
@@ -315,8 +329,7 @@ export default function EnquirySection({
                       animate={{ opacity: 1, y: 0 }}
                       className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-700 text-sm font-semibold text-center"
                     >
-                      Thank you! Your enquiry has been submitted successfully.
-                      We will contact you shortly.
+                      {successMessage}
                     </motion.div>
                   )}
 

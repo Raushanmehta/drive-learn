@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { IoWarningOutline, IoHome, IoCarSport, IoArrowForward } from "react-icons/io5";
-import PageTopSection from "@/components/common/PageTopSection";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import { poppins } from "@/lib/fonts";
 import { siteMap } from "@/data";
 
@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <main className={poppins.className}>
       {/* Top */}
-      <PageTopSection
+      <Breadcrumb
         title={pageTop.title}
         breadcrumb={pageTop.breadcrumb}
       />

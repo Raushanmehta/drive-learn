@@ -1,6 +1,5 @@
-import PageTopSection from "@/components/common/PageTopSection";
+import Breadcrumb from "@/components/common/Breadcrumb";
 import AboutSection from "@/sections/home/AboutSection";
-import CtaSection from "@/sections/home/CtaSection";
 import StatsSection from "@/sections/home/StatsSection";
 import WhyChooseUsSection from "@/sections/home/WhyChooseUsSection";
 import OurMisionSection from "@/sections/OurMisionSection";
@@ -12,13 +11,12 @@ export default function AboutPage() {
 
     return (
         <main>
-            <PageTopSection title="About Us" breadcrumb="About Us" />
+            <Breadcrumb title="About Us" breadcrumb="About Us" />
             <AboutSection data={about} showActionButton={false} />
             <OurMisionSection data={ourMission} />
             <WhyChooseUsSection data={whyChooseUs} />
             <ProcessSection data={process} />
             <StatsSection data={stats} />
-            <CtaSection data={cta} />
         </main>
     );
 }

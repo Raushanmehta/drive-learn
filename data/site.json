@@ -119,6 +119,18 @@
                 "component": "DriveLearnEnquiry1"
               }
             ]
+          },
+          "driveTest": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "DriveLearnPageTop1"
+              },
+              {
+                "key": "driveTest",
+                "component": "DriveLearnDriveTest1"
+              }
+            ]
           }
         }
       }
@@ -128,7 +140,7 @@
         "variants": {
           "DriveLearnTopbar1": {
             "logo": {
-              "src": "/logo/logo-blacks.png",
+              "src": "/logo/logo-blacks.webp",
               "alt": "DriveLearn Driving School",
               "width": 380,
               "height": 125,
@@ -200,14 +212,14 @@
         "variants": {
           "DriveLearnFooter1": {
             "logo": {
-              "src": "/logo/logo-whites.png",
+              "src": "/logo/logo-whites.webp",
               "alt": "DriveLearn Driving School",
               "width": 380,
               "height": 125,
               "href": "/"
             },
             "description": "At DriveLearn, we are committed to providing high-quality driving education with experienced instructors, modern training vehicles and a focus on safe driving for every learner.",
-            "bgImage": "/images/footer-car-bg.jpg",
+            "bgImage": "/images/footer-car-bg.webp",
             "quickLinks": [
               {
                 "name": "Home",
@@ -310,7 +322,7 @@
           "DriveLearnPageTop1": {
             "defaultTitle": "About Us",
             "defaultBreadcrumb": "About Us",
-            "defaultBgImage": "/images/page-top-bg.jpg"
+            "defaultBgImage": "/images/page-top-bg.webp"
           }
         }
       },
@@ -325,7 +337,7 @@
                 "badge": "Driving Training",
                 "titleBottom": "For a Brighter Future",
                 "description": "Learn to drive with certified instructors and modern training cars. Safe, practical and personalized driving lessons for all levels.",
-                "image": "/images/hero-driving-lesson.jpg"
+                "image": "/images/hero-driving-lesson.webp"
               },
               {
                 "id": 2,
@@ -334,7 +346,7 @@
                 "badge": "Expert Instructors",
                 "titleBottom": "For Every Learner",
                 "description": "Structured driving courses tailored to your pace. Learn defensive driving skills and gain complete confidence behind the wheel.",
-                "image": "/images/hero-driving-slide2.jpg"
+                "image": "/images/hero-driving-slide2.webp"
               },
               {
                 "id": 3,
@@ -343,14 +355,9 @@
                 "badge": "License Success",
                 "titleBottom": "With High Pass Rate",
                 "description": "Comprehensive test preparation, mock tests, and RTO guidance to help you pass your official driving test with flying colors.",
-                "image": "/images/hero-driving-slide3.jpg"
+                "image": "/images/hero-driving-slide3.webp"
               }
-            ],
-            "videoButtonText": "Watch Our Video",
-            "videoModal": {
-              "title": "Driving School Introduction Video",
-              "embedUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
-            }
+            ]
           }
         }
       },
@@ -368,9 +375,9 @@
               "label": "Years Experience"
             },
             "images": {
-              "main": "/images/hero-driving-lesson.jpg",
-              "overlapping": "/images/about-woman-keys.jpg",
-              "videoThumb": "/images/about-video-thumb.jpg"
+              "main": "/images/hero-driving-lesson.webp",
+              "overlapping": "/images/about-woman-keys.webp",
+              "videoThumb": "/images/about-video-thumb.webp"
             },
             "checkListCol1": [
               "Certified Instructors",
@@ -419,12 +426,12 @@
                 "slug": "beginner-driving-course",
                 "title": "Beginner Driving Course",
                 "description": "Comprehensive lessons for first-time learners covering car controls, road signs, parking and safe driving fundamentals.",
-                "image": "/images/service-driving-courses.jpg",
+                "image": "/images/service-driving-courses.webp",
                 "icon": "PiSteeringWheelBold",
                 "href": "/driving-courses/beginner-driving-course",
                 "courseDetail": {
                   "eyebrow": "COURSE DETAILS",
-                  "heroImage": "/images/service-driving-courses.jpg",
+                  "heroImage": "/images/service-driving-courses.webp",
                   "title": {
                     "part1": "Beginner ",
                     "part2": "Driving Course"
@@ -456,7 +463,7 @@
                   "advantages": {
                     "title": "Driving School Advantages",
                     "description": "Learn with professional instructors and get complete support to become a safe and confident driver.",
-                    "image": "/images/driver-girl-clean.png",
+                    "image": "/images/driver-girl-clean.webp",
                     "items": [
                       "60 Mins Driving Lesson",
                       "Additional Time Available",
@@ -514,12 +521,12 @@
                 "slug": "driving-license-training",
                 "title": "Driving License Training",
                 "description": "Get expert guidance and complete road test preparation to pass your official driving license exam with ease.",
-                "image": "/images/service-driving-license.jpg",
+                "image": "/images/service-driving-license.webp",
                 "icon": "IoIdCard",
                 "href": "/driving-courses/driving-license-training",
                 "courseDetail": {
                   "eyebrow": "COURSE DETAILS",
-                  "heroImage": "/images/service-driving-license.jpg",
+                  "heroImage": "/images/service-driving-license.webp",
                   "title": {
                     "part1": "Driving License ",
                     "part2": "Training"
@@ -551,7 +558,7 @@
                   "advantages": {
                     "title": "License Training Advantages",
                     "description": "Learn exactly what the RTO examiner looks for to pass on your very first attempt.",
-                    "image": "/images/driver-girl-clean.png",
+                    "image": "/images/driver-girl-clean.webp",
                     "items": [
                       "Mock RTO Driving Test",
                       "Parallel & Reverse Parking Focus",
@@ -609,12 +616,12 @@
                 "slug": "vehicle-safety-training",
                 "title": "Vehicle & Safety Training",
                 "description": "Learn essential vehicle mechanics, hazard anticipation and defensive road safety measures for all driving conditions.",
-                "image": "/images/service-vehicle-insurance.jpg",
+                "image": "/images/service-vehicle-insurance.webp",
                 "icon": "IoShieldCheckmark",
                 "href": "/driving-courses/vehicle-safety-training",
                 "courseDetail": {
                   "eyebrow": "COURSE DETAILS",
-                  "heroImage": "/images/service-vehicle-insurance.jpg",
+                  "heroImage": "/images/service-vehicle-insurance.webp",
                   "title": {
                     "part1": "Vehicle & Safety ",
                     "part2": "Training"
@@ -646,7 +653,7 @@
                   "advantages": {
                     "title": "Vehicle Safety Advantages",
                     "description": "Master proactive defensive road skills and unexpected emergency handling.",
-                    "image": "/images/driver-girl-clean.png",
+                    "image": "/images/driver-girl-clean.webp",
                     "items": [
                       "Hazard Perception Drills",
                       "Emergency Braking Practice",
@@ -700,12 +707,12 @@
                 "slug": "refresher-driving-lessons",
                 "title": "Refresher Driving Lessons",
                 "description": "Perfect for license holders looking to rebuild confidence, highway driving skills, and advanced night driving.",
-                "image": "/images/drivetest-confidences.jpg",
+                "image": "/images/drivetest-confidences.webp",
                 "icon": "IoSpeedometerOutline",
                 "href": "/driving-courses/refresher-driving-lessons",
                 "courseDetail": {
                   "eyebrow": "COURSE DETAILS",
-                  "heroImage": "/images/drivetest-confidences.jpg",
+                  "heroImage": "/images/drivetest-confidences.webp",
                   "title": {
                     "part1": "Refresher Driving ",
                     "part2": "Lessons"
@@ -737,7 +744,7 @@
                   "advantages": {
                     "title": "Refresher Course Advantages",
                     "description": "Customized to target specifically the areas where you feel hesitation.",
-                    "image": "/images/driver-girl-clean.png",
+                    "image": "/images/driver-girl-clean.webp",
                     "items": [
                       "Heavy City Traffic Navigation",
                       "Multi-Lane Highway Merging",
@@ -791,12 +798,12 @@
                 "slug": "intensive-fast-track-course",
                 "title": "Intensive Fast-Track Course",
                 "description": "Accelerated learning schedule designed to prepare you for road driving and license testing within a short period.",
-                "image": "/images/drivetest-instructor.jpg",
+                "image": "/images/drivetest-instructor.webp",
                 "icon": "IoSchoolOutline",
                 "href": "/driving-courses/intensive-fast-track-course",
                 "courseDetail": {
                   "eyebrow": "COURSE DETAILS",
-                  "heroImage": "/images/drivetest-instructor.jpg",
+                  "heroImage": "/images/drivetest-instructor.webp",
                   "title": {
                     "part1": "Intensive ",
                     "part2": "Fast-Track Course"
@@ -828,7 +835,7 @@
                   "advantages": {
                     "title": "Fast-Track Advantages",
                     "description": "Rapid skill acquisition through continuous, immersive daily driving practice.",
-                    "image": "/images/driver-girl-clean.png",
+                    "image": "/images/driver-girl-clean.webp",
                     "items": [
                       "Daily 2 Hours Immersive Driving",
                       "Complete Curriculum in 1-2 Weeks",
@@ -882,12 +889,12 @@
                 "slug": "dual-control-car-training",
                 "title": "Dual-Control Car Training",
                 "description": "Hands-on practice in modern dual-control training cars with both manual and automatic transmission options.",
-                "image": "/images/enquiry-car.jpg",
+                "image": "/images/enquiry-car.webp",
                 "icon": "IoCarSportOutline",
                 "href": "/driving-courses/dual-control-car-training",
                 "courseDetail": {
                   "eyebrow": "COURSE DETAILS",
-                  "heroImage": "/images/enquiry-car.jpg",
+                  "heroImage": "/images/enquiry-car.webp",
                   "title": {
                     "part1": "Dual-Control ",
                     "part2": "Car Training"
@@ -919,7 +926,7 @@
                   "advantages": {
                     "title": "Dual Control Advantages",
                     "description": "Zero risk of accidents while you build muscle memory and car feel.",
-                    "image": "/images/driver-girl-clean.png",
+                    "image": "/images/driver-girl-clean.webp",
                     "items": [
                       "Instructor Instant Override Safety",
                       "Choose Manual or Automatic Fleet",
@@ -998,7 +1005,7 @@
                 }
               ],
               "callout": {
-                "image": "/images/drivetest-cone.jpg",
+                "image": "/images/drivetest-cone.webp",
                 "title": "Best Guidance To \nEach Student, That's \nWhy We Produce \nA Confident Drivers",
                 "subtitle": "Join Our Driving Courses, Call us",
                 "phone": "+1 000000000",
@@ -1017,7 +1024,7 @@
               "part2": "For Safe Driving"
             },
             "description": "We are committed to providing high-quality driving education with professional instructors, modern vehicles and a student-focused approach.",
-            "centerImage": "/images/car-stering-2.png",
+            "centerImage": "/images/car-stering-2.webp",
             "leftFeatures": [
               {
                 "number": "01",
@@ -1088,7 +1095,7 @@
       "stats": {
         "variants": {
           "DriveLearnStats1": {
-            "bgImage": "/images/stats-cars-bg.jpg",
+            "bgImage": "/images/stats-cars-bg.webp",
             "statsList": [
               {
                 "id": 1,
@@ -1133,7 +1140,7 @@
               "title": "Testimonials",
               "breadcrumb": "Testimonials"
             },
-            "bgImage": "/images/testimonial-bg-girl.jpg",
+            "bgImage": "/images/testimonial-bg-girl.webp",
             "eyebrow": "Testimonial",
             "title": {
               "part1": "What our ",
@@ -1161,7 +1168,7 @@
                 "review": "Yahan ke instructors bahut patient hain aur har cheez ko clearly samjhate hain. Inki training ki wajah se mujhe driving me confidence mila. Main is driving school ko sabko recommend karunga.",
                 "name": "Amit Sharma",
                 "location": "NEW DELHI",
-                "avatar": "/images/reviewer-amit.jpg",
+                "avatar": "/images/reviewer-amit.webp",
                 "rating": 5
               },
               {
@@ -1169,7 +1176,7 @@
                 "review": "Mera driving experience yahan bahut accha raha. Staff bahut supportive hai aur training cars bhi well-maintained hain. Yahan seekhna easy aur comfortable hai. Highly recommended!",
                 "name": "Priya Verma",
                 "location": "GURGAON",
-                "avatar": "/images/reviewer-priya.jpg",
+                "avatar": "/images/reviewer-priya.webp",
                 "rating": 5
               },
               {
@@ -1177,7 +1184,7 @@
                 "review": "Instructors ne test routes par itni achhi practice karayi ki maine pehle hi attempt me RTO driving test pass kar liya. Inka training system lajawab hai.",
                 "name": "Rohit Malhotra",
                 "location": "NOIDA",
-                "avatar": "/images/reviewer-amit.jpg",
+                "avatar": "/images/reviewer-amit.webp",
                 "rating": 5
               },
               {
@@ -1185,7 +1192,7 @@
                 "review": "Mujhe driving se bahut darr lagta tha, par yahan ke calm environment aur step-by-step guidance se mera saara darr khatam ho gaya. Thank you DriveLearn!",
                 "name": "Sneha Patel",
                 "location": "NEW DELHI",
-                "avatar": "/images/reviewer-priya.jpg",
+                "avatar": "/images/reviewer-priya.webp",
                 "rating": 5
               },
               {
@@ -1193,7 +1200,7 @@
                 "review": "Meri job ki wajah se weekend batches best the. Training cars bilkul nayi aur clean hain. Dual-control pedals se safe feel hota hai.",
                 "name": "Vikram Singh",
                 "location": "FARIDABAD",
-                "avatar": "/images/reviewer-amit.jpg",
+                "avatar": "/images/reviewer-amit.webp",
                 "rating": 5
               },
               {
@@ -1201,7 +1208,7 @@
                 "review": "Koi hidden charges nahi hain. Jo commit kiya tha, wahi complete training aur guidance provide ki. Sabhi ko yahan se hi driving sikhni chahiye.",
                 "name": "Ananya Roy",
                 "location": "GHAZIABAD",
-                "avatar": "/images/reviewer-priya.jpg",
+                "avatar": "/images/reviewer-priya.webp",
                 "rating": 5
               }
             ]
@@ -1211,7 +1218,7 @@
       "cta": {
         "variants": {
           "DriveLearnCta1": {
-            "bgImage": "/images/footer-car-bg.jpg",
+            "bgImage": "/images/footer-car-bg.webp",
             "title": {
               "part1": "Start Your",
               "part2": "Driving Journey",
@@ -1238,42 +1245,42 @@
               {
                 "name": "Mac Alexixe",
                 "role": "CEO, Founder",
-                "image": "/images/team-mac-alexixes.jpg"
+                "image": "/images/team-mac-alexixes.webp"
               },
               {
                 "name": "Alex Julian",
                 "role": "Instructor",
-                "image": "/images/team-alex-julians.jpg"
+                "image": "/images/team-alex-julians.webp"
               },
               {
                 "name": "Jenifer Lopez",
                 "role": "Instructor",
-                "image": "/images/team-jenifer-lopezs.jpg"
+                "image": "/images/team-jenifer-lopezs.webp"
               },
               {
                 "name": "Henry Joseph",
                 "role": "Senior Instructor",
-                "image": "/images/team-henry-josephs.jpg"
+                "image": "/images/team-henry-josephs.webp"
               },
               {
                 "name": "Poppy Joanne",
                 "role": "Instructor",
-                "image": "/images/team-poppy-joannes.jpg"
+                "image": "/images/team-poppy-joannes.webp"
               },
               {
                 "name": "Oscar Rhys",
                 "role": "Instructor",
-                "image": "/images/team-oscar-rhyss.jpg"
+                "image": "/images/team-oscar-rhyss.webp"
               },
               {
                 "name": "James Charles",
                 "role": "Senior Instructor",
-                "image": "/images/team-james-charless.jpg"
+                "image": "/images/team-james-charless.webp"
               },
               {
                 "name": "Jessica Madison",
                 "role": "Junior Instructor",
-                "image": "/images/team-jessica-madisons.jpg"
+                "image": "/images/team-jessica-madisons.webp"
               }
             ]
           }
@@ -1302,9 +1309,11 @@
                 "col2": "High Success Rate"
               }
             ],
-            "driverImage": "/images/driver-girl-clean.png",
+            "driverImage": "/images/driver-girl-clean.webp",
+            "driverImageAlt": "Confident student driver driving with guidance and safety",
             "calloutCard": {
-              "videoThumbnail": "/images/process-video-thumb.jpg",
+              "videoThumbnail": "/images/process-video-thumb.webp",
+              "videoThumbnailAlt": "Watch DriveLearn training session video",
               "supportTitle": "24/7 Support Team",
               "phone": "+1 000000000",
               "phoneHref": "tel:+1000000000"
@@ -1470,7 +1479,12 @@
             "additionalSection": {
               "title": "Additional Services",
               "description": "Enhance your learning experience with our add-on services.",
-              "image": "/images/pricing-addon-lessons.jpg",
+              "image": "/images/pricing-addon-lessons.webp",
+              "imageAlt": "Professional driving instructor giving driving lesson to student",
+              "tableHeaders": {
+                "service": "Service",
+                "price": "Price (₹)"
+              },
               "services": [
                 {
                   "service": "Additional Driving Hour",
@@ -1532,7 +1546,8 @@
                 "text": "Commitment to road safety & student excellence."
               }
             },
-            "driverImage": "/images/driver-mission-clean.jpg"
+            "driverImage": "/images/driver-mission-clean.webp",
+            "driverImageAlt": "Confident driver with instructor giving thumbs up"
           }
         }
       },
@@ -1545,7 +1560,7 @@
               "part2": "Information"
             },
             "description": "Fill out the form below and our team will get back to you with complete details about our driving courses, fees, schedules and admission process.",
-            "carImage": "/images/enquiry-car.jpg",
+            "carImage": "/images/enquiry-car.webp",
             "features": [
               {
                 "icon": "IoSchool",
@@ -1570,13 +1585,145 @@
                 "part2": "Now"
               },
               "description": "Have questions? Share your details and we will contact you with all the required information.",
+              "fields": {
+                "name": {
+                  "label": "Full Name",
+                  "placeholder": "Your Name"
+                },
+                "phone": {
+                  "label": "Phone Number",
+                  "placeholder": "Your Phone Number"
+                },
+                "email": {
+                  "label": "Email Address",
+                  "placeholder": "Your Email Address"
+                },
+                "course": {
+                  "label": "Select Course",
+                  "placeholder": "Select Course"
+                },
+                "message": {
+                  "label": "Your Message",
+                  "placeholder": "Write your message here..."
+                }
+              },
               "courseOptions": [
                 "Beginner Driving Course",
                 "Refresher Driving Course",
                 "Driving License Assistance",
                 "Defensive Driving Training"
               ],
-              "submitButton": "SEND ENQUIRY"
+              "submitButton": "SEND ENQUIRY",
+              "successMessage": "Thank you! Your enquiry has been submitted successfully. We will contact you shortly."
+            }
+          }
+        }
+      },
+      "driveTest": {
+        "variants": {
+          "DriveLearnDriveTest1": {
+            "pageTop": {
+              "title": "Driving Test Preparation",
+              "breadcrumb": "Driving Test"
+            },
+            "hero": {
+              "eyebrow": "DRIVING TEST PREPARATION",
+              "title": {
+                "part1": "Pass Your Driving Test ",
+                "part2": "with Confidence"
+              },
+              "description": "Get expert guidance, practical training and mock tests to help you prepare for your driving test and get your license with ease.",
+              "image": "/images/drivetest-confidences.webp",
+              "imageAlt": "Student driver passing driving test with confidence",
+              "badges": [
+                {
+                  "icon": "IoShieldCheckmark",
+                  "title": "Expert Instructors"
+                },
+                {
+                  "icon": "IoCar",
+                  "title": "Real Test Routes"
+                },
+                {
+                  "icon": "IoDocumentText",
+                  "title": "Mock Tests"
+                },
+                {
+                  "icon": "TbTarget",
+                  "title": "Higher Success Rate"
+                }
+              ]
+            },
+            "about": {
+              "title": "About Driving Test Preparation",
+              "description": "Our driving test preparation program is designed to give you the skills, confidence and knowledge needed to pass your driving test. We focus on real exam conditions, traffic rules and practical driving experience so you can get your license without any stress.",
+              "image": "/images/drivetest-cone.webp",
+              "imageAlt": "Practical driving test preparation with cones obstacle track",
+              "features": [
+                {
+                  "icon": "IoBookOutline",
+                  "title": "Traffic Rules & Regulations",
+                  "description": "Learn all the essential traffic rules and signs."
+                },
+                {
+                  "icon": "TbSteeringWheel",
+                  "title": "Practical Driving Training",
+                  "description": "Build real-world road experience."
+                },
+                {
+                  "icon": "IoClipboardOutline",
+                  "title": "Mock Driving Tests",
+                  "description": "Practice with exam-like scenarios."
+                },
+                {
+                  "icon": "IoPersonOutline",
+                  "title": "Personalized Guidance",
+                  "description": "Get one-on-one support from experts."
+                }
+              ]
+            },
+            "whyChoose": {
+              "title": "Why Choose Our Test Preparation?",
+              "image": "/images/drivetest-instructors.webp",
+              "imageAlt": "Instructor guiding learner driver with checklist",
+              "points": [
+                "Experienced and certified driving instructors",
+                "Complete training as per RTO guidelines",
+                "Flexible class timings (weekdays & weekends)",
+                "Real test route practice",
+                "High pass rate and proven results",
+                "Support until you get your license"
+              ]
+            },
+            "process": {
+              "title": "Our Training Process",
+              "description": "A simple and effective process to help you prepare and pass your driving test.",
+              "steps": [
+                {
+                  "step": "01",
+                  "icon": "IoClipboardOutline",
+                  "title": "Initial Assessment",
+                  "description": "We check your current skills and requirements."
+                },
+                {
+                  "step": "02",
+                  "icon": "TbSteeringWheel",
+                  "title": "Training Sessions",
+                  "description": "Get hands-on training with expert instructors."
+                },
+                {
+                  "step": "03",
+                  "icon": "IoDocumentTextOutline",
+                  "title": "Mock Test",
+                  "description": "Practice with real exam conditions."
+                },
+                {
+                  "step": "04",
+                  "icon": "IoShieldCheckmarkOutline",
+                  "title": "Test & License",
+                  "description": "Appear for the driving test and get license."
+                }
+              ]
             }
           }
         }
@@ -1610,14 +1757,6 @@
                 "line2": "Sunday: 9:00 AM - 5:00 PM",
                 "actionText": "BOOK APPOINTMENT",
                 "actionHref": "/enquiry"
-              },
-              {
-                "icon": "IoChatbubblesOutline",
-                "tag": "FAQ'S",
-                "line1": "Find quick answers in our",
-                "line2": "frequently asked questions.",
-                "actionText": "READ FAQ'S",
-                "actionHref": "/faqs"
               }
             ],
             "socialConnect": {
